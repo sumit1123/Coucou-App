@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Coucou App</string>
+    <string name="no_internet">Make you sure you are connected with internet</string>
+    <string name="slow_internet">Your internet connection is very slow</string>
+    <string name="server_error">Server Error</string>
+    <string name="msg_empty_email">Please enter email address</string>
+    <string name="msg_valid_email">Please enter valid email address</string>
+    <string name="msg_empty_password">Please enter password</string>
+    <string name="msg_empty_name">Please enter name</string>
 </resources>
