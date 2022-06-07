@@ -3,21 +3,27 @@ package com.coucouapp.ui.base
 import android.content.Context
 import android.text.TextUtils
 import android.view.inputmethod.InputMethodManager
+import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.coucouapp.R
 import com.coucouapp.utils.Constants.INVALID_SESSION_ERROR_CODE
-import com.google.android.material.snackbar.Snackbar
 import retrofit2.HttpException
 
-abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity(), BaseView {
+abstract class BaseActivity<VM : ViewModel,T : ViewDataBinding> : AppCompatActivity(), BaseView {
 
+    var mViewModel: VM? = null
     private lateinit var viewDataBinding: T
+    @LayoutRes
+    abstract fun getLayout(): Int
+    abstract fun getViewModelClass(): Class<VM>
 
     protected fun bindViewData(): T {
-        viewDataBinding = DataBindingUtil.setContentView(this, getLayoutId())
+        viewDataBinding = DataBindingUtil.setContentView(this, getLayout())
+        mViewModel = ViewModelProvider(this).get(getViewModelClass())
         viewDataBinding.lifecycleOwner = this
         return viewDataBinding
     }

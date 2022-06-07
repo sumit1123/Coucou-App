@@ -16,8 +16,8 @@ interface BaseView {
 
     fun onFailed(msg: String, error: Int)
 
-    @LayoutRes
-    fun getLayoutId(): Int
-
-    fun getBindingVariable(): Int
+//    @LayoutRes
+//    fun getLayoutId(): Int
+//
+//    fun getBindingVariable(): Int
 }
