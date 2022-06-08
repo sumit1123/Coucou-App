@@ -22,5 +22,9 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="already_have_an_account">Already have an account</string>
     <string name="or_connect_using">Or connect using</string>
+    <string name="skip">SKIP</string>
+    <string name="build_your_">Build your credit score easily for bigger bank loans</string>
+    <string name="enjoy_peer_">Enjoy peer-to-peer lending with your friends and family</string>
+    <string name="easily_get_">Easily get a loan or cash from peers faster than your bank</string>
 
 </resources>

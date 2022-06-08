@@ -5,24 +5,24 @@
     <application
         android:name=".application.CoucouApplication"
         android:allowBackup="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/appicon"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/appicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoTitleBar">
+        <activity
+            android:name=".ui.components.introscreen.IntroductionActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.components.CreateAccountActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.components.SplashActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.components.WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.components.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

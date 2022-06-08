@@ -1,6 +1,7 @@
 package com.coucouapp.ui.base
 
 import android.content.Context
+import android.os.Bundle
 import android.text.TextUtils
 import android.view.inputmethod.InputMethodManager
 import androidx.annotation.LayoutRes
@@ -16,10 +17,17 @@ import retrofit2.HttpException
 abstract class BaseActivity<VM : ViewModel,T : ViewDataBinding> : AppCompatActivity(), BaseView {
 
     var mViewModel: VM? = null
-    private lateinit var viewDataBinding: T
+    lateinit var viewDataBinding: T
     @LayoutRes
     abstract fun getLayout(): Int
     abstract fun getViewModelClass(): Class<VM>
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewDataBinding = DataBindingUtil.setContentView(this, getLayout())
+        mViewModel = ViewModelProvider(this).get(getViewModelClass())
+        viewDataBinding.lifecycleOwner = this
+    }
 
     protected fun bindViewData(): T {
         viewDataBinding = DataBindingUtil.setContentView(this, getLayout())

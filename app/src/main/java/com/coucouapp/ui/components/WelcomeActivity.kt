@@ -8,12 +8,6 @@ import com.coucouapp.ui.base.BaseActivity
 import com.coucouapp.viewmodel.WelcomeViewModel
 import kotlinx.android.synthetic.main.activity_welcome.*
 
-/*class WelcomeActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_welcome)
-    }
-}*/
 class WelcomeActivity : BaseActivity<WelcomeViewModel, ActivityWelcomeBinding>() {
 
     override fun getLayout(): Int = R.layout.activity_welcome
