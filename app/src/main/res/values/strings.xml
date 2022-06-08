@@ -7,4 +7,20 @@
     <string name="msg_valid_email">Please enter valid email address</string>
     <string name="msg_empty_password">Please enter password</string>
     <string name="msg_empty_name">Please enter name</string>
+
+    <!--WelcomeActivity-->
+    <string name="save_lend_build_trust">Save. Lend. Build Trust</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="log_in">Log In</string>
+
+    <!--CreateAccountActivity-->
+    <string name="create_account">Create Account</string>
+    <string name="username">Username</string>
+    <string name="e_mail">E-mail</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_an_account">Already have an account</string>
+    <string name="or_connect_using">Or connect using</string>
+
 </resources>

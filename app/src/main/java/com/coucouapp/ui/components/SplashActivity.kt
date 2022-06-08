@@ -4,14 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.WindowManager
 import com.coucouapp.MainActivity
 import com.coucouapp.R
 import com.coucouapp.databinding.ActivitySplashBinding
 import com.coucouapp.ui.base.BaseActivity
 import com.coucouapp.viewmodel.SplashViewModel
 
-class SplashActivity : BaseActivity<SplashViewModel , ActivitySplashBinding>() {
+class SplashActivity : BaseActivity<SplashViewModel, ActivitySplashBinding>() {
 
     override fun getLayout(): Int = R.layout.activity_splash
 

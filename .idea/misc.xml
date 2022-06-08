@@ -3,13 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/drawable/bg_corner_primary.xml" value="0.2169230769230769" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/drawable/bg_corner_secondary.xml" value="0.2169230769230769" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/drawable/bg_corner_white_smoke.xml" value="0.2169230769230769" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/drawable/border_corner_primary.xml" value="0.2169230769230769" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/drawable/ic_logo.xml" value="0.2169230769230769" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/activity_create_account.xml" value="0.19010416666666666" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/activity_welcome.xml" value="0.18" />
         <entry key="app/src/main/res/drawable/ic_appicon.xml" value="0.1445" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15729166666666666" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.16" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
