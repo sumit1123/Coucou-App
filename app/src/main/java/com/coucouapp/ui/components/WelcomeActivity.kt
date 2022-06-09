@@ -20,17 +20,14 @@ class WelcomeActivity : BaseActivity<WelcomeViewModel, ActivityWelcomeBinding>()
     }
 
     private fun initView() {
-        //TODO: create Login Screen
         tvLogIn.setOnClickListener {
-            val intent = Intent(this, WelcomeActivity::class.java)
+            val intent = Intent(this, LogInActivity::class.java)
             startActivity(intent)
-            finish()
         }
 
         tvSignUp.setOnClickListener {
             val intent = Intent(this, CreateAccountActivity::class.java)
             startActivity(intent)
-            finish()
         }
     }
 

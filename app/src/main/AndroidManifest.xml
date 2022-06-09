@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoTitleBar">
         <activity
+            android:name=".ui.components.LogInActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.components.UserVerifiedActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.components.OtpVerificationActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.components.introscreen.IntroductionActivity"
             android:exported="false" />
         <activity

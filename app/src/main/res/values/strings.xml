@@ -3,10 +3,13 @@
     <string name="no_internet">Make you sure you are connected with internet</string>
     <string name="slow_internet">Your internet connection is very slow</string>
     <string name="server_error">Server Error</string>
-    <string name="msg_empty_email">Please enter email address</string>
-    <string name="msg_valid_email">Please enter valid email address</string>
-    <string name="msg_empty_password">Please enter password</string>
-    <string name="msg_empty_name">Please enter name</string>
+    <string name="msg_empty_email">Please enter email address.</string>
+    <string name="msg_valid_email">Please enter valid email address.</string>
+    <string name="msg_empty_password">Please enter password.</string>
+    <string name="msg_empty_confirm_password">Please enter confirm password.</string>
+    <string name="msg_empty_name">Please enter username.</string>
+    <string name="msg_empty_phone">Please enter phone number.</string>
+    <string name="msg_password_must_be_same">Password and Confirm Password must be same.</string>
 
     <!--WelcomeActivity-->
     <string name="save_lend_build_trust">Save. Lend. Build Trust</string>
@@ -22,9 +25,25 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="already_have_an_account">Already have an account</string>
     <string name="or_connect_using">Or connect using</string>
+
+    <!--IntroductionActivity-->
     <string name="skip">SKIP</string>
     <string name="build_your_">Build your credit score easily for bigger bank loans</string>
     <string name="enjoy_peer_">Enjoy peer-to-peer lending with your friends and family</string>
     <string name="easily_get_">Easily get a loan or cash from peers faster than your bank</string>
+
+    <!--OTPVerificationAcivity-->
+    <string name="otp_verification">OTP Verification</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel odio sit amet sapien porttitor blandit in eu ipsum.</string>
+    <string name="verify_code">Verify Code</string>
+
+    <!--UserVerifiedActivity-->
+    <string name="user_verified">User Verified</string>
+    <string name="user_verified_details">User has now been verified. You can use the application now</string>
+
+    <!--LoginActivity-->
+    <string name="login">Login</string>
+    <string name="forgotten_password">Forgotten Password</string>
+
 
 </resources>

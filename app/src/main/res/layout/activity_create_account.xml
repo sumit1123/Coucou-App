@@ -46,7 +46,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <EditText
-                        android:id="@+id/tvUsername"
+                        android:id="@+id/edUsername"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_36sdp"
@@ -64,7 +64,7 @@
                         tools:ignore="Autofill" />
 
                     <EditText
-                        android:id="@+id/tvEmail"
+                        android:id="@+id/edEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_8sdp"
@@ -78,11 +78,11 @@
                         android:textSize="@dimen/_12sdp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvUsername"
+                        app:layout_constraintTop_toBottomOf="@+id/edUsername"
                         tools:ignore="Autofill" />
 
                     <EditText
-                        android:id="@+id/tvPhoneNumber"
+                        android:id="@+id/edPhoneNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_8sdp"
@@ -96,11 +96,11 @@
                         android:textSize="@dimen/_12sdp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvEmail"
+                        app:layout_constraintTop_toBottomOf="@+id/edEmail"
                         tools:ignore="Autofill" />
 
                     <EditText
-                        android:id="@+id/tvPassword"
+                        android:id="@+id/edPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_8sdp"
@@ -114,11 +114,11 @@
                         android:textSize="@dimen/_12sdp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvPhoneNumber"
+                        app:layout_constraintTop_toBottomOf="@+id/edPhoneNumber"
                         tools:ignore="Autofill" />
 
                     <EditText
-                        android:id="@+id/tvConfirmPassword"
+                        android:id="@+id/edConfirmPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_8sdp"
@@ -132,7 +132,7 @@
                         android:textSize="@dimen/_12sdp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvPassword"
+                        app:layout_constraintTop_toBottomOf="@+id/edPassword"
                         tools:ignore="Autofill" />
 
                     <TextView
@@ -141,16 +141,17 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/flamingo"
                         android:textSize="@dimen/_8sdp"
+                        android:layout_margin="@dimen/_4sdp"
                         android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvConfirmPassword" />
+                        app:layout_constraintTop_toBottomOf="@+id/edConfirmPassword" />
 
                     <TextView
                         android:id="@+id/tvSignUp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_36sdp"
+                        android:layout_marginTop="@dimen/_48sdp"
                         android:background="@drawable/bg_corner_primary"
                         android:gravity="center"
                         android:paddingVertical="@dimen/_8sdp"
@@ -159,7 +160,7 @@
                         android:textSize="@dimen/_14sdp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvConfirmPassword" />
+                        app:layout_constraintTop_toBottomOf="@+id/edConfirmPassword" />
 
                     <TextView
                         android:id="@+id/tvAlreadyHaveAccount"
