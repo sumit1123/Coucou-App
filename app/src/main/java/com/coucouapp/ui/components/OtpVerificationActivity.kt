@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.coucouapp.R
 import com.coucouapp.databinding.ActivityOtpVerificationBinding
 import com.coucouapp.ui.base.BaseActivity
+import com.coucouapp.utils.Constants
 import com.coucouapp.viewmodel.OtpVerificationViewModel
 import kotlinx.android.synthetic.main.activity_otp_verification.*
 
@@ -23,8 +24,9 @@ class OtpVerificationActivity :
     }
 
     private fun initViews() {
-        tvVerifyCode.setOnClickListener {
+        tvContinue.setOnClickListener {
             val intent = Intent(this, UserVerifiedActivity::class.java)
+            intent.putExtra(Constants.USER_VERIFICATION, Constants.FROM_OTP_VERIFICATION)
             startActivity(intent)
         }
     }

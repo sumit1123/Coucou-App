@@ -24,17 +24,17 @@ class CreateAccountActivity : BaseActivity<CreateAccountViewModel, ActivityCreat
 
     private fun initViews() {
         tvSignUp.setOnClickListener {
-            //isValidate()  //TODO: Remove Comment
-            val intent = Intent(this, OtpVerificationActivity::class.java)
-            startActivity(intent)
+            isValidate()
+//            val intent = Intent(this, OtpVerificationActivity::class.java)
+//            startActivity(intent)
         }
     }
 
     private fun isValidate() {
-        if (edUsername.text.trim().isEmpty()) {
+        /*if (edUsername.text.trim().isEmpty()) {
             showErrorMsg(getString(R.string.msg_empty_name))
             return
-        }
+        }*/
         if (edEmail.text.trim().isEmpty()) {
             showErrorMsg(getString(R.string.msg_empty_email))
             return
@@ -60,7 +60,6 @@ class CreateAccountActivity : BaseActivity<CreateAccountViewModel, ActivityCreat
 
         val intent = Intent(this, OtpVerificationActivity::class.java)
         startActivity(intent)
-        finish()
     }
 
     private fun showErrorMsg(msg: String) {

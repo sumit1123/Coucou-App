@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoTitleBar">
         <activity
+            android:name=".ui.components.ResetPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.components.ForgotPasswordActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.components.LogInActivity"
             android:exported="true" />
         <activity

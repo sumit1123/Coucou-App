@@ -10,6 +10,7 @@
     <string name="msg_empty_name">Please enter username.</string>
     <string name="msg_empty_phone">Please enter phone number.</string>
     <string name="msg_password_must_be_same">Password and Confirm Password must be same.</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel odio sit amet sapien porttitor blandit in eu ipsum.</string>
 
     <!--WelcomeActivity-->
     <string name="save_lend_build_trust">Save. Lend. Build Trust</string>
@@ -32,18 +33,30 @@
     <string name="enjoy_peer_">Enjoy peer-to-peer lending with your friends and family</string>
     <string name="easily_get_">Easily get a loan or cash from peers faster than your bank</string>
 
-    <!--OTPVerificationAcivity-->
+    <!--OTPVerificationActivity-->
     <string name="otp_verification">OTP Verification</string>
-    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel odio sit amet sapien porttitor blandit in eu ipsum.</string>
     <string name="verify_code">Verify Code</string>
+    <string name="we_just_want_to_make_sure_it_s_you">We just want to make sure it\'s you</string>
+    <string name="enter_the_code_we_just_sent_you_below">Enter the code we just sent you below</string>
+    <string name="_continue">Continue</string>
 
     <!--UserVerifiedActivity-->
     <string name="user_verified">User Verified</string>
-    <string name="user_verified_details">User has now been verified. You can use the application now</string>
+    <string name="user_verified_details">User has now been verified. You can use the application now.</string>
+    <string name="password_changed_successfully">Password Changed Successfully</string>
+    <string name="password_changed_successfully_details">Your password has been changed. Navigate to profile to make another corrections</string>
 
     <!--LoginActivity-->
     <string name="login">Login</string>
     <string name="forgotten_password">Forgotten Password</string>
+    <string name="enter_e_mail_address">Enter e-mail address</string>
+
+    <!--ForgotPasswordActivity-->
+    <string name="send_reset_link">Send Reset Link</string>
+    <string name="send">Send</string>
+
+    <!--ResetPasswordActivity-->
+    <string name="reset_password">Reset Password</string>
 
 
 </resources>

@@ -58,6 +58,7 @@
                         android:textColor="@color/primary"
                         android:textColorHint="@color/gray"
                         android:textSize="@dimen/_12sdp"
+                        android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tvCreateAccount"
@@ -67,7 +68,7 @@
                         android:id="@+id/edEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_36sdp"
                         android:background="@drawable/border_corner_primary"
                         android:hint="@string/e_mail"
                         android:inputType="textEmailAddress"
@@ -78,7 +79,7 @@
                         android:textSize="@dimen/_12sdp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/edUsername"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCreateAccount"
                         tools:ignore="Autofill" />
 
                     <EditText
@@ -139,9 +140,9 @@
                         android:id="@+id/tvError"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_4sdp"
                         android:textColor="@color/flamingo"
                         android:textSize="@dimen/_8sdp"
-                        android:layout_margin="@dimen/_4sdp"
                         android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
