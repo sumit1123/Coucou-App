@@ -7,6 +7,7 @@ import android.os.Looper
 import com.coucouapp.R
 import com.coucouapp.databinding.ActivitySplashBinding
 import com.coucouapp.ui.base.BaseActivity
+import com.coucouapp.ui.components.introscreen.*
 import com.coucouapp.viewmodel.SplashViewModel
 
 class SplashActivity : BaseActivity<SplashViewModel, ActivitySplashBinding>() {
@@ -20,7 +21,7 @@ class SplashActivity : BaseActivity<SplashViewModel, ActivitySplashBinding>() {
 
     private fun setScreenNavigation() {
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, WelcomeActivity::class.java)  //TODO: replace IntroductionActivity
+            val intent = Intent(this, IntroductionActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)

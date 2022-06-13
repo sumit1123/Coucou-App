@@ -21,20 +21,10 @@
             android:layout_alignParentTop="true"
             android:text="@string/enjoy_peer_"
             android:textAppearance="@style/build_your_"
-            android:layout_marginBottom="@dimen/_80sdp"
+            android:layout_marginBottom="@dimen/_60sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             />
-
-      <androidx.appcompat.widget.AppCompatButton
-          android:id="@+id/bt_skip"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:background="@drawable/skip_button"
-          app:layout_constraintBottom_toBottomOf="parent"
-          android:textAppearance="@style/button"
-          android:text="@string/skip"
-          />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

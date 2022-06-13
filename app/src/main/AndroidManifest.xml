@@ -11,13 +11,16 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@drawable/appicon"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoTitleBar">
+        android:theme="@style/Theme.CoucouApp">
         <activity
             android:name=".ui.components.ResetPasswordActivity"
             android:exported="true" />
         <activity
             android:name=".ui.components.ForgotPasswordActivity"
             android:exported="true" />
+        <activity
+            android:name=".ui.components.dashboard.DashBoardScreen"
+            android:exported="false" />
         <activity
             android:name=".ui.components.LogInActivity"
             android:exported="true" />
