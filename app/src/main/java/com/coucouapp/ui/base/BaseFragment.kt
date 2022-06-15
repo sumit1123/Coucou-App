@@ -19,12 +19,11 @@ abstract class BaseFragment<VM : ViewModel, VB : ViewDataBinding> : Fragment() {
     abstract fun getLayout(): Int
 
     abstract fun getViewModelClass(): Class<VM>
-    abstract fun initResultHandlingCallBacks()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mViewModel = activity?.let { ViewModelProvider(it).get(getViewModelClass()) }!!
-        initResultHandlingCallBacks()
+      
     }
 
     override fun onCreateView(

@@ -5,21 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.coucouapp.*
+import com.coucouapp.databinding.*
+import com.coucouapp.ui.base.*
+import com.coucouapp.ui.components.dashboard.viewmodel.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [SavingGroupFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class SavingGroupFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+class SavingGroupFragment : BaseFragment<DashboardViewModel , FragmentSavingGroupBinding>() {
     private var param1: String? = null
     private var param2: String? = null
+    
+    lateinit var fragmentSavingGroupBinding: FragmentSavingGroupBinding
+    override fun getLayout(): Int = R.layout.fragment_saving_group
+    
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,21 +32,12 @@ class SavingGroupFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_saving_group, container, false)
+    ): View {
+        fragmentSavingGroupBinding = FragmentSavingGroupBinding.inflate(inflater, container, false)
+        return fragmentSavingGroupBinding.root
     }
     
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment SavingGroupFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             SavingGroupFragment().apply {
@@ -55,5 +46,9 @@ class SavingGroupFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+    
+    override fun getViewModelClass(): Class<DashboardViewModel> {
+        return DashboardViewModel::class.java
     }
 }

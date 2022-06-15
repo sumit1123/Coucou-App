@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/fragment_home"
-        android:name="com.coucouapp.HomeFragment"
+        android:name="com.coucouapp.ui.components.dashboard.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/fragment_profile"
-        android:name="com.coucouapp.ProfileFragment"
+        android:name="com.coucouapp.ui.components.dashboard.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/fragment_saving_group"
-        android:name="com.coucouapp.SavingGroupFragment"
+        android:name="com.coucouapp.ui.components.dashboard.fragments.SavingGroupFragment"
         android:label="fragment_saving_group"
         tools:layout="@layout/fragment_saving_group" />
     <fragment
         android:id="@+id/fragment_settings"
-        android:name="com.coucouapp.SettingFragment"
+        android:name="com.coucouapp.ui.components.dashboard.fragments.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" />
 </navigation>

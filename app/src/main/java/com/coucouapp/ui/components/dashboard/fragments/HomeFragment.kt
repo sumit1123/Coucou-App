@@ -51,8 +51,5 @@ class HomeFragment : BaseFragment<DashboardViewModel, FragmentHomeBinding>() {
     override fun getViewModelClass(): Class<DashboardViewModel> {
        return DashboardViewModel::class.java
     }
-    
-    override fun initResultHandlingCallBacks() {
-        TODO("Not yet implemented")
-    }
+   
 }
