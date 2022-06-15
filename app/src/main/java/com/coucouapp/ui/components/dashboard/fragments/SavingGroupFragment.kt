@@ -1,4 +1,4 @@
-package com.coucouapp
+package com.coucouapp.ui.components.dashboard.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
