@@ -1,14 +1,13 @@
 package com.coucouapp.ui.components.dashboard.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.coucouapp.*
-import com.coucouapp.databinding.*
-import com.coucouapp.ui.base.*
-import com.coucouapp.ui.components.dashboard.viewmodel.*
+import com.coucouapp.R
+import com.coucouapp.databinding.FragmentHomeBinding
+import com.coucouapp.ui.base.BaseFragment
+import com.coucouapp.ui.components.dashboard.viewmodel.DashboardViewModel
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"

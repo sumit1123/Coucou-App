@@ -28,41 +28,47 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/edEmail"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmail"
+            style="@style/StyledTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_36sdp"
-            android:background="@drawable/border_corner_primary"
             android:hint="@string/e_mail"
-            android:inputType="textEmailAddress"
-            android:paddingHorizontal="@dimen/_12sdp"
-            android:paddingVertical="@dimen/_8sdp"
-            android:textColor="@color/primary"
-            android:textColorHint="@color/gray"
-            android:textSize="@dimen/_12sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvLogIn"
-            tools:ignore="Autofill" />
+            app:layout_constraintTop_toBottomOf="@id/tvLogIn">
 
-        <EditText
-            android:id="@+id/edPassword"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edEmail"
+                style="@style/StyledTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            style="@style/StyledTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:background="@drawable/border_corner_primary"
+            android:layout_marginTop="@dimen/_4sdp"
             android:hint="@string/password"
-            android:inputType="textPassword"
-            android:paddingHorizontal="@dimen/_12sdp"
-            android:paddingVertical="@dimen/_8sdp"
-            android:textColor="@color/primary"
-            android:textColorHint="@color/gray"
-            android:textSize="@dimen/_12sdp"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/primary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edEmail"
-            tools:ignore="Autofill" />
+            app:layout_constraintTop_toBottomOf="@id/tilEmail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edPassword"
+                style="@style/StyledTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/tvError"
@@ -74,7 +80,7 @@
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edPassword" />
+            app:layout_constraintTop_toBottomOf="@+id/tilPassword" />
 
         <TextView
             android:id="@+id/tvLoginUser"

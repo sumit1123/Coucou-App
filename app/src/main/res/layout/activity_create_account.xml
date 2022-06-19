@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="viewModel"
             type="com.coucouapp.viewmodel.CreateAccountViewModel" />
@@ -45,96 +44,110 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <EditText
-                        android:id="@+id/edUsername"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilUsername"
+                        style="@style/StyledTextInputLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_36sdp"
-                        android:background="@drawable/border_corner_primary"
                         android:hint="@string/username"
-                        android:inputType="text"
-                        android:paddingHorizontal="@dimen/_12sdp"
-                        android:paddingVertical="@dimen/_8sdp"
-                        android:textColor="@color/primary"
-                        android:textColorHint="@color/gray"
-                        android:textSize="@dimen/_12sdp"
                         android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvCreateAccount"
-                        tools:ignore="Autofill" />
+                        app:layout_constraintTop_toBottomOf="@id/tvCreateAccount">
 
-                    <EditText
-                        android:id="@+id/edEmail"
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edUsername"
+                            style="@style/StyledTextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilEmail"
+                        style="@style/StyledTextInputLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_36sdp"
-                        android:background="@drawable/border_corner_primary"
                         android:hint="@string/e_mail"
-                        android:inputType="textEmailAddress"
-                        android:paddingHorizontal="@dimen/_12sdp"
-                        android:paddingVertical="@dimen/_8sdp"
-                        android:textColor="@color/primary"
-                        android:textColorHint="@color/gray"
-                        android:textSize="@dimen/_12sdp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvCreateAccount"
-                        tools:ignore="Autofill" />
+                        app:layout_constraintTop_toBottomOf="@id/tvCreateAccount">
 
-                    <EditText
-                        android:id="@+id/edPhoneNumber"
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edEmail"
+                            style="@style/StyledTextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilPhoneNumber"
+                        style="@style/StyledTextInputLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_8sdp"
-                        android:background="@drawable/border_corner_primary"
+                        android:layout_marginTop="@dimen/_4sdp"
                         android:hint="@string/phone_number"
-                        android:inputType="phone"
-                        android:paddingHorizontal="@dimen/_12sdp"
-                        android:paddingVertical="@dimen/_8sdp"
-                        android:textColor="@color/primary"
-                        android:textColorHint="@color/gray"
-                        android:textSize="@dimen/_12sdp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/edEmail"
-                        tools:ignore="Autofill" />
+                        app:layout_constraintTop_toBottomOf="@id/tilEmail">
 
-                    <EditText
-                        android:id="@+id/edPassword"
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edPhoneNumber"
+                            style="@style/StyledTextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilPassword"
+                        style="@style/StyledTextInputLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_8sdp"
-                        android:background="@drawable/border_corner_primary"
+                        android:layout_marginTop="@dimen/_4sdp"
                         android:hint="@string/password"
-                        android:inputType="textPassword"
-                        android:paddingHorizontal="@dimen/_12sdp"
-                        android:paddingVertical="@dimen/_8sdp"
-                        android:textColor="@color/primary"
-                        android:textColorHint="@color/gray"
-                        android:textSize="@dimen/_12sdp"
+                        app:endIconMode="password_toggle"
+                        app:endIconTint="@color/primary"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/edPhoneNumber"
-                        tools:ignore="Autofill" />
+                        app:layout_constraintTop_toBottomOf="@id/tilPhoneNumber">
 
-                    <EditText
-                        android:id="@+id/edConfirmPassword"
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edPassword"
+                            style="@style/StyledTextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilConfirmPassword"
+                        style="@style/StyledTextInputLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_8sdp"
-                        android:background="@drawable/border_corner_primary"
+                        android:layout_marginTop="@dimen/_4sdp"
                         android:hint="@string/confirm_password"
-                        android:inputType="textPassword"
-                        android:paddingHorizontal="@dimen/_12sdp"
-                        android:paddingVertical="@dimen/_8sdp"
-                        android:textColor="@color/primary"
-                        android:textColorHint="@color/gray"
-                        android:textSize="@dimen/_12sdp"
+                        app:endIconMode="password_toggle"
+                        app:endIconTint="@color/primary"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/edPassword"
-                        tools:ignore="Autofill" />
+                        app:layout_constraintTop_toBottomOf="@id/tilPassword">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edConfirmPassword"
+                            style="@style/StyledTextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
 
                     <TextView
                         android:id="@+id/tvError"
@@ -146,7 +159,7 @@
                         android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/edConfirmPassword" />
+                        app:layout_constraintTop_toBottomOf="@+id/tilConfirmPassword" />
 
                     <TextView
                         android:id="@+id/tvSignUp"
@@ -161,7 +174,7 @@
                         android:textSize="@dimen/_14sdp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/edConfirmPassword" />
+                        app:layout_constraintTop_toBottomOf="@+id/tilConfirmPassword" />
 
                     <TextView
                         android:id="@+id/tvAlreadyHaveAccount"
@@ -211,7 +224,6 @@
                             android:background="@color/darkGray" />
 
                     </LinearLayout>
-
 
                     <LinearLayout
                         android:id="@+id/llConnectApps"

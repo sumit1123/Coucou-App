@@ -38,6 +38,5 @@ class ForgotPasswordActivity :
 
     override fun getViewModelClass(): Class<ForgotPasswordViewModel> {
         return ForgotPasswordViewModel::class.java
-
     }
 }
