@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_30sdp">
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tv_description"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/use_this_fe"
+          style="@style/description_style"
+          android:paddingStart="@dimen/_30sdp"
+          android:paddingEnd="@dimen/_30sdp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/add_group_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_camera_icon"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/constrain_contribution"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:paddingStart="@dimen/_22sdp"-->
+<!--            android:paddingEnd="@dimen/_22sdp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/add_group_image">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/et_group_name"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/_20sdp"-->
+<!--            android:background="@drawable/border_corner"-->
+<!--            android:hint="@string/enter_group_name"-->
+<!--            android:inputType="textEmailAddress"-->
+<!--            android:paddingHorizontal="@dimen/_12sdp"-->
+<!--            android:paddingVertical="@dimen/_8sdp"-->
+<!--            android:textColor="@color/primary"-->
+<!--            android:textColorHint="@color/gray"-->
+<!--            android:textSize="@dimen/_12sdp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            tools:ignore="Autofill" />-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/border_corner"-->
+<!--            android:layout_marginTop="@dimen/_10sdp"-->
+<!--            android:paddingStart="@dimen/_16sdp"-->
+<!--            android:paddingEnd="@dimen/_16sdp"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/et_group_name"-->
+<!--            app:layout_constraintStart_toStartOf="parent">-->
+
+<!--              <androidx.appcompat.widget.AppCompatTextView-->
+<!--                  android:id="@+id/tv_contribution"-->
+<!--                  android:layout_width="wrap_content"-->
+<!--                  android:layout_height="wrap_content"-->
+<!--                  android:text="@string/contributions"-->
+<!--                  style="@style/description_style"-->
+<!--                  app:layout_constraintStart_toStartOf="parent"-->
+<!--                  app:layout_constraintTop_toTopOf="parent"-->
+<!--                  />-->
+
+<!--              <androidx.appcompat.widget.AppCompatTextView-->
+<!--                  android:id="@+id/tv_price"-->
+<!--                  android:layout_width="wrap_content"-->
+<!--                  android:layout_height="wrap_content"-->
+<!--                  android:text="HK$ 0,000.00"-->
+<!--                  android:textColor="@color/black"-->
+<!--                  android:textStyle="bold"-->
+<!--                  android:textSize="@dimen/_22sdp"-->
+<!--                  app:layout_constraintStart_toStartOf="parent"-->
+<!--                  app:layout_constraintTop_toBottomOf="@+id/tv_contribution"-->
+<!--                  />-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/border_corner"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+<!--                android:paddingStart="@dimen/_16sdp"-->
+<!--                android:paddingEnd="@dimen/_16sdp"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/et_group_name"-->
+<!--                app:layout_constraintEnd_toEndOf="parent">-->
+
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                    android:id="@+id/tv_start_date"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/start_date"-->
+<!--                    style="@style/description_style"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    />-->
+
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                    android:id="@+id/tv_date"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="HK$ 0,000.00"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="@dimen/_22sdp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/tv_start_date"-->
+<!--                    />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--        <androidx.appcompat.widget.SwitchCompat-->
+<!--            android:id="@+id/switchs"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/_10sdp"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/constrain_contribution"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            />-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Make public"-->
+<!--            android:layout_marginTop="@dimen/_15sdp"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/switchs"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/constrain_contribution"-->
+<!--            />-->
+
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/sharelink"-->
+<!--            android:layout_marginBottom="@dimen/_30sdp"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/bt_create_group"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            />-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_create_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/create_group_butto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

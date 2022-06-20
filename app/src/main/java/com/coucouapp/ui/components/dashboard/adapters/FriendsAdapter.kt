@@ -1,7 +1,6 @@
 package com.coucouapp.ui.components.dashboard.adapters
 
 import android.view.*
-import android.widget.*
 import androidx.recyclerview.widget.*
 import com.coucouapp.databinding.*
 

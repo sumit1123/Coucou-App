@@ -70,6 +70,15 @@
     <string name="hk_1_500_00">HK$ 1,500.00</string>
     <string name="amount_due">Amount due</string>
     <string name="friends">Friends</string>
+    <string name="my_current_savings_groups">My current savings groups</string>
+    <string name="romanus">Romanus</string>
+    <string name="create_a_new_group">Create a new group</string>
+    <string name="join_a_public_group">Join a public group</string>
+    <string name="view_all">View all</string>
+    <string name="use_this_fe">Use this feature to create your own savings group. You can create your own savings group, add friends and families and engage in a closed rotating savings.</string>
+    <string name="enter_group_name">Enter group name</string>
+    <string name="contributions">Contributions:</string>
+    <string name="start_date">Start date:</string>
 
     <!--ProfileDetailActivity-->
     <string name="first_name">First name</string>
@@ -83,6 +92,19 @@
     <string name="city">City</string>
     <string name="country">Country</string>
     <string name="verify_your_profile">Verify your profile</string>
-
+    <string name="coucou_cash">Coucou Cash</string>
+    <string name="group_name">Group Name</string>
+    <string name="members_00_">00 Members, 00 Months</string>
+    <string name="savings_tar">Savings target: HK$ 10,000.00</string>
+    <string name="this_is_a_p">This is a public savings group available to anyone. To be part of this group you must send a request and the admin will add you based on your trust score</string>
+    <string name="monthly_savings">Monthly savings</string>
+    <string name="status">Status</string>
+    <string name="open">Open</string>
+    <string name="total_savings">Total savings</string>
+    <string name="hk_123_000_00">HK$123,000.00</string>
+    <string name="hk_1_300_00">HK$1,300.00</string>
+    <string name="members">Members</string>
+    <string name="end_date">End date</string>
+    <string name="_12_01_2022">12|01|2022</string>
 
 </resources>

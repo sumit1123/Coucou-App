@@ -29,8 +29,8 @@ abstract class BaseActivity<VM : ViewModel,T : ViewDataBinding> : AppCompatActiv
         viewDataBinding = DataBindingUtil.setContentView(this, getLayout())
         mViewModel = ViewModelProvider(this).get(getViewModelClass())
         viewDataBinding.lifecycleOwner = this
-        window?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
-        window.statusBarColor = Color.TRANSPARENT
+//        window?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
+//        window.statusBarColor = Color.TRANSPARENT
     
     }
 

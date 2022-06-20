@@ -25,4 +25,22 @@
         android:name="com.coucouapp.ui.components.dashboard.fragments.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/publicGroupFragment"
+        android:name="com.coucouapp.ui.components.dashboard.fragments.PublicGroupFragment"
+        android:label="PublicGroupFragment"
+        tools:layout="@layout/fragment_public_group"
+        />
+    <fragment
+        android:id="@+id/createGroupFragment"
+        android:name="com.coucouapp.ui.components.dashboard.fragments.CreateGroupFragment"
+        android:label="CreateGroupFragment"
+        tools:layout="@layout/fragment_create_group"
+        />
+    <fragment
+        android:id="@+id/publiGroupDetailFragment"
+        android:name="com.coucouapp.ui.components.dashboard.fragments.PubliGroupDetailFragment"
+        android:label="PubliGroupDetailFragment"
+        tools:layout="@layout/fragment_group_detail"
+        />
 </navigation>

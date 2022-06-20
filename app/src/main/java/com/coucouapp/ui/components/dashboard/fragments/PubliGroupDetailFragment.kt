@@ -18,12 +18,12 @@ import com.coucouapp.ui.components.dashboard.viewmodel.*
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class SavingGroupFragment : BaseFragment<DashboardViewModel, FragmentSavingGroupBinding>(),
+class PubliGroupDetailFragment : BaseFragment<DashboardViewModel, FragmentGroupDetailBinding>(),
     View.OnClickListener {
     private var param1: String? = null
     private var param2: String? = null
     
-    lateinit var fragmentSavingGroupBinding: FragmentSavingGroupBinding
+    lateinit var fragmentGroupDetailBinding: FragmentGroupDetailBinding
     override fun getLayout(): Int = R.layout.fragment_saving_group
     
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,29 +40,29 @@ class SavingGroupFragment : BaseFragment<DashboardViewModel, FragmentSavingGroup
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        fragmentSavingGroupBinding = FragmentSavingGroupBinding.inflate(inflater, container, false)
-        setRecyclerView()
+        fragmentGroupDetailBinding = FragmentGroupDetailBinding.inflate(inflater, container, false)
+        //setRecyclerView()
         
-        return fragmentSavingGroupBinding.root
+        return fragmentGroupDetailBinding.root
     }
     
-    private fun setRecyclerView() {
-        fragmentSavingGroupBinding.recyclerviewFriends.layoutManager =
-            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        fragmentSavingGroupBinding.recyclerviewFriends.adapter = FriendsAdapter()
-        
-        fragmentSavingGroupBinding.recyclerviewGroupName.layoutManager =
-            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        fragmentSavingGroupBinding.recyclerviewGroupName.adapter = SavingGroupAdapter()
-        
-        fragmentSavingGroupBinding.recyclerviewPublicGroup.layoutManager =
-            LinearLayoutManager(requireContext())
-        fragmentSavingGroupBinding.recyclerviewPublicGroup.adapter = PublicGroupAdapter()
-        
-        fragmentSavingGroupBinding.tvViewAll.setOnClickListener(this)
-        fragmentSavingGroupBinding.imgCreateGroup.setOnClickListener(this)
-        
-    }
+//    private fun setRecyclerView() {
+//        fragmentSavingGroupBinding.recyclerviewFriends.layoutManager =
+//            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+//        fragmentSavingGroupBinding.recyclerviewFriends.adapter = FriendsAdapter()
+//
+//        fragmentSavingGroupBinding.recyclerviewGroupName.layoutManager =
+//            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+//        fragmentSavingGroupBinding.recyclerviewGroupName.adapter = SavingGroupAdapter()
+//
+//        fragmentSavingGroupBinding.recyclerviewPublicGroup.layoutManager =
+//            LinearLayoutManager(requireContext())
+//        fragmentSavingGroupBinding.recyclerviewPublicGroup.adapter = PublicGroupAdapter()
+//
+//        fragmentSavingGroupBinding.tvViewAll.setOnClickListener(this)
+//        fragmentSavingGroupBinding.imgCreateGroup.setOnClickListener(this)
+//
+//    }
     
     
     companion object {

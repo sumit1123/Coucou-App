@@ -16,12 +16,11 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/build_your_"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:text="@string/easily_get_"
             android:textAppearance="@style/build_your_"
-            android:layout_marginBottom="@dimen/_60sdp"
+            android:layout_marginBottom="@dimen/_52sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             />

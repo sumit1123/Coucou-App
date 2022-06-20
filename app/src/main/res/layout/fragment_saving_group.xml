@@ -6,6 +6,13 @@
 
     </data>
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -13,21 +20,25 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_200sdp"
+        android:layout_height="@dimen/_170sdp"
         android:background="@color/primary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
        <TextView
            android:id="@+id/tv_saving"
-           android:layout_width="wrap_content"
+           android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:textColor="@color/white"
            android:gravity="center_horizontal"
+           android:layout_marginStart="@dimen/_45sdp"
+           android:layout_marginEnd="@dimen/_45sdp"
+           android:layout_marginTop="@dimen/_20sdp"
+           android:textSize="6pt"
            android:text="@string/these_are_all_the_savings_groups_available_to_you_as_well_as_those_you_are_part_of"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
            />
 
 
@@ -38,7 +49,7 @@
             android:textColor="@color/white"
             android:gravity="center_horizontal"
             android:text="@string/next_payment"
-            android:textSize="@dimen/_18sdp"
+            android:textSize="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_20sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +63,7 @@
             android:textColor="@color/white"
             android:gravity="center_horizontal"
             android:text="@string/hk_1_500_00"
-            android:textSize="@dimen/_40sdp"
+            android:textSize="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_20sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +76,7 @@
             android:textColor="@color/white"
             android:gravity="center_horizontal"
             android:text="@string/amount_due"
-            android:textSize="@dimen/_14sdp"
+            android:textSize="@dimen/_12sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_price"
@@ -73,11 +84,13 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+
      <androidx.constraintlayout.widget.ConstraintLayout
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:layout_marginStart="@dimen/_18sdp"
-         android:layout_marginTop="@dimen/_31sdp"
+         android:layout_marginTop="@dimen/_10sdp"
          app:layout_constraintTop_toBottomOf="@+id/header"
          app:layout_constraintStart_toStartOf="parent">
 
@@ -85,8 +98,9 @@
             android:id="@+id/tv_friends"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/textcolor"
+            android:textColor="@color/darkGray"
             android:gravity="center_horizontal"
+            android:textStyle="bold"
             android:text="@string/friends"
             android:textSize="@dimen/_14sdp"
             app:layout_constraintStart_toStartOf="parent"
@@ -107,15 +121,94 @@
              android:id="@+id/recyclerview_friends"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/_12sdp"
              android:layout_marginStart="@dimen/_4sdp"
              app:layout_constraintStart_toEndOf="@+id/img_adding_stuff"
              app:layout_constraintTop_toBottomOf="@+id/tv_friends"/>
 
+         <TextView
+             android:id="@+id/current_saving_group"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="@color/darkGray"
+             android:gravity="center_horizontal"
+             android:textStyle="bold"
+             android:layout_marginTop="@dimen/_24sdp"
+             android:text="@string/my_current_savings_groups"
+             android:textSize="@dimen/_14sdp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/recyclerview_friends"
+             />
+
+         <ImageView
+             android:id="@+id/img_create_group"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/create_group"
+             android:layout_marginTop="@dimen/_12sdp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/current_saving_group"
+             />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="@color/gray"
+             android:gravity="center_horizontal"
+             android:text="@string/create_a_new_group"
+             android:textSize="@dimen/_10sdp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/img_create_group"
+             />
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/recyclerview_group_name"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/_12sdp"
+             android:layout_marginStart="@dimen/_4sdp"
+             app:layout_constraintStart_toEndOf="@+id/img_create_group"
+             app:layout_constraintTop_toBottomOf="@+id/current_saving_group"/>
+
+         <TextView
+             android:id="@+id/tv_join_public_group"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="@color/black"
+             android:textStyle="bold"
+             android:gravity="center_horizontal"
+             android:text="@string/join_a_public_group"
+             android:textSize="@dimen/_10sdp"
+             android:layout_marginTop="@dimen/_24sdp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/recyclerview_group_name"
+             />
+
+         <TextView
+             android:id="@+id/tv_view_all"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="@color/black"
+             android:textStyle="bold"
+             android:gravity="center_horizontal"
+             android:text="@string/view_all"
+             android:layout_marginTop="@dimen/_24sdp"
+             android:textSize="@dimen/_10sdp"
+             android:layout_marginEnd="@dimen/_26sdp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/recyclerview_group_name"
+             />
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/recyclerview_public_group"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/_12sdp"
+             android:layout_marginEnd="@dimen/_13sdp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/tv_join_public_group"/>
 
      </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+    </androidx.core.widget.NestedScrollView>
 </layout>

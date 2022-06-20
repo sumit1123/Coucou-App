@@ -21,7 +21,7 @@
             android:layout_alignParentTop="true"
             android:text="@string/build_your_"
             android:textAppearance="@style/build_your_"
-            android:layout_marginBottom="@dimen/_60sdp"
+            android:layout_marginBottom="@dimen/_52sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             />

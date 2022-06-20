@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_13sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/this_is_a_p"
+            style="@style/description_style"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/members"
+            style="@style/description_style"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/constraint_saving"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="@dimen/_15sdp"
+           android:paddingTop="@dimen/_5sdp"
+           android:paddingStart="@dimen/_16sdp"
+           android:paddingEnd="@dimen/_23sdp"
+           app:layout_constraintWidth_percent="0.50"
+           android:paddingBottom="@dimen/_15sdp"
+           app:layout_constraintTop_toBottomOf="@+id/tv_member"
+           app:layout_constraintStart_toStartOf="parent"
+           android:background="@drawable/group_background">
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/tv_monthly_saving"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/monthly_savings"
+               style="@style/description_style"
+               android:layout_marginTop="@dimen/_15sdp"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintStart_toStartOf="parent"/>
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/tv_monthly_saving_amount"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/hk_1_300_00"
+               style="@style/description_style"
+               android:textSize="@dimen/_15sdp"
+               android:layout_marginTop="@dimen/_4sdp"
+               app:layout_constraintTop_toBottomOf="@+id/tv_monthly_saving"
+               app:layout_constraintStart_toStartOf="parent"/>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_23sdp"
+            app:layout_constraintWidth_percent="0.50"
+            android:paddingBottom="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_member"
+            app:layout_constraintStart_toEndOf="@+id/constraint_saving"
+            android:background="@drawable/group_background">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status"
+                style="@style/description_style"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_status_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open"
+                android:textColor="@color/silverTree"
+                style="@style/description_style"
+                android:textSize="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_status"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_total_saving"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp"
+            app:layout_constraintWidth_percent="0.50"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_23sdp"
+            android:paddingBottom="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_saving"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/group_background">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_total_saving"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_savings"
+                style="@style/description_style"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_total_saving_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hk_123_000_00"
+                style="@style/description_style"
+                android:textSize="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_saving"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:paddingStart="@dimen/_16sdp"
+            app:layout_constraintWidth_percent="0.50"
+            android:paddingEnd="@dimen/_23sdp"
+            android:paddingBottom="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_saving"
+            app:layout_constraintStart_toEndOf="@+id/constraint_total_saving"
+            android:background="@drawable/group_background">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_members"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/members"
+                style="@style/description_style"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_member_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25"
+                style="@style/description_style"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_4sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_members"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_start_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp"
+            app:layout_constraintWidth_percent="0.50"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_23sdp"
+            android:paddingBottom="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_total_saving"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/group_background">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start_date"
+                style="@style/description_style"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_start_date_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_12_01_2022"
+                style="@style/description_style"
+                android:textSize="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_start_date"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_end_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp"
+            app:layout_constraintWidth_percent="0.50"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_23sdp"
+            android:paddingBottom="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_total_saving"
+            app:layout_constraintStart_toEndOf="@+id/constraint_start_date"
+            android:background="@drawable/group_background">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/end_date"
+                style="@style/description_style"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_end_date_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_12_01_2022"
+                style="@style/description_style"
+                android:textSize="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_end_date"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/img_share_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sharelink"
+            android:layout_marginTop="@dimen/_24sdp"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_end_date"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/request_join"
+            android:layout_marginTop="@dimen/_24sdp"
+            app:layout_constraintTop_toBottomOf="@+id/img_share_link"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
