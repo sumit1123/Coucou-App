@@ -8,7 +8,9 @@ import androidx.navigation.fragment.*
 import com.coucouapp.R
 import com.coucouapp.databinding.FragmentHomeBinding
 import com.coucouapp.ui.base.BaseFragment
+import com.coucouapp.ui.components.dashboard.*
 import com.coucouapp.ui.components.dashboard.viewmodel.DashboardViewModel
+import kotlinx.android.synthetic.main.toolbar_dashboard.view.*
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -39,6 +41,7 @@ class HomeFragment : BaseFragment<DashboardViewModel, FragmentHomeBinding>(), Vi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         homeBinding.imgMarketPlace.setOnClickListener(this)
+        homeBinding.imgSavingGroup.setOnClickListener(this)
     }
     
     companion object {
@@ -68,7 +71,7 @@ class HomeFragment : BaseFragment<DashboardViewModel, FragmentHomeBinding>(), Vi
             }
             
             R.id.img_saving_group -> {
-            
+                findNavController().navigate(R.id.fragment_saving_group)
             }
         }
     }

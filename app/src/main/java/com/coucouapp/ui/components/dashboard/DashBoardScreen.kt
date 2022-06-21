@@ -1,13 +1,14 @@
 package com.coucouapp.ui.components.dashboard
 
 import android.os.*
+import android.view.*
 import androidx.navigation.*
 import androidx.navigation.ui.*
-import com.coucouapp.*
 import com.coucouapp.R
 import com.coucouapp.databinding.*
 import com.coucouapp.ui.base.*
 import com.coucouapp.ui.components.dashboard.viewmodel.*
+import kotlinx.android.synthetic.main.toolbar_dashboard.view.*
 
 
 class DashBoardScreen : BaseActivity<DashboardViewModel,ActivityDashboardScreenBinding>() {

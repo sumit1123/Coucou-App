@@ -12,8 +12,10 @@ import com.coucouapp.*
 import com.coucouapp.R
 import com.coucouapp.databinding.*
 import com.coucouapp.ui.base.*
+import com.coucouapp.ui.components.dashboard.*
 import com.coucouapp.ui.components.dashboard.adapters.*
 import com.coucouapp.ui.components.dashboard.viewmodel.*
+import kotlinx.android.synthetic.main.toolbar_dashboard.view.*
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -41,9 +43,13 @@ class SavingGroupFragment : BaseFragment<DashboardViewModel, FragmentSavingGroup
         savedInstanceState: Bundle?
     ): View {
         fragmentSavingGroupBinding = FragmentSavingGroupBinding.inflate(inflater, container, false)
-        setRecyclerView()
-        
         return fragmentSavingGroupBinding.root
+    }
+    
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        (requireActivity() as DashBoardScreen).viewDataBinding.toolbar.constraintToolbar.tvToolbarTitle.text = getString(R.string.your_saving_group)
+        setRecyclerView()
     }
     
     private fun setRecyclerView() {
