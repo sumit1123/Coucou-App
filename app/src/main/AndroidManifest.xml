@@ -42,6 +42,8 @@
         <activity
             android:name=".ui.components.WelcomeActivity"
             android:exported="false" />
+        <activity android:name=".ui.components.CreateGroupVerificationActivity"/>
+
         <activity
             android:name=".ui.components.SplashActivity"
             android:exported="true">

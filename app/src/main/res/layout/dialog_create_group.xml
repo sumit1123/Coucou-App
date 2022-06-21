@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_15sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_27sdp"
+        android:paddingEnd="@dimen/_31sdp"
+        android:layout_marginBottom="@dimen/_31sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_create_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:text="@string/create_a_new_group"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/you_are_about_to_create_a_new_savings_group_you_u00e2_u0080_u0099ve_currently_added_0_members_to_this_group"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_create_group" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_yes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintWidth_percent="0.50"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:background="@drawable/bg_corner_primary"
+            android:text="@string/yes"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintWidth_percent="0.45"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:background="@drawable/bg_corner_secondary"
+            android:text="@string/cancel"
+            android:textColor="@color/primary"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

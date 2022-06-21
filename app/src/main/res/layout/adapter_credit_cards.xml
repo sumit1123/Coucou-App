@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/border_corner">
+
+            <ImageView
+                android:id="@+id/img_credit_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_creadit_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_minumum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/min_annual_income"
+                android:textColor="@color/darkGray"
+                style="@style/title_style"
+                android:layout_marginStart="@dimen/_6sdp"
+                app:layout_constraintStart_toEndOf="@+id/img_credit_card"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 120,000"
+                style="@style/description_style"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textColor="@color/primary"
+                app:layout_constraintStart_toEndOf="@+id/img_credit_card"
+                app:layout_constraintTop_toBottomOf="@+id/tv_minumum" />
+
+            <TextView
+                android:id="@+id/tv_apr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apr"
+                style="@style/title_style"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:textColor="@color/darkGray"
+                app:layout_constraintStart_toEndOf="@+id/tv_minumum"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24%"
+                style="@style/description_style"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:textColor="@color/darkGray"
+                app:layout_constraintStart_toEndOf="@+id/tv_price"
+                app:layout_constraintTop_toBottomOf="@+id/tv_apr" />
+
+            <TextView
+                android:id="@+id/tv_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/review"
+                style="@style/title_style"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:textColor="@color/darkGray"
+                app:layout_constraintStart_toEndOf="@+id/tv_apr"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RatingBar
+                android:id="@+id/simpleRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_20sdp"
+                android:theme="@style/RatingBar"
+                android:rating="5"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                style="?android:attr/ratingBarStyleSmall"
+                app:layout_constraintTop_toBottomOf="@+id/tv_review"
+                app:layout_constraintStart_toEndOf="@+id/tv_percentage"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_yes"
+                android:layout_width="@dimen/_43sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:background="@drawable/bg_corner_primary"
+                android:text="@string/apply"
+                android:textSize="5pt"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

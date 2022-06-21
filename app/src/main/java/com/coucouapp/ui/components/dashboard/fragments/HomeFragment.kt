@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.*
 import com.coucouapp.R
 import com.coucouapp.databinding.FragmentHomeBinding
 import com.coucouapp.ui.base.BaseFragment
@@ -12,7 +13,7 @@ import com.coucouapp.ui.components.dashboard.viewmodel.DashboardViewModel
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class HomeFragment : BaseFragment<DashboardViewModel, FragmentHomeBinding>() {
+class HomeFragment : BaseFragment<DashboardViewModel, FragmentHomeBinding>(), View.OnClickListener {
     private var param1: String? = null
     private var param2: String? = null
     lateinit var homeBinding: FragmentHomeBinding
@@ -35,6 +36,11 @@ class HomeFragment : BaseFragment<DashboardViewModel, FragmentHomeBinding>() {
         return homeBinding.root
     }
     
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        homeBinding.imgMarketPlace.setOnClickListener(this)
+    }
+    
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
@@ -49,6 +55,22 @@ class HomeFragment : BaseFragment<DashboardViewModel, FragmentHomeBinding>() {
     
     override fun getViewModelClass(): Class<DashboardViewModel> {
         return DashboardViewModel::class.java
+    }
+    
+    override fun onClick(v: View?) {
+        when (v!!.id) {
+            R.id.img_market_place -> {
+                findNavController().navigate(R.id.marketPlaceFragment)
+            }
+            
+            R.id.img_manage_credit -> {
+            
+            }
+            
+            R.id.img_saving_group -> {
+            
+            }
+        }
     }
     
 }

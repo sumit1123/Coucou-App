@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/bg_loan_product">
+
+            <ImageView
+                android:id="@+id/img_city_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/city_bank"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_auto_loan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/auto_loan"
+                android:textColor="@color/primary"
+                style="@style/description_style"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_city_bank"/>
+
+            <TextView
+                android:id="@+id/tv_citybank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/citibank"
+                android:textColor="@color/darkGray"
+                style="@style/description_style"
+                android:layout_marginStart="@dimen/_6sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_auto_loan"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_24_months"
+                android:textColor="@color/darkGray"
+                style="@style/title_style"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:layout_marginStart="@dimen/_22sdp"
+                app:layout_constraintStart_toEndOf="@+id/tv_auto_loan"
+                app:layout_constraintTop_toBottomOf="@+id/img_city_bank"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

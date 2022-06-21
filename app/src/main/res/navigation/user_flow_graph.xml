@@ -43,4 +43,10 @@
         android:label="PubliGroupDetailFragment"
         tools:layout="@layout/fragment_group_detail"
         />
+    <fragment
+        android:id="@+id/marketPlaceFragment"
+        android:name="com.coucouapp.ui.components.dashboard.fragments.MarketPlaceFragment"
+        android:label="MarketPlaceFragment"
+        tools:layout="@layout/fragment_market_place"
+        />
 </navigation>

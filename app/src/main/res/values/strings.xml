@@ -41,10 +41,11 @@
     <string name="_continue">Continue</string>
 
     <!--UserVerifiedActivity-->
-    <string name="user_verified">User Verified</string>
+    <string name="user_verified">You have created\na new group</string>
     <string name="user_verified_details">User has now been verified. You can use the application now.</string>
     <string name="password_changed_successfully">Password Changed Successfully</string>
     <string name="password_changed_successfully_details">Your password has been changed. Navigate to profile to make another corrections</string>
+
 
     <!--LoginActivity-->
     <string name="login">Login</string>
@@ -72,7 +73,6 @@
     <string name="friends">Friends</string>
     <string name="my_current_savings_groups">My current savings groups</string>
     <string name="romanus">Romanus</string>
-    <string name="create_a_new_group">Create a new group</string>
     <string name="join_a_public_group">Join a public group</string>
     <string name="view_all">View all</string>
     <string name="use_this_fe">Use this feature to create your own savings group. You can create your own savings group, add friends and families and engage in a closed rotating savings.</string>
@@ -106,5 +106,29 @@
     <string name="members">Members</string>
     <string name="end_date">End date</string>
     <string name="_12_01_2022">12|01|2022</string>
+    <string name="make_public">Make public</string>
+    <string name="add_members">add members</string>
+    <string name="number_of_members_allowed">Number of members allowed</string>
+    <string name="create_a_new_group">Create a new group</string>
+    <string name="you_are_about_to_create_a_new_savings_group_you_u00e2_u0080_u0099ve_currently_added_0_members_to_this_group">You are about to create a new savings group. You have currently added 0 members to this group.</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="create_group">You have created a new group</string>
+    <string name="create_group_description">Your new group has been created successfully. You can keep adding mroe members.</string>
+    <string name="credit_cards">Credit Cards</string>
+    <string name="most_popular_cards">Most popular cards</string>
+    <string name="min_annual_income">Min annual income</string>
+    <string name="apr">APR</string>
+    <string name="review">Review</string>
+    <string name="apply">Apply</string>
+    <string name="investments">Investments</string>
+    <string name="most_popular_investments">Most popular investments</string>
+    <string name="loan_products">Loan products</string>
+    <string name="most_popular_loan_products">Most popular loan products</string>
+    <string name="auto_loan">Auto Loan</string>
+    <string name="citibank">Citibank</string>
+    <string name="_24_months">24 Months</string>
+    <string name="stock_trading">Stock trading</string>
+    <string name="stock_accounts_to_trade_hk_and_us_stocks_available_in_the_app">Stock accounts to trade HK and US stocks available in the app</string>
 
 </resources>

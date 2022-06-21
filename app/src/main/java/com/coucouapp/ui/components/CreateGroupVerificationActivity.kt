@@ -9,9 +9,9 @@ import com.coucouapp.utils.Constants
 import com.coucouapp.viewmodel.UserVerifiedViewModel
 import kotlinx.android.synthetic.main.activity_user_verified.*
 
-class UserVerifiedActivity : BaseActivity<UserVerifiedViewModel, ActivityUserVerifiedBinding>() {
+class CreateGroupVerificationActivity : BaseActivity<UserVerifiedViewModel, ActivityUserVerifiedBinding>() {
 
-    private val TAG = UserVerifiedActivity::class.simpleName
+    private val TAG = CreateGroupVerificationActivity::class.simpleName
     private var userVerification = ""
 
     override fun getLayout(): Int = R.layout.activity_user_verified
@@ -24,15 +24,7 @@ class UserVerifiedActivity : BaseActivity<UserVerifiedViewModel, ActivityUserVer
 
     private fun initViews() {
         userVerification = intent.getStringExtra(Constants.USER_VERIFICATION).toString()
-        if (userVerification == Constants.FROM_OTP_VERIFICATION) {
-            setData(getString(R.string.user_verified), getString(R.string.user_verified_details))
-        } else if (userVerification == Constants.FROM_RESET_PASSWORD) {
-            setData(
-                getString(R.string.password_changed_successfully),
-                getString(R.string.password_changed_successfully_details)
-            )
-        }
-        Log.e(TAG, userVerification)
+        setData(getString(R.string.create_group), getString(R.string.create_group_description))
     }
 
     private fun setData(text: String, details: String) {
