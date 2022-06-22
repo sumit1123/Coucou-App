@@ -14,7 +14,25 @@
         android:id="@+id/fragment_profile"
         android:name="com.coucouapp.ui.components.dashboard.fragments.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_fragment_profile_to_fragment_profile_verification"
+            app:destination="@id/fragment_profile_verification" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_profile_verification"
+        android:name="com.coucouapp.ui.components.fragments.ProfileVerificationFragment"
+        android:label="fragment_profile_verification"
+        tools:layout="@layout/fragment_address_verification">
+        <action
+            android:id="@+id/action_fragment_profile_verification_to_fragment_address_verification"
+            app:destination="@id/fragment_address_verification" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_address_verification"
+        android:name="com.coucouapp.ui.components.fragments.AddressVerificationFragment"
+        android:label="fragment_address_verification"
+        tools:layout="@layout/fragment_address_verification" />
     <fragment
         android:id="@+id/fragment_saving_group"
         android:name="com.coucouapp.ui.components.dashboard.fragments.SavingGroupFragment"
@@ -29,24 +47,20 @@
         android:id="@+id/publicGroupFragment"
         android:name="com.coucouapp.ui.components.dashboard.fragments.PublicGroupFragment"
         android:label="PublicGroupFragment"
-        tools:layout="@layout/fragment_public_group"
-        />
+        tools:layout="@layout/fragment_public_group" />
     <fragment
         android:id="@+id/createGroupFragment"
         android:name="com.coucouapp.ui.components.dashboard.fragments.CreateGroupFragment"
         android:label="CreateGroupFragment"
-        tools:layout="@layout/fragment_create_group"
-        />
+        tools:layout="@layout/fragment_create_group" />
     <fragment
         android:id="@+id/publiGroupDetailFragment"
         android:name="com.coucouapp.ui.components.dashboard.fragments.PubliGroupDetailFragment"
         android:label="PubliGroupDetailFragment"
-        tools:layout="@layout/fragment_group_detail"
-        />
+        tools:layout="@layout/fragment_group_detail" />
     <fragment
         android:id="@+id/marketPlaceFragment"
         android:name="com.coucouapp.ui.components.dashboard.fragments.MarketPlaceFragment"
         android:label="MarketPlaceFragment"
-        tools:layout="@layout/fragment_market_place"
-        />
+        tools:layout="@layout/fragment_market_place" />
 </navigation>

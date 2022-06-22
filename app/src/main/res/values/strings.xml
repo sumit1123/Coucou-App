@@ -80,7 +80,7 @@
     <string name="contributions">Contributions:</string>
     <string name="start_date">Start date:</string>
 
-    <!--ProfileDetailActivity-->
+    <!--ProfileFragment-->
     <string name="first_name">First name</string>
     <string name="last_name">Last name</string>
     <string name="birthday">Birthday</string>
@@ -131,5 +131,22 @@
     <string name="stock_trading">Stock trading</string>
     <string name="stock_accounts_to_trade_hk_and_us_stocks_available_in_the_app">Stock accounts to trade HK and US stocks available in the app</string>
     <string name="your_saving_group">Your Savings Groups</string>
+
+    <!--ProfileVerificationFragment-->
+    <string name="profile_verification_detail">We are required by law to identify your identity before you can use this app efficiently</string>
+    <string name="done">Done</string>
+    <string name="facial_verification">Facial verification</string>
+    <string name="address_verification">Address verification</string>
+    <string name="id_verification">ID verification</string>
+
+    <!--AddressVerificationFragment-->
+    <string name="address_verification_detail">Verifying your residential address is required to access the full functionality of the app. Use any of these options to verify you residentional address.</string>
+    <string name="upload_your_document">Upload your document</string>
+    <string name="upload_a_bank_statement_or_a_rental_document">Upload a bank statement or a rental document</string>
+    <string name="scan_your_residential_document">Scan your residential document</string>
+    <string name="scan_the_physical_document_directly_into_the_app">Scan the physical document directly into the app</string>
+    <string name="pin_your_location_on_the_map">Pin your location on the map</string>
+    <string name="identify_your_residential_address_on_the_map">Identify your residential address on the map</string>
+
 
 </resources>

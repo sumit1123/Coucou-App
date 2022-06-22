@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.coucouapp.viewmodel.AddressVerificationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.components.fragments.AddressVerificationFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_16sdp">
+
+                <TextView
+                    android:id="@+id/tvAddressVerificationDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:gravity="start"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:text="@string/address_verification_detail"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/bg_corner_azure_gray"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:paddingVertical="@dimen/_20sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAddressVerificationDetail">
+
+                    <ImageView
+                        android:id="@+id/ivUploadFile"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:src="@drawable/ic_upload_file"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/darkGray"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tvUploadDocument"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:text="@string/upload_your_document"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/ivUploadFile"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvUploadBankStatementOrRentalDocument"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:text="@string/upload_a_bank_statement_or_a_rental_document"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_9sdp"
+                        app:layout_constraintStart_toEndOf="@id/ivUploadFile"
+                        app:layout_constraintTop_toBottomOf="@id/tvUploadDocument" />
+
+                    <ProgressBar
+                        android:id="@+id/pbUploadDocument"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/viewUploadDocument"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginVertical="@dimen/_28sdp"
+                        android:background="@color/gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ivUploadFile" />
+
+                    <ImageView
+                        android:id="@+id/ivScanResidentialDocument"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:src="@drawable/ic_document_scanner"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewUploadDocument"
+                        app:tint="@color/darkGray"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tvScanResidentialDocument"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="@string/scan_your_residential_document"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/ivScanResidentialDocument"
+                        app:layout_constraintTop_toBottomOf="@id/viewUploadDocument" />
+
+                    <TextView
+                        android:id="@+id/tvScanPhysicalDocument"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:text="@string/scan_the_physical_document_directly_into_the_app"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_9sdp"
+                        app:layout_constraintStart_toEndOf="@id/ivScanResidentialDocument"
+                        app:layout_constraintTop_toBottomOf="@id/tvScanResidentialDocument" />
+
+                    <ProgressBar
+                        android:id="@+id/pbScanResidentialDocument"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewUploadDocument" />
+
+                    <View
+                        android:id="@+id/viewScanResidentialDocument"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginVertical="@dimen/_28sdp"
+                        android:background="@color/gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ivScanResidentialDocument" />
+
+                    <ImageView
+                        android:id="@+id/ivPinLocation"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:src="@drawable/ic_home_pin"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewScanResidentialDocument"
+                        app:tint="@color/darkGray"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tvPinLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="@string/pin_your_location_on_the_map"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/ivPinLocation"
+                        app:layout_constraintTop_toBottomOf="@id/viewScanResidentialDocument" />
+
+                    <TextView
+                        android:id="@+id/tvIdentifyAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:text="@string/identify_your_residential_address_on_the_map"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_9sdp"
+                        app:layout_constraintStart_toEndOf="@id/ivPinLocation"
+                        app:layout_constraintTop_toBottomOf="@id/tvPinLocation" />
+
+                    <ProgressBar
+                        android:id="@+id/pbPinLocation"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewScanResidentialDocument" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tvDone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_corner_primary"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/_8sdp"
+                    android:text="@string/done"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

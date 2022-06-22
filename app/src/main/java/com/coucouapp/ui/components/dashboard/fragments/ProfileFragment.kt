@@ -1,14 +1,13 @@
 package com.coucouapp.ui.components.dashboard.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.coucouapp.R
 import com.coucouapp.databinding.FragmentProfileBinding
 import com.coucouapp.ui.base.BaseFragment
-import com.coucouapp.ui.components.ProfileVerificationActivity
 import com.coucouapp.viewmodel.ProfileDetailViewModel
 import kotlinx.android.synthetic.main.fragment_profile.*
 
@@ -21,7 +20,7 @@ class ProfileFragment : BaseFragment<ProfileDetailViewModel, FragmentProfileBind
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View{
+    ): View {
         fragmentProfileBinding = FragmentProfileBinding.inflate(inflater, container, false)
         return fragmentProfileBinding.root
     }
@@ -33,8 +32,9 @@ class ProfileFragment : BaseFragment<ProfileDetailViewModel, FragmentProfileBind
 
     private fun initViews() {
         tvVerifyYourProfile.setOnClickListener {
-            val intent = Intent(requireActivity(), ProfileVerificationActivity::class.java)
-            startActivity(intent)
+            findNavController().navigate(
+                ProfileFragmentDirections.actionFragmentProfileToFragmentProfileVerification()
+            )
         }
     }
 
