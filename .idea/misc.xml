@@ -8,6 +8,8 @@
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/drawable/bg_corner_primary.xml" value="0.2169230769230769" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/drawable/bg_corner_secondary.xml" value="0.2169230769230769" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/drawable/bg_corner_white_smoke.xml" value="0.2169230769230769" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/drawable/bg_loan_product.xml" value="0.2169230769230769" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/drawable/border_corner.xml" value="0.2169230769230769" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/drawable/border_corner_primary.xml" value="0.2169230769230769" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/drawable/bottom_selector.xml" value="0.1125" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/drawable/dashboard_rectangle.xml" value="0.2169230769230769" />
@@ -18,7 +20,7 @@
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/drawable/ic_upload_file.xml" value="0.2169230769230769" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/drawable/skip_button.xml" value="0.1125" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/activity_create_account.xml" value="0.22" />
-        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/activity_dashboard_screen.xml" value="0.1" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/activity_dashboard_screen.xml" value="0.15" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/activity_forgot.xml" value="0.19010416666666666" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/activity_forgot_password.xml" value="0.20416666666666666" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/activity_introduction.xml" value="0.20416666666666666" />
@@ -32,14 +34,29 @@
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/activity_user_verified.xml" value="0.20416666666666666" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/activity_welcome.xml" value="0.18" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/adapter_credit_cards.xml" value="0.1" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/adapter_friends.xml" value="0.20416666666666666" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/adapter_investement.xml" value="0.20416666666666666" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/adapter_loan_product.xml" value="0.20416666666666666" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/adapter_public_group.xml" value="0.35555555555555557" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/adapter_saving_group.xml" value="0.20416666666666666" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/dialog_create_group.xml" value="0.20416666666666666" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/fragment_address_verification.xml" value="0.22" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/fragment_create_group.xml" value="0.1" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/fragment_group_detail.xml" value="0.20416666666666666" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/fragment_market_place.xml" value="0.1" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/fragment_profile_verification.xml" value="0.20416666666666666" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/fragment_public_group.xml" value="0.1" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/fragment_saving_group.xml" value="0.20416666666666666" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/fragment_setting.xml" value="0.20416666666666666" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/intro_screen_one.xml" value="0.20416666666666666" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/intro_screen_three.xml" value="0.1" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/intro_screen_two.xml" value="0.20416666666666666" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/toolbar.xml" value="0.20416666666666666" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/toolbar_dashboard.xml" value="0.20416666666666666" />
+        <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/menu/home_menu.xml" value="0.17777777777777778" />
         <entry key="app/src/main/res/drawable/ic_appicon.xml" value="0.1445" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15729166666666666" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.16" />

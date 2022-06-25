@@ -9,23 +9,22 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/intro_two"
         android:paddingStart="@dimen/_22sdp"
         android:paddingEnd="@dimen/_22sdp"
-        android:paddingBottom="@dimen/_44sdp"
-        android:background="@drawable/intro_two">
+        android:paddingBottom="@dimen/_44sdp">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/build_your_"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/_52sdp"
             android:text="@string/enjoy_peer_"
             android:textAppearance="@style/build_your_"
-            android:layout_marginBottom="@dimen/_52sdp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

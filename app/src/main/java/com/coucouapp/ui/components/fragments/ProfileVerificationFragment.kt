@@ -8,6 +8,7 @@ import androidx.navigation.fragment.findNavController
 import com.coucouapp.R
 import com.coucouapp.databinding.FragmentProfileVerificationBinding
 import com.coucouapp.ui.base.BaseFragment
+import com.coucouapp.ui.components.dashboard.DashBoardScreen
 import com.coucouapp.viewmodel.ProfileVerificationViewModel
 import kotlinx.android.synthetic.main.fragment_profile_verification.*
 
@@ -28,6 +29,22 @@ class ProfileVerificationFragment : BaseFragment<ProfileVerificationViewModel, F
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        setToolbar()
+    }
+
+    private fun setToolbar() {
+        (activity as DashBoardScreen).setToolbarBackImage(View.VISIBLE, R.color.primary)
+        (activity as DashBoardScreen).setToolbarTitle(
+            View.VISIBLE,
+            R.color.darkGray,
+            getString(R.string.verification)
+        )
+        (activity as DashBoardScreen).setToolbarBackground(R.color.market_gray)
+        (activity as DashBoardScreen).setToolbarNotificationIcon(R.color.darkGray, View.VISIBLE)
     }
 
     private fun initViews() {

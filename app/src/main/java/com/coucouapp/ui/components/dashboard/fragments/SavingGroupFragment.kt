@@ -1,21 +1,19 @@
 package com.coucouapp.ui.components.dashboard.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
-import androidx.navigation.fragment.*
-import androidx.recyclerview.widget.*
-import com.coucouapp.*
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.coucouapp.R
-import com.coucouapp.databinding.*
-import com.coucouapp.ui.base.*
-import com.coucouapp.ui.components.dashboard.*
-import com.coucouapp.ui.components.dashboard.adapters.*
-import com.coucouapp.ui.components.dashboard.viewmodel.*
-import kotlinx.android.synthetic.main.toolbar_dashboard.view.*
+import com.coucouapp.databinding.FragmentSavingGroupBinding
+import com.coucouapp.ui.base.BaseFragment
+import com.coucouapp.ui.components.dashboard.DashBoardScreen
+import com.coucouapp.ui.components.dashboard.adapters.FriendsAdapter
+import com.coucouapp.ui.components.dashboard.adapters.PublicGroupAdapter
+import com.coucouapp.ui.components.dashboard.adapters.SavingGroupAdapter
+import com.coucouapp.ui.components.dashboard.viewmodel.DashboardViewModel
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -34,7 +32,6 @@ class SavingGroupFragment : BaseFragment<DashboardViewModel, FragmentSavingGroup
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-        
     }
     
     
@@ -48,8 +45,19 @@ class SavingGroupFragment : BaseFragment<DashboardViewModel, FragmentSavingGroup
     
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        (requireActivity() as DashBoardScreen).viewDataBinding.toolbar.constraintToolbar.tvToolbarTitle.text = getString(R.string.your_saving_group)
         setRecyclerView()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        setToolbar()
+    }
+
+    private fun setToolbar() {
+        (activity as DashBoardScreen).setToolbarBackImage(View.VISIBLE, R.color.white)
+        (activity as DashBoardScreen).setToolbarTitle(View.VISIBLE, R.color.white, getString(R.string.your_savings_groups))
+        (activity as DashBoardScreen).setToolbarBackground(R.color.primary)
+        (activity as DashBoardScreen).setToolbarNotificationIcon(R.color.white, View.VISIBLE)
     }
     
     private fun setRecyclerView() {

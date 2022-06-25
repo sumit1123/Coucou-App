@@ -1,17 +1,21 @@
 package com.coucouapp.ui.components.dashboard.fragments
 
-import android.app.*
-import android.content.*
-import android.graphics.*
-import android.graphics.drawable.*
-import android.os.*
-import android.view.*
-import androidx.databinding.*
-import com.coucouapp.*
-import com.coucouapp.databinding.*
-import com.coucouapp.ui.base.*
-import com.coucouapp.ui.components.*
-import com.coucouapp.ui.components.dashboard.viewmodel.*
+import android.app.Dialog
+import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import com.coucouapp.R
+import com.coucouapp.databinding.DialogCreateGroupBinding
+import com.coucouapp.databinding.FragmentCreateGroupBinding
+import com.coucouapp.ui.base.BaseFragment
+import com.coucouapp.ui.components.CreateGroupVerificationActivity
+import com.coucouapp.ui.components.dashboard.DashBoardScreen
+import com.coucouapp.ui.components.dashboard.viewmodel.DashboardViewModel
 
 
 private const val ARG_PARAM1 = "param1"
@@ -22,9 +26,9 @@ class CreateGroupFragment : BaseFragment<DashboardViewModel, FragmentCreateGroup
     private var param1: String? = null
     private var param2: String? = null
     lateinit var createGroupBinding: FragmentCreateGroupBinding
-    
+
     override fun getLayout(): Int = R.layout.fragment_create_group
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -32,7 +36,7 @@ class CreateGroupFragment : BaseFragment<DashboardViewModel, FragmentCreateGroup
             param2 = it.getString(ARG_PARAM2)
         }
     }
-    
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -40,12 +44,28 @@ class CreateGroupFragment : BaseFragment<DashboardViewModel, FragmentCreateGroup
         createGroupBinding = FragmentCreateGroupBinding.inflate(inflater, container, false)
         return createGroupBinding.root
     }
-    
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         createGroupBinding.btCreateGroup.setOnClickListener(this)
     }
-    
+
+    override fun onResume() {
+        super.onResume()
+        setToolbar()
+    }
+
+    private fun setToolbar() {
+        (activity as DashBoardScreen).setToolbarBackImage(View.VISIBLE, R.color.primary)
+        (activity as DashBoardScreen).setToolbarTitle(
+            View.VISIBLE,
+            R.color.darkGray,
+            getString(R.string.create_a_group)
+        )
+        (activity as DashBoardScreen).setToolbarBackground(R.color.market_gray)
+        (activity as DashBoardScreen).setToolbarNotificationIcon(R.color.darkGray, View.VISIBLE)
+    }
+
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
@@ -56,12 +76,12 @@ class CreateGroupFragment : BaseFragment<DashboardViewModel, FragmentCreateGroup
                 }
             }
     }
-    
-    
+
+
     override fun getViewModelClass(): Class<DashboardViewModel> {
         return DashboardViewModel::class.java
     }
-    
+
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.bt_create_group -> {
@@ -69,7 +89,7 @@ class CreateGroupFragment : BaseFragment<DashboardViewModel, FragmentCreateGroup
             }
         }
     }
-    
+
     private fun showDialog() {
         var dialog = Dialog(requireActivity())
         val binding: DialogCreateGroupBinding = DataBindingUtil.inflate(
@@ -93,5 +113,5 @@ class CreateGroupFragment : BaseFragment<DashboardViewModel, FragmentCreateGroup
         }
         dialog.show()
     }
-    
+
 }

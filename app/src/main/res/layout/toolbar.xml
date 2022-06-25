@@ -26,7 +26,7 @@
             android:paddingHorizontal="@dimen/_16sdp">
 
             <ImageView
-                android:id="@+id/imageToolbarBack"
+                android:id="@+id/ivToolbarBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_back"
@@ -51,7 +51,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/ivToolbar"
+                android:id="@+id/ivNotification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_notifications"

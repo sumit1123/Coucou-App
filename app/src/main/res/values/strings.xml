@@ -148,5 +148,13 @@
     <string name="pin_your_location_on_the_map">Pin your location on the map</string>
     <string name="identify_your_residential_address_on_the_map">Identify your residential address on the map</string>
 
+    <!--ToolbarTitle-->
+    <string name="your_savings_groups">Your Savings Groups</string>
+    <string name="create_a_group">Create a group</string>
+    <string name="public_group">Public groups</string>
+    <string name="market_place">Market place</string>
+    <string name="verification">Verification</string>
+    <string name="proof_of_residence">Proof of Residence</string>
+
 
 </resources>

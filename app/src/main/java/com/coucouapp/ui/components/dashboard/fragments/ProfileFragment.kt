@@ -8,6 +8,7 @@ import androidx.navigation.fragment.findNavController
 import com.coucouapp.R
 import com.coucouapp.databinding.FragmentProfileBinding
 import com.coucouapp.ui.base.BaseFragment
+import com.coucouapp.ui.components.dashboard.DashBoardScreen
 import com.coucouapp.viewmodel.ProfileDetailViewModel
 import kotlinx.android.synthetic.main.fragment_profile.*
 
@@ -28,6 +29,22 @@ class ProfileFragment : BaseFragment<ProfileDetailViewModel, FragmentProfileBind
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        setToolbar()
+    }
+
+    private fun setToolbar() {
+        (activity as DashBoardScreen).setToolbarBackImage(View.VISIBLE, R.color.primary)
+        (activity as DashBoardScreen).setToolbarTitle(
+            View.VISIBLE,
+            R.color.darkGray,
+            getString(R.string.profile)
+        )
+        (activity as DashBoardScreen).setToolbarBackground(R.color.market_gray)
+        (activity as DashBoardScreen).setToolbarNotificationIcon(R.color.darkGray, View.VISIBLE)
     }
 
     private fun initViews() {

@@ -62,7 +62,7 @@ class CreateAccountActivity : BaseActivity<CreateAccountViewModel, ActivityCreat
             tilConfirmPassword.error = null
         }
 
-        if (edPassword.text!!.trim() != edConfirmPassword.text!!.trim()) {
+        /*if (edPassword.text!!.trim() != edConfirmPassword.text!!.trim()) {
             tvError.visibility = View.VISIBLE
             tvError.text = getString(R.string.msg_password_must_be_same)
             tvError.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_error, 0, 0, 0);
@@ -70,7 +70,7 @@ class CreateAccountActivity : BaseActivity<CreateAccountViewModel, ActivityCreat
             isValid = false
         } else {
             tvError.visibility = View.GONE
-        }
+        }*/
 
         return isValid
     }
