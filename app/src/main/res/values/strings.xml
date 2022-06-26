@@ -156,5 +156,9 @@
     <string name="verification">Verification</string>
     <string name="proof_of_residence">Proof of Residence</string>
 
+    <!--Filter text-->
+    <string name="credit_card_filter">This option lists all the credit cards that are available for users to apply to</string>
+    <string name="search_in_contacts">Search in contacts</string>
+
 
 </resources>

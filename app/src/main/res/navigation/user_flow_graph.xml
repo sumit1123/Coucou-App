@@ -63,4 +63,9 @@
         android:name="com.coucouapp.ui.components.dashboard.fragments.MarketPlaceFragment"
         android:label="MarketPlaceFragment"
         tools:layout="@layout/fragment_market_place" />
+    <fragment
+        android:id="@+id/creditCardsFragment"
+        android:name="com.coucouapp.ui.components.dashboard.fragments.CreditCardsFragment"
+        android:label="CreditCardsFragment"
+        tools:layout="@layout/fragment_credit_cards" />
 </navigation>

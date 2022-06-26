@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.coucouapp.R
 import com.coucouapp.databinding.FragmentMarketPlaceBinding
@@ -12,10 +13,11 @@ import com.coucouapp.ui.components.dashboard.DashBoardScreen
 import com.coucouapp.ui.components.dashboard.adapters.CreaditCardAdapter
 import com.coucouapp.ui.components.dashboard.adapters.InvestementAdapter
 import com.coucouapp.ui.components.dashboard.adapters.LoanProductAdapter
-import com.coucouapp.viewmodel.ProfileDetailViewModel
+import com.coucouapp.viewmodel.MarketPlaceViewModel
 
 
-class MarketPlaceFragment : BaseFragment<ProfileDetailViewModel, FragmentMarketPlaceBinding>() {
+class MarketPlaceFragment : BaseFragment<MarketPlaceViewModel, FragmentMarketPlaceBinding>(),
+    View.OnClickListener {
 
     lateinit var fragmentMarketPlaceBinding: FragmentMarketPlaceBinding
 
@@ -31,7 +33,15 @@ class MarketPlaceFragment : BaseFragment<ProfileDetailViewModel, FragmentMarketP
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        initViews()
         setRecyclerViews()
+    }
+
+    private fun initViews() {
+        fragmentMarketPlaceBinding.tvCreditCardViewAll.setOnClickListener(this)
+        fragmentMarketPlaceBinding.tvLoanViewAll.setOnClickListener(this)
+        fragmentMarketPlaceBinding.tvInvestmentViewAll.setOnClickListener(this)
     }
 
     override fun onResume() {
@@ -64,7 +74,20 @@ class MarketPlaceFragment : BaseFragment<ProfileDetailViewModel, FragmentMarketP
         fragmentMarketPlaceBinding.recyclerviewLoanProduct.adapter = LoanProductAdapter()
     }
 
-    override fun getViewModelClass(): Class<ProfileDetailViewModel> {
-        return ProfileDetailViewModel::class.java
+    override fun getViewModelClass(): Class<MarketPlaceViewModel> {
+        return MarketPlaceViewModel::class.java
+    }
+
+    override fun onClick(v: View?) {
+        when (v!!.id) {
+            R.id.tv_credit_card_view_all -> {
+                findNavController().navigate(R.id.creditCardsFragment)
+            }
+            R.id.tv_investment_view_all -> {
+            }
+            R.id.tv_loan_view_all -> {
+            }
+
+        }
     }
 }

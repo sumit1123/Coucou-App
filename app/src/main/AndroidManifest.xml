@@ -12,9 +12,7 @@
         android:roundIcon="@drawable/appicon"
         android:supportsRtl="true"
         android:theme="@style/Theme.CoucouApp">
-        <activity
-            android:name=".ui.components.ProfileVerificationActivity"
-            android:exported="true" />
+
         <activity
             android:name=".ui.components.ResetPasswordActivity"
             android:exported="true" />
