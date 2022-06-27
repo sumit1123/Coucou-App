@@ -33,7 +33,6 @@ class MarketPlaceFragment : BaseFragment<MarketPlaceViewModel, FragmentMarketPla
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         initViews()
         setRecyclerViews()
     }
@@ -53,8 +52,8 @@ class MarketPlaceFragment : BaseFragment<MarketPlaceViewModel, FragmentMarketPla
         (activity as DashBoardScreen).setToolbarBackImage(View.VISIBLE, R.color.primary)
         (activity as DashBoardScreen).setToolbarTitle(
             View.VISIBLE,
-            R.color.darkGray,
-            getString(R.string.market_place)
+            R.color.primary,
+            getString(R.string.investment)
         )
         (activity as DashBoardScreen).setToolbarBackground(R.color.market_gray)
         (activity as DashBoardScreen).setToolbarNotificationIcon(R.color.darkGray, View.VISIBLE)
@@ -84,6 +83,7 @@ class MarketPlaceFragment : BaseFragment<MarketPlaceViewModel, FragmentMarketPla
                 findNavController().navigate(R.id.creditCardsFragment)
             }
             R.id.tv_investment_view_all -> {
+                findNavController().navigate(R.id.investmentFragment)
             }
             R.id.tv_loan_view_all -> {
             }

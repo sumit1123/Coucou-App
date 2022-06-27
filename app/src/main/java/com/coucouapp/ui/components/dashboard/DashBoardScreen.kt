@@ -43,7 +43,6 @@ class DashBoardScreen : BaseActivity<DashboardViewModel, ActivityDashboardScreen
     }
 
     fun setToolbarBackground(color: Int) {
-        //dashboardToolbar.toolbar.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, color)))
         dashboardToolbar.toolbar.setBackgroundResource(color)
     }
 

@@ -1,15 +1,14 @@
 package com.coucouapp.ui.components.dashboard.fragments
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
+import android.os.*
+import android.view.*
+import androidx.navigation.fragment.*
 import com.coucouapp.R
-import com.coucouapp.databinding.FragmentHomeBinding
-import com.coucouapp.ui.base.BaseFragment
-import com.coucouapp.ui.components.dashboard.DashBoardScreen
-import com.coucouapp.ui.components.dashboard.viewmodel.DashboardViewModel
+import com.coucouapp.databinding.*
+import com.coucouapp.ui.base.*
+import com.coucouapp.ui.components.dashboard.*
+import com.coucouapp.ui.components.dashboard.viewmodel.*
+import com.coucouapp.ui.components.fragments.*
 
 class HomeFragment : BaseFragment<DashboardViewModel, FragmentHomeBinding>(), View.OnClickListener {
     lateinit var homeBinding: FragmentHomeBinding
@@ -31,9 +30,10 @@ class HomeFragment : BaseFragment<DashboardViewModel, FragmentHomeBinding>(), Vi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         homeBinding.imgMarketPlace.setOnClickListener(this)
         homeBinding.imgSavingGroup.setOnClickListener(this)
+        homeBinding.imgManageCredit.setOnClickListener(this)
+        
     }
 
     override fun getViewModelClass(): Class<DashboardViewModel> {
@@ -59,7 +59,7 @@ class HomeFragment : BaseFragment<DashboardViewModel, FragmentHomeBinding>(), Vi
             }
 
             R.id.img_manage_credit -> {
-
+                findNavController().navigate(R.id.creditCardsFragment)
             }
 
             R.id.img_saving_group -> {

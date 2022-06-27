@@ -7,12 +7,11 @@ import androidx.recyclerview.widget.*
 import com.coucouapp.R
 import com.coucouapp.databinding.*
 
-
-class InvestementAdapter() : RecyclerView.Adapter<InvestementAdapter.ViewHolder>() {
+class InvestementFullAdapter() : RecyclerView.Adapter<InvestementFullAdapter.ViewHolder>() {
   
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val adapterInvestementBinding: AdapterInvestementBinding = AdapterInvestementBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false)
-        return ViewHolder(adapterInvestementBinding)
+        val adapterInvestementFullBinding: AdapterInvestementFullBinding = AdapterInvestementFullBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false)
+        return ViewHolder(adapterInvestementFullBinding)
     }
   
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -20,10 +19,10 @@ class InvestementAdapter() : RecyclerView.Adapter<InvestementAdapter.ViewHolder>
     }
   
     override fun getItemCount(): Int {
-        return 4
+        return 10
     }
   
-   inner class ViewHolder(adapterInvestementBinding: AdapterInvestementBinding) : RecyclerView.ViewHolder(adapterInvestementBinding.root) {
+   inner class ViewHolder(adapterInvestementFullBinding: AdapterInvestementFullBinding) : RecyclerView.ViewHolder(adapterInvestementFullBinding.root) {
     
     }
 }

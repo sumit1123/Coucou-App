@@ -122,6 +122,7 @@
     <string name="review">Review</string>
     <string name="apply">Apply</string>
     <string name="investments">Investments</string>
+    <string name="investment">Investment</string>
     <string name="most_popular_investments">Most popular investments</string>
     <string name="loan_products">Loan products</string>
     <string name="most_popular_loan_products">Most popular loan products</string>
@@ -155,10 +156,25 @@
     <string name="market_place">Market place</string>
     <string name="verification">Verification</string>
     <string name="proof_of_residence">Proof of Residence</string>
+    <string name="filter_credit_cards">Filter credit cards</string>
+    <string name="annual_fee">Annual fee</string>
+    <string name="annual_fee_chip">+ annual fee</string>
+    <string name="deposit">Deposit</string>
+    <string name="cash_back">Cash back</string>
+    <string name="interest_rate">Interest rate</string>
+    <string name="credit_score">Credit score</string>
+    <string name="student_credit_card">+ student credit card</string>
+    <string name="credit_building">+ credit building</string>
+    <string name="reward">+ reward</string>
+    <string name="travel">+ travel</string>
+    <string name="balance_transfer">+ balance transfer</string>
+    <string name="apply_filter">Apply filter</string>
 
     <!--Filter text-->
     <string name="credit_card_filter">This option lists all the credit cards that are available for users to apply to</string>
     <string name="search_in_contacts">Search in contacts</string>
+    <string name="investement_title">Find in the lists all the investment opportunities that are available for users to apply to</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_nunc_vel_auctor_eros_sed_sed_lacus_aliquet_blandit_metus_finibus_viverra_quam_in_porttitor_orci_eu_hendrerit_tempor_turpis_mi_dignissim_tortor_quis_fringilla_sem_dolor_eget_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel auctor eros. Sed sed lacus aliquet, blandit metus finibus, viverra quam. In porttitor, orci eu hendrerit tempor, turpis mi dignissim tortor, quis fringilla sem dolor eget ipsum.</string>
 
 
 </resources>

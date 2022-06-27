@@ -68,4 +68,12 @@
         android:name="com.coucouapp.ui.components.dashboard.fragments.CreditCardsFragment"
         android:label="CreditCardsFragment"
         tools:layout="@layout/fragment_credit_cards" />
+    <dialog
+        android:id="@+id/filterBottomSheetDialog"
+        android:name="com.coucouapp.ui.components.fragments.FilterBottomSheetDialog"
+        android:label="FilterBottomSheetDialog" />
+    <fragment
+        android:id="@+id/investmentFragment"
+        android:name="com.coucouapp.ui.components.fragments.InvestmentFragment"
+        android:label="InvestmentFragment" />
 </navigation>

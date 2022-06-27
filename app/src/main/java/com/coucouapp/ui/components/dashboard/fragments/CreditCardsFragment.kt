@@ -4,13 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.*
 import com.coucouapp.R
 import com.coucouapp.databinding.FragmentCreditCardsBinding
 import com.coucouapp.ui.base.BaseFragment
 import com.coucouapp.ui.components.dashboard.DashBoardScreen
 import com.coucouapp.viewmodel.MarketPlaceViewModel
 
-class CreditCardsFragment: BaseFragment<MarketPlaceViewModel, FragmentCreditCardsBinding>() {
+class CreditCardsFragment: BaseFragment<MarketPlaceViewModel, FragmentCreditCardsBinding>() ,View.OnClickListener {
 
     lateinit var fragmentCreditCardsBinding: FragmentCreditCardsBinding
 
@@ -26,6 +27,7 @@ class CreditCardsFragment: BaseFragment<MarketPlaceViewModel, FragmentCreditCard
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        fragmentCreditCardsBinding.layoutFilter.imgFilter.setOnClickListener(this)
     }
 
     override fun onResume() {
@@ -47,6 +49,16 @@ class CreditCardsFragment: BaseFragment<MarketPlaceViewModel, FragmentCreditCard
     override fun getViewModelClass(): Class<MarketPlaceViewModel> {
         return MarketPlaceViewModel::class.java
     }
-
-
+    
+    override fun onClick(v: View?) {
+        when(v!!.id)
+        {
+            R.id.img_filter ->
+            {
+                findNavController().navigate(R.id.filterBottomSheetDialog)
+            }
+        }
+    }
+    
+    
 }
