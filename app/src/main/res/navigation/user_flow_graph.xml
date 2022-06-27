@@ -71,9 +71,29 @@
     <dialog
         android:id="@+id/filterBottomSheetDialog"
         android:name="com.coucouapp.ui.components.fragments.FilterBottomSheetDialog"
-        android:label="FilterBottomSheetDialog" />
+        android:label="FilterBottomSheetDialog"
+        tools:layout="@layout/fragment_filter"
+        />
     <fragment
         android:id="@+id/investmentFragment"
         android:name="com.coucouapp.ui.components.fragments.InvestmentFragment"
-        android:label="InvestmentFragment" />
+        android:label="InvestmentFragment"
+        tools:layout="@layout/fragment_investment"
+        />
+    <fragment
+        android:id="@+id/loanFragment"
+        android:name="com.coucouapp.ui.components.fragments.LoanFragment"
+        android:label="LoanFragment"
+        tools:layout="@layout/fragment_loan"
+        />
+    <fragment
+        android:id="@+id/personalLoanFragment"
+        android:name="com.coucouapp.ui.components.fragments.PersonalLoanFragment"
+        android:label="PersonalLoanFragment"
+        tools:layout="@layout/fragment_personal_loan"
+        />
+    <dialog
+        android:id="@+id/filterBottomSheetLoanDialog"
+        android:name="com.coucouapp.ui.components.fragments.FilterBottomSheetLoanDialog"
+        android:label="FilterBottomSheetLoanDialog" />
 </navigation>

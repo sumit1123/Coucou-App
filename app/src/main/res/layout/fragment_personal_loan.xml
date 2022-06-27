@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_22sdp"
+        android:layout_marginEnd="@dimen/_22sdp">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:src="@drawable/citibank_detail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/dotted_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/dotted_line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_logo" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_detail"
+            android:layout_width="@dimen/_133sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dotted_line">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_max_amount"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/max_amount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_amount_value"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hk_24_000_00"
+                android:textSize="@dimen/_20sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_max_amount" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_apr"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/apr"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_amount_value" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_apr_value"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_7_04"
+                android:textSize="@dimen/_20sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_apr" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_period"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/period_m"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_apr_value" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_period_value"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textSize="@dimen/_20sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_period" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_intial_deposit"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/initial_deposit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_period_value" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_intial_deposit_value"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HK$1000.00"
+                android:textSize="@dimen/_20sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_intial_deposit" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_processing_fee"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/processing_fee"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_intial_deposit_value" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_processing_fee_value"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textSize="@dimen/_20sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_processing_fee" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/img_laon_graph"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:src="@drawable/loan_graph"
+            android:layout_marginStart="@dimen/_20sdp"
+            app:layout_constraintStart_toEndOf="@+id/constraint_detail"
+            app:layout_constraintTop_toBottomOf="@+id/img_logo" />
+
+
+        <View
+            android:id="@+id/dotted_line_below"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/dotted_line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_detail"/>
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tv_about_laon_title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/about_this_loan"
+          android:textSize="@dimen/_16sdp"
+          android:textColor="@color/black"
+          android:textStyle="bold"
+          android:layout_marginTop="@dimen/_30sdp"
+          app:layout_constraintTop_toBottomOf="@+id/dotted_line_below"
+          app:layout_constraintStart_toStartOf="parent"
+          />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_about_laon_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/citibank_u00e2_u0080_u0099s_personal_loan_is_a_type_of_unsecured_loan_that_you_can_borrow_if_you_require_funds_to_pay_for_your_some_personal_financial_needs"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/darkGray"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_about_laon_title"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/_30sdp"
+          android:background="@drawable/bg_corner_primary"
+          android:text="@string/apply_for_this_loan"
+          android:textColor="@color/white"
+          app:layout_constraintTop_toBottomOf="@+id/tv_about_laon_description"
+          app:layout_constraintStart_toStartOf="parent"
+          />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

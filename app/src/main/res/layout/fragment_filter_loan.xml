@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_22sdp"
+        android:layout_marginStart="@dimen/_10sdp">
+
+      <ImageView
+          android:id="@+id/bt_cancel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          android:background="@color/white"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:layout_marginEnd="@dimen/_10sdp"
+          android:src="@drawable/ic_cancel"
+          />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_filter_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="@string/filter_loan"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/bt_cancel"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_annual_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/darkGray"
+            android:text="@string/annual_interest_rate"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_filter_title"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekBar_annual_fee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:max="100"
+            android:min="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_annual_fee" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_interest_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/darkGray"
+            android:text="@string/initial_deposit"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar_annual_fee"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekBar_interest_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:max="100"
+            android:min="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_interest_rate" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_cash_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/darkGray"
+            android:text="@string/credit_score"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar_interest_rate"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekBar_cash_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:max="100"
+            android:min="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cash_back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_deposit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/darkGray"
+            android:text="@string/monthly_repayment_amount"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar_cash_back"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekBar_deposit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:max="100"
+            android:min="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_deposit" />
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar_deposit"
+            app:singleLine="false">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_annual_fee"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                app:chipStrokeColor="@color/primary"
+                app:chipStrokeWidth="@dimen/_1sdp"
+                android:text="@string/for_students" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_credit_card"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                app:chipStrokeColor="@color/primary"
+                app:chipStrokeWidth="@dimen/_1sdp"
+                android:text="@string/personal_loan" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_credit"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                app:chipStrokeColor="@color/primary"
+                app:chipStrokeWidth="@dimen/_1sdp"
+                android:text="@string/auto_loan" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_reward"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                app:chipStrokeColor="@color/primary"
+                app:chipStrokeWidth="@dimen/_1sdp"
+                android:text="@string/for_projects" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_travel"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                app:chipStrokeColor="@color/primary"
+                app:chipStrokeWidth="@dimen/_1sdp"
+                android:text="@string/no_penalty" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_balance_transfer"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                app:chipStrokeColor="@color/primary"
+                app:chipStrokeWidth="@dimen/_1sdp"
+                android:text="@string/instant_approval" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/no_handling_fee"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                app:chipStrokeColor="@color/primary"
+                app:chipStrokeWidth="@dimen/_1sdp"
+                android:text="@string/no_handling_fee" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+     <androidx.appcompat.widget.AppCompatButton
+         android:id="@+id/bt_apply_filter"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/apply_filter"
+         android:textColor="@color/white"
+         android:layout_marginTop="@dimen/_40sdp"
+         android:background="@drawable/bg_corner_primary"
+         android:layout_marginEnd="@dimen/_22sdp"
+         android:layout_marginStart="@dimen/_22sdp"
+         app:layout_constraintTop_toBottomOf="@+id/chipGroup"
+         app:layout_constraintStart_toStartOf="parent"
+         />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

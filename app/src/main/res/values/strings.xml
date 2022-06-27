@@ -123,6 +123,7 @@
     <string name="apply">Apply</string>
     <string name="investments">Investments</string>
     <string name="investment">Investment</string>
+    <string name="loan_instrument">Loan instruments</string>
     <string name="most_popular_investments">Most popular investments</string>
     <string name="loan_products">Loan products</string>
     <string name="most_popular_loan_products">Most popular loan products</string>
@@ -175,6 +176,24 @@
     <string name="search_in_contacts">Search in contacts</string>
     <string name="investement_title">Find in the lists all the investment opportunities that are available for users to apply to</string>
     <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_nunc_vel_auctor_eros_sed_sed_lacus_aliquet_blandit_metus_finibus_viverra_quam_in_porttitor_orci_eu_hendrerit_tempor_turpis_mi_dignissim_tortor_quis_fringilla_sem_dolor_eget_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel auctor eros. Sed sed lacus aliquet, blandit metus finibus, viverra quam. In porttitor, orci eu hendrerit tempor, turpis mi dignissim tortor, quis fringilla sem dolor eget ipsum.</string>
+    <string name="filter_loan">Filter loans</string>
+    <string name="annual_interest_rate">Annual Interest rate</string>
+    <string name="initial_deposit">Initial deposit</string>
+    <string name="monthly_repayment_amount">Monthly repayment amount</string>
+    <string name="for_students">for students</string>
+    <string name="personal_loan">personal loan</string>
+    <string name="for_projects">for projects</string>
+    <string name="no_penalty">no penalty</string>
+    <string name="instant_approval">instant approval</string>
+    <string name="no_handling_fee">no handling fee</string>
+    <string name="max_amount">Max amount</string>
+    <string name="hk_24_000_00">HK$24,000.00</string>
+    <string name="_7_04">7.04%</string>
+    <string name="period_m">Period/m</string>
+    <string name="processing_fee">Processing fee</string>
+    <string name="about_this_loan">About this Loan</string>
+    <string name="citibank_u00e2_u0080_u0099s_personal_loan_is_a_type_of_unsecured_loan_that_you_can_borrow_if_you_require_funds_to_pay_for_your_some_personal_financial_needs">Citibankâs personal loan is a type of unsecured loan that you can borrow if you require funds to pay for your some personal financial needs</string>
+    <string name="apply_for_this_loan">Apply for this Loan</string>
 
 
 </resources>

@@ -86,8 +86,8 @@ class MarketPlaceFragment : BaseFragment<MarketPlaceViewModel, FragmentMarketPla
                 findNavController().navigate(R.id.investmentFragment)
             }
             R.id.tv_loan_view_all -> {
+                findNavController().navigate(R.id.loanFragment)
             }
-
         }
     }
 }
