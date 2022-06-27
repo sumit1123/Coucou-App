@@ -13,18 +13,22 @@ class CreateGroupVerificationActivity : BaseActivity<UserVerifiedViewModel, Acti
 
     private val TAG = CreateGroupVerificationActivity::class.simpleName
     private var userVerification = ""
+    private var title : String = ""
+    private var description : String = ""
 
     override fun getLayout(): Int = R.layout.activity_user_verified
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_verified)
+        title = intent.getStringExtra(Constants.TITLE)!!
+        description = intent.getStringExtra(Constants.DESCRIPTION)!!
         initViews()
     }
 
     private fun initViews() {
         userVerification = intent.getStringExtra(Constants.USER_VERIFICATION).toString()
-        setData(getString(R.string.create_group), getString(R.string.create_group_description))
+        setData(title, description)
     }
 
     private fun setData(text: String, details: String) {

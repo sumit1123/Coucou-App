@@ -79,7 +79,9 @@
         <entry key="app/src/main/res/layout/adapter_investement_full.xml" value="0.25" />
         <entry key="app/src/main/res/layout/adapter_loan_instrument.xml" value="0.21" />
         <entry key="app/src/main/res/layout/adapter_loan_product.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/dialog_create_group.xml" value="0.1296875" />
+        <entry key="app/src/main/res/layout/dialog_apply_loan.xml" value="0.15729166666666666" />
+        <entry key="app/src/main/res/layout/dialog_create_group.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/fragment_apply_loan.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_create_group.xml" value="0.121875" />
         <entry key="app/src/main/res/layout/fragment_credit_cards.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_filter.xml" value="0.25" />
@@ -88,6 +90,7 @@
         <entry key="app/src/main/res/layout/fragment_loan.xml" value="0.13958333333333334" />
         <entry key="app/src/main/res/layout/fragment_market_place.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_personal_loan.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/fragment_public_group.xml" value="0.15729166666666666" />
         <entry key="app/src/main/res/layout/fragment_saving_group.xml" value="0.15729166666666666" />
         <entry key="app/src/main/res/layout/layout_filter.xml" value="0.2" />
         <entry key="app/src/main/res/layout/toolbar.xml" value="0.121875" />

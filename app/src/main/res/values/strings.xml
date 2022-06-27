@@ -181,7 +181,7 @@
     <string name="initial_deposit">Initial deposit</string>
     <string name="monthly_repayment_amount">Monthly repayment amount</string>
     <string name="for_students">for students</string>
-    <string name="personal_loan">personal loan</string>
+    <string name="personal_loan">Personal loan</string>
     <string name="for_projects">for projects</string>
     <string name="no_penalty">no penalty</string>
     <string name="instant_approval">instant approval</string>
@@ -194,6 +194,12 @@
     <string name="about_this_loan">About this Loan</string>
     <string name="citibank_u00e2_u0080_u0099s_personal_loan_is_a_type_of_unsecured_loan_that_you_can_borrow_if_you_require_funds_to_pay_for_your_some_personal_financial_needs">Citibankâs personal loan is a type of unsecured loan that you can borrow if you require funds to pay for your some personal financial needs</string>
     <string name="apply_for_this_loan">Apply for this Loan</string>
+    <string name="apply_for_loan">Apply for loan</string>
+    <string name="about_amazon_stocks">About Amazon Stocks</string>
+    <string name="enter_amount">Enter amount</string>
+    <string name="you_are_about_to_issue_a_purchase_order_for_amazon_stocks_would_you_like_to_proceed">You are about to issue a purchase order for Amazon stocks. Would you like to proceed?</string>
+    <string name="loan_sucess_title">Loan application sent successfully</string>
+    <string name="loan_sucess_descripton">Your loan application has been sent to the providers successfully. When approved you will be notified</string>
 
 
 </resources>

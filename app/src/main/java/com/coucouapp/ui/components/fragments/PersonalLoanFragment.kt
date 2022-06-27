@@ -48,6 +48,7 @@ class PersonalLoanFragment : BaseFragment<DashboardViewModel, FragmentPersonalLo
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        fragmentPersonalLoanBinding.btApply.setOnClickListener(this)
 
     }
 
@@ -73,7 +74,13 @@ class PersonalLoanFragment : BaseFragment<DashboardViewModel, FragmentPersonalLo
     }
 
     override fun onClick(v: View?) {
-
+        when(v!!.id)
+        {
+            R.id.bt_apply ->
+            {
+                findNavController().navigate(R.id.applyLoanBottomSheetDialog)
+            }
+        }
     }
 
 }

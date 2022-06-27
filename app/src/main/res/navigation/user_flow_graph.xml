@@ -96,4 +96,8 @@
         android:id="@+id/filterBottomSheetLoanDialog"
         android:name="com.coucouapp.ui.components.fragments.FilterBottomSheetLoanDialog"
         android:label="FilterBottomSheetLoanDialog" />
+    <dialog
+        android:id="@+id/applyLoanBottomSheetDialog"
+        android:name="com.coucouapp.ui.components.fragments.ApplyLoanBottomSheetDialog"
+        android:label="ApplyLoanBottomSheetDialog" />
 </navigation>

@@ -16,6 +16,7 @@ import com.coucouapp.ui.base.BaseFragment
 import com.coucouapp.ui.components.CreateGroupVerificationActivity
 import com.coucouapp.ui.components.dashboard.DashBoardScreen
 import com.coucouapp.ui.components.dashboard.viewmodel.DashboardViewModel
+import com.coucouapp.utils.*
 
 
 private const val ARG_PARAM1 = "param1"
@@ -105,6 +106,8 @@ class CreateGroupFragment : BaseFragment<DashboardViewModel, FragmentCreateGroup
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         binding.btYes.setOnClickListener {
             var intent = Intent(requireActivity(), CreateGroupVerificationActivity::class.java)
+            intent.putExtra(Constants.TITLE, getString(R.string.create_group))
+            intent.putExtra(Constants.DESCRIPTION, getString(R.string.create_group_description))
             startActivity(intent)
             dialog.dismiss()
         }
