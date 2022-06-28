@@ -114,7 +114,7 @@
     <string name="yes">Yes</string>
     <string name="cancel">Cancel</string>
     <string name="create_group">You have created a new group</string>
-    <string name="create_group_description">Your new group has been created successfully. You can keep adding mroe members.</string>
+    <string name="create_group_description">Your new group has been created successfully. You can keep adding more members.</string>
     <string name="credit_cards">Credit Cards</string>
     <string name="most_popular_cards">Most popular cards</string>
     <string name="min_annual_income">Min annual income</string>
@@ -174,8 +174,8 @@
     <!--Filter text-->
     <string name="credit_card_filter">This option lists all the credit cards that are available for users to apply to</string>
     <string name="search_in_contacts">Search in contacts</string>
-    <string name="investement_title">Find in the lists all the investment opportunities that are available for users to apply to</string>
-    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_nunc_vel_auctor_eros_sed_sed_lacus_aliquet_blandit_metus_finibus_viverra_quam_in_porttitor_orci_eu_hendrerit_tempor_turpis_mi_dignissim_tortor_quis_fringilla_sem_dolor_eget_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel auctor eros. Sed sed lacus aliquet, blandit metus finibus, viverra quam. In porttitor, orci eu hendrerit tempor, turpis mi dignissim tortor, quis fringilla sem dolor eget ipsum.</string>
+    <string name="filter">Filter</string>
+    <string name="investment_title">Find in the lists all the investment opportunities that are available for users to apply to</string>
     <string name="filter_loan">Filter loans</string>
     <string name="annual_interest_rate">Annual Interest rate</string>
     <string name="initial_deposit">Initial deposit</string>
@@ -198,8 +198,8 @@
     <string name="about_amazon_stocks">About Amazon Stocks</string>
     <string name="enter_amount">Enter amount</string>
     <string name="you_are_about_to_issue_a_purchase_order_for_amazon_stocks_would_you_like_to_proceed">You are about to issue a purchase order for Amazon stocks. Would you like to proceed?</string>
-    <string name="loan_sucess_title">Loan application sent successfully</string>
-    <string name="loan_sucess_descripton">Your loan application has been sent to the providers successfully. When approved you will be notified</string>
+    <string name="loan_success_title">Loan application sent successfully</string>
+    <string name="loan_success_description">Your loan application has been sent to the providers successfully. When approved you will be notified</string>
 
 
 </resources>

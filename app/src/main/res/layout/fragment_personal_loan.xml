@@ -178,7 +178,7 @@
           />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_about_laon_description"
+            android:id="@+id/tv_about_loan_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/citibank_u00e2_u0080_u0099s_personal_loan_is_a_type_of_unsecured_loan_that_you_can_borrow_if_you_require_funds_to_pay_for_your_some_personal_financial_needs"
@@ -197,7 +197,7 @@
           android:background="@drawable/bg_corner_primary"
           android:text="@string/apply_for_this_loan"
           android:textColor="@color/white"
-          app:layout_constraintTop_toBottomOf="@+id/tv_about_laon_description"
+          app:layout_constraintTop_toBottomOf="@+id/tv_about_loan_description"
           app:layout_constraintStart_toStartOf="parent"
           />
 

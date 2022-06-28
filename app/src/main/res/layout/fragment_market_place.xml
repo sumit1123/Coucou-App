@@ -61,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:background="@drawable/bg_corner_market"
+                android:background="@drawable/bg_corner_snow_gray"
                 android:paddingStart="@dimen/_5sdp"
                 android:paddingEnd="@dimen/_5sdp"
                 app:layout_constraintStart_toStartOf="parent"

@@ -15,19 +15,20 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/border_corner"
+            android:background="@drawable/bg_corner_azure_gray"
             android:padding="@dimen/_5sdp">
 
             <ImageView
                 android:id="@+id/img_credit_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_creadit_card"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_credit_card"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tv_minumum"
+                android:id="@+id/tv_minimum"
                 style="@style/title_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -47,7 +48,7 @@
                 android:text="$ 120,000"
                 android:textColor="@color/primary"
                 app:layout_constraintStart_toEndOf="@+id/img_credit_card"
-                app:layout_constraintTop_toBottomOf="@+id/tv_minumum" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_minimum" />
 
             <TextView
                 android:id="@+id/tv_apr"
@@ -57,7 +58,7 @@
                 android:layout_marginStart="@dimen/_12sdp"
                 android:text="@string/apr"
                 android:textColor="@color/darkGray"
-                app:layout_constraintStart_toEndOf="@+id/tv_minumum"
+                app:layout_constraintStart_toEndOf="@+id/tv_minimum"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -96,15 +97,17 @@
                 app:layout_constraintStart_toEndOf="@+id/tv_percentage"
                 app:layout_constraintTop_toBottomOf="@+id/tv_review" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/bt_yes"
-                android:layout_width="@dimen/_43sdp"
-                android:layout_height="@dimen/_28sdp"
-                android:layout_marginTop="@dimen/_5sdp"
+            <TextView
+                android:id="@+id/tv_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:background="@drawable/bg_corner_primary"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:paddingVertical="@dimen/_8sdp"
                 android:text="@string/apply"
                 android:textColor="@color/white"
-                android:textSize="5pt"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

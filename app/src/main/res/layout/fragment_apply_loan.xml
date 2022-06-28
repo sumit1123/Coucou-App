@@ -9,122 +9,113 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardCornerRadius="@dimen/_10sdp"
-        app:cardBackgroundColor="@color/white">
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_10sdp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/_22sdp"
-        android:layout_marginStart="@dimen/_10sdp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_22sdp">
 
-      <ImageView
-          android:id="@+id/bt_cancel"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintTop_toTopOf="parent"
-          android:background="@color/white"
-          android:layout_marginTop="@dimen/_10sdp"
-          android:layout_marginEnd="@dimen/_10sdp"
-          android:src="@drawable/ic_cancel"
-          />
+            <ImageView
+                android:id="@+id/bt_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@color/white"
+                android:src="@drawable/ic_cancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_filter_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/_16sdp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text="@string/apply_for_loan"
-            android:layout_marginTop="@dimen/_10sdp"
-            app:layout_constraintTop_toBottomOf="@+id/bt_cancel"
-            app:layout_constraintStart_toStartOf="parent"
-            />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_filter_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/apply_for_loan"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bt_cancel" />
 
-      <androidx.constraintlayout.widget.ConstraintLayout
-          android:id="@+id/constraint_detail"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="@dimen/_30sdp"
-          android:layout_marginEnd="@dimen/_22sdp"
-          android:paddingBottom="@dimen/_16sdp"
-          android:background="@drawable/border_corner"
-          app:layout_constraintTop_toBottomOf="@+id/tv_filter_title"
-          app:layout_constraintStart_toStartOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_22sdp"
+                android:background="@drawable/bg_corner_azure_gray"
+                android:paddingBottom="@dimen/_16sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_filter_title">
 
-      <androidx.appcompat.widget.AppCompatTextView
-          android:id="@+id/tv_enter_amount"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/enter_amount"
-          style="@style/description_style"
-          android:layout_marginStart="@dimen/_16sdp"
-          android:layout_marginTop="@dimen/_9sdp"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent"
-          />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_enter_amount"
+                    style="@style/description_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:text="@string/enter_amount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-      <androidx.appcompat.widget.AppCompatEditText
-          android:id="@+id/et_amount"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:hint="0.00"
-          android:layout_marginStart="@dimen/_16sdp"
-          android:textSize="@dimen/_22sdp"
-          android:textColorHint="@color/black"
-          android:textStyle="bold"
-          android:background="@android:color/transparent"
-          app:layout_constraintTop_toBottomOf="@+id/tv_enter_amount"
-          app:layout_constraintStart_toStartOf="parent"
-          />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:background="@android:color/transparent"
+                    android:hint="0.00"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/_22sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_enter_amount" />
 
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-      </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_about_stocks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_150sdp"
+                android:text="@string/about_amazon_stocks"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraint_detail" />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_about_loan_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/citibank_u00e2_u0080_u0099s_personal_loan_is_a_type_of_unsecured_loan_that_you_can_borrow_if_you_require_funds_to_pay_for_your_some_personal_financial_needs"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_about_stocks" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_about_stocks"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/about_amazon_stocks"
-            android:textSize="@dimen/_14sdp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:layout_marginTop="@dimen/_150sdp"
-            app:layout_constraintTop_toBottomOf="@+id/constraint_detail"
-            app:layout_constraintStart_toStartOf="parent"
-            />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_apply_loan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_22sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_22sdp"
+                android:background="@drawable/bg_corner_primary"
+                android:text="@string/apply_for_this_loan"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_about_loan_description" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_about_laon_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/citibank_u00e2_u0080_u0099s_personal_loan_is_a_type_of_unsecured_loan_that_you_can_borrow_if_you_require_funds_to_pay_for_your_some_personal_financial_needs"
-            android:textSize="@dimen/_12sdp"
-            android:textColor="@color/darkGray"
-            android:layout_marginTop="@dimen/_10sdp"
-            app:layout_constraintTop_toBottomOf="@+id/tv_about_stocks"
-            app:layout_constraintStart_toStartOf="parent"
-            />
-
-     <androidx.appcompat.widget.AppCompatButton
-         android:id="@+id/bt_apply_loan"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:text="@string/apply_for_this_loan"
-         android:textColor="@color/white"
-         android:textSize="@dimen/_10sdp"
-         android:layout_marginTop="@dimen/_20sdp"
-         android:background="@drawable/bg_corner_primary"
-         android:layout_marginEnd="@dimen/_22sdp"
-         android:layout_marginStart="@dimen/_22sdp"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toBottomOf="@+id/tv_about_laon_description"
-         />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
 

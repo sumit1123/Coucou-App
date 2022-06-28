@@ -41,12 +41,12 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_description"
-            android:textSize="@dimen/_10sdp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_6sdp"
-            android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_nunc_vel_auctor_eros_sed_sed_lacus_aliquet_blandit_metus_finibus_viverra_quam_in_porttitor_orci_eu_hendrerit_tempor_turpis_mi_dignissim_tortor_quis_fringilla_sem_dolor_eget_ipsum"
+            android:text="@string/dummy_text"
             android:textColor="@color/darkGray"
+            android:textSize="@dimen/_10sdp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 

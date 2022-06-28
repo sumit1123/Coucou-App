@@ -14,36 +14,36 @@
         android:theme="@style/Theme.CoucouApp">
 
         <activity
-            android:name=".ui.components.ResetPasswordActivity"
+            android:name=".ui.activity.ResetPasswordActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.components.ForgotPasswordActivity"
+            android:name=".ui.activity.ForgotPasswordActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.components.dashboard.DashBoardScreen"
+            android:name=".ui.activity.DashBoardActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.components.LogInActivity"
+            android:name=".ui.activity.LogInActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.components.UserVerifiedActivity"
+            android:name=".ui.activity.UserVerifiedActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.components.OtpVerificationActivity"
+            android:name=".ui.activity.OtpVerificationActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.components.introscreen.IntroductionActivity"
+            android:name=".ui.activity.IntroductionActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.components.CreateAccountActivity"
+            android:name=".ui.activity.CreateAccountActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.components.WelcomeActivity"
+            android:name=".ui.activity.WelcomeActivity"
             android:exported="false" />
-        <activity android:name=".ui.components.CreateGroupVerificationActivity"/>
+        <activity android:name=".ui.activity.CreateGroupVerificationActivity" />
 
         <activity
-            android:name=".ui.components.SplashActivity"
+            android:name=".ui.activity.SplashActivity"
             android:exported="true">
              <intent-filter>
                  <action android:name="android.intent.action.MAIN" />

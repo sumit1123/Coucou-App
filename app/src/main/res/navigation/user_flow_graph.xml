@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/fragment_home"
-        android:name="com.coucouapp.ui.components.dashboard.fragments.HomeFragment"
+        android:name="com.coucouapp.ui.fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/fragment_profile"
-        android:name="com.coucouapp.ui.components.dashboard.fragments.ProfileFragment"
+        android:name="com.coucouapp.ui.fragment.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile">
         <action
@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragment_profile_verification"
-        android:name="com.coucouapp.ui.components.fragments.ProfileVerificationFragment"
+        android:name="com.coucouapp.ui.fragment.ProfileVerificationFragment"
         android:label="fragment_profile_verification"
         tools:layout="@layout/fragment_address_verification">
         <action
@@ -30,74 +30,70 @@
     </fragment>
     <fragment
         android:id="@+id/fragment_address_verification"
-        android:name="com.coucouapp.ui.components.fragments.AddressVerificationFragment"
+        android:name="com.coucouapp.ui.fragment.AddressVerificationFragment"
         android:label="fragment_address_verification"
         tools:layout="@layout/fragment_address_verification" />
     <fragment
         android:id="@+id/fragment_saving_group"
-        android:name="com.coucouapp.ui.components.dashboard.fragments.SavingGroupFragment"
+        android:name="com.coucouapp.ui.fragment.SavingGroupFragment"
         android:label="fragment_saving_group"
         tools:layout="@layout/fragment_saving_group" />
     <fragment
         android:id="@+id/fragment_settings"
-        android:name="com.coucouapp.ui.components.dashboard.fragments.SettingFragment"
+        android:name="com.coucouapp.ui.fragment.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" />
     <fragment
         android:id="@+id/publicGroupFragment"
-        android:name="com.coucouapp.ui.components.dashboard.fragments.PublicGroupFragment"
+        android:name="com.coucouapp.ui.fragment.PublicGroupFragment"
         android:label="PublicGroupFragment"
         tools:layout="@layout/fragment_public_group" />
     <fragment
         android:id="@+id/createGroupFragment"
-        android:name="com.coucouapp.ui.components.dashboard.fragments.CreateGroupFragment"
+        android:name="com.coucouapp.ui.fragment.CreateGroupFragment"
         android:label="CreateGroupFragment"
         tools:layout="@layout/fragment_create_group" />
     <fragment
         android:id="@+id/publiGroupDetailFragment"
-        android:name="com.coucouapp.ui.components.dashboard.fragments.PubliGroupDetailFragment"
+        android:name="com.coucouapp.ui.fragment.PublicGroupDetailFragment"
         android:label="PubliGroupDetailFragment"
         tools:layout="@layout/fragment_group_detail" />
     <fragment
         android:id="@+id/marketPlaceFragment"
-        android:name="com.coucouapp.ui.components.dashboard.fragments.MarketPlaceFragment"
+        android:name="com.coucouapp.ui.fragment.MarketPlaceFragment"
         android:label="MarketPlaceFragment"
         tools:layout="@layout/fragment_market_place" />
     <fragment
         android:id="@+id/creditCardsFragment"
-        android:name="com.coucouapp.ui.components.dashboard.fragments.CreditCardsFragment"
+        android:name="com.coucouapp.ui.fragment.CreditCardsFragment"
         android:label="CreditCardsFragment"
         tools:layout="@layout/fragment_credit_cards" />
     <dialog
         android:id="@+id/filterBottomSheetDialog"
-        android:name="com.coucouapp.ui.components.fragments.FilterBottomSheetCreaditCardDialog"
+        android:name="com.coucouapp.ui.fragment.FilterBottomSheetCreditCardDialog"
         android:label="FilterBottomSheetDialog"
-        tools:layout="@layout/fragment_filter"
-        />
+        tools:layout="@layout/fragment_filter" />
     <fragment
         android:id="@+id/investmentFragment"
-        android:name="com.coucouapp.ui.components.fragments.InvestmentFragment"
+        android:name="com.coucouapp.ui.fragment.InvestmentFragment"
         android:label="InvestmentFragment"
-        tools:layout="@layout/fragment_investment"
-        />
+        tools:layout="@layout/fragment_investment" />
     <fragment
         android:id="@+id/loanFragment"
-        android:name="com.coucouapp.ui.components.fragments.LoanFragment"
+        android:name="com.coucouapp.ui.fragment.LoanFragment"
         android:label="LoanFragment"
-        tools:layout="@layout/fragment_loan"
-        />
+        tools:layout="@layout/fragment_loan" />
     <fragment
         android:id="@+id/personalLoanFragment"
-        android:name="com.coucouapp.ui.components.fragments.PersonalLoanFragment"
+        android:name="com.coucouapp.ui.fragment.PersonalLoanFragment"
         android:label="PersonalLoanFragment"
-        tools:layout="@layout/fragment_personal_loan"
-        />
+        tools:layout="@layout/fragment_personal_loan" />
     <dialog
         android:id="@+id/filterBottomSheetLoanDialog"
-        android:name="com.coucouapp.ui.components.fragments.FilterBottomSheetLoanDialog"
+        android:name="com.coucouapp.ui.fragment.FilterBottomSheetLoanDialog"
         android:label="FilterBottomSheetLoanDialog" />
     <dialog
         android:id="@+id/applyLoanBottomSheetDialog"
-        android:name="com.coucouapp.ui.components.fragments.ApplyLoanBottomSheetDialog"
+        android:name="com.coucouapp.ui.fragment.ApplyLoanBottomSheetDialog"
         android:label="ApplyLoanBottomSheetDialog" />
 </navigation>
