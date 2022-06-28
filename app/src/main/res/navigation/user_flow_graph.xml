@@ -70,7 +70,7 @@
         tools:layout="@layout/fragment_credit_cards" />
     <dialog
         android:id="@+id/filterBottomSheetDialog"
-        android:name="com.coucouapp.ui.components.fragments.FilterBottomSheetDialog"
+        android:name="com.coucouapp.ui.components.fragments.FilterBottomSheetCreaditCardDialog"
         android:label="FilterBottomSheetDialog"
         tools:layout="@layout/fragment_filter"
         />

@@ -1,27 +1,25 @@
 package com.coucouapp.ui.components.fragments
 
 import android.app.*
-import android.graphics.*
-import android.graphics.drawable.*
 import android.os.*
 import android.view.*
 import com.coucouapp.*
 import com.coucouapp.databinding.*
 import com.google.android.material.bottomsheet.*
 
-class FilterBottomSheetDialog : BottomSheetDialogFragment(), View.OnClickListener {
+class FilterBottomSheetCreaditCardDialog : BottomSheetDialogFragment(), View.OnClickListener {
     
     lateinit var fragmentFilterBinding: FragmentFilterBinding
     
     companion object {
-        fun newInstance(): FilterBottomSheetDialog? {
-            return FilterBottomSheetDialog()
+        fun newInstance(): FilterBottomSheetCreaditCardDialog? {
+            return FilterBottomSheetCreaditCardDialog()
         }
     }
     
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         super.onCreateDialog(savedInstanceState)
-        return BottomSheetDialog(requireContext(), R.style.TransparentBottomSheetDialogTheme)
+        return BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme)
     }
     
     override fun onCreateView(

@@ -25,7 +25,7 @@ class ApplyLoanBottomSheetDialog : BottomSheetDialogFragment(), View.OnClickList
     
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         super.onCreateDialog(savedInstanceState)
-        return BottomSheetDialog(requireContext(), R.style.TransparentBottomSheetDialogTheme)
+        return BottomSheetDialog(requireContext() ,R.style.BottomSheetDialogTheme)
     }
     
     override fun onCreateView(

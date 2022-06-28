@@ -70,6 +70,7 @@
         <entry key="app/src/main/res/drawable/ic_cancel.xml" value="0.14" />
         <entry key="app/src/main/res/drawable/ic_remove_moderator.xml" value="0.1325" />
         <entry key="app/src/main/res/drawable/loan_graph.xml" value="0.1495" />
+        <entry key="app/src/main/res/drawable/shape_rounded_dialog.xml" value="0.1665" />
         <entry key="app/src/main/res/layout/activity_dashboard_screen.xml" value="0.121875" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15729166666666666" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.16" />
@@ -81,7 +82,7 @@
         <entry key="app/src/main/res/layout/adapter_loan_product.xml" value="0.25" />
         <entry key="app/src/main/res/layout/dialog_apply_loan.xml" value="0.15729166666666666" />
         <entry key="app/src/main/res/layout/dialog_create_group.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/fragment_apply_loan.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_apply_loan.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_create_group.xml" value="0.121875" />
         <entry key="app/src/main/res/layout/fragment_credit_cards.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_filter.xml" value="0.25" />
