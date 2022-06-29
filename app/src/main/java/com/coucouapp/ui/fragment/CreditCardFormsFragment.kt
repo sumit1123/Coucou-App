@@ -21,12 +21,6 @@ class CreditCardFormsFragment :
 
     override fun getLayout(): Int = R.layout.fragment_credit_card_forms
 
-    var genderAdapter: ArrayAdapter<String> = ArrayAdapter<String>(
-        requireActivity(),
-        R.layout.dropdown_menu_popup_item,
-        genderArray
-    )
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -43,7 +37,6 @@ class CreditCardFormsFragment :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         initViews()
     }
 
@@ -64,7 +57,8 @@ class CreditCardFormsFragment :
     }
 
     private fun initViews() {
-        binding.spGender.setAdapter<ArrayAdapter<String>>(genderAdapter)
+        var genderAdapter: ArrayAdapter<String> = ArrayAdapter<String>(requireActivity(), R.layout.dropdown_menu_popup_item, genderArray)
+       binding.spGender.setAdapter<ArrayAdapter<String>>(genderAdapter)
     }
 
     override fun getViewModelClass(): Class<CreditCardViewModel> {
