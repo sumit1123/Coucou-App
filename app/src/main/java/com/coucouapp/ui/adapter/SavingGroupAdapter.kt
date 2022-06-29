@@ -6,17 +6,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.coucouapp.databinding.AdapterSavingGroupBinding
 
 
-class SavingGroupAdapter() : RecyclerView.Adapter<SavingGroupAdapter.ViewHolder>() {
-  
+class SavingGroupAdapter : RecyclerView.Adapter<SavingGroupAdapter.ViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val adapterSavingGroupBinding: AdapterSavingGroupBinding = AdapterSavingGroupBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false)
+        val adapterSavingGroupBinding: AdapterSavingGroupBinding =
+            AdapterSavingGroupBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(adapterSavingGroupBinding)
     }
-  
-  
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-    
-      
+
     }
   
     override fun getItemCount(): Int {

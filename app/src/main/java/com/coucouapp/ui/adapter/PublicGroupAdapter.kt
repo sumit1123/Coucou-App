@@ -19,7 +19,6 @@ class PublicGroupAdapter() : RecyclerView.Adapter<PublicGroupAdapter.ViewHolder>
         holder.adapterPublicGroupBinding.root.setOnClickListener {
             findNavController(holder.adapterPublicGroupBinding.root).navigate(R.id.publiGroupDetailFragment)
         }
-      
     }
   
     override fun getItemCount(): Int {

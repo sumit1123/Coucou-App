@@ -96,4 +96,14 @@
         android:id="@+id/applyLoanBottomSheetDialog"
         android:name="com.coucouapp.ui.fragment.ApplyLoanBottomSheetDialog"
         android:label="ApplyLoanBottomSheetDialog" />
+    <fragment
+        android:id="@+id/creditCardsDetailFragment"
+        android:name="com.coucouapp.ui.fragment.CreditCardDetailFragment"
+        android:label="CreditCardDetailFragment"
+        tools:layout="@layout/fragment_credit_card_detail" />
+    <fragment
+        android:id="@+id/creditCardFormsFragment"
+        android:name="com.coucouapp.ui.fragment.CreditCardFormsFragment"
+        android:label="CreditCardFormsFragment"
+        tools:layout="@layout/fragment_credit_card_forms" />
 </navigation>

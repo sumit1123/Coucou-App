@@ -23,7 +23,7 @@ abstract class BaseFragment<VM : ViewModel, VB : ViewDataBinding> : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mViewModel = activity?.let { ViewModelProvider(it).get(getViewModelClass()) }!!
-      
+
     }
 
     override fun onCreateView(

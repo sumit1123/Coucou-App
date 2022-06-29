@@ -18,20 +18,20 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class ApplyLoanBottomSheetDialog : BottomSheetDialogFragment(), View.OnClickListener {
-    
+
     lateinit var fragmentApplyLoanBinding: FragmentApplyLoanBinding
-    
+
     companion object {
         fun newInstance(): ApplyLoanBottomSheetDialog {
             return ApplyLoanBottomSheetDialog()
         }
     }
-    
+
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         super.onCreateDialog(savedInstanceState)
-        return BottomSheetDialog(requireContext() ,R.style.BottomSheetDialogTheme)
+        return BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme)
     }
-    
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -40,28 +40,26 @@ class ApplyLoanBottomSheetDialog : BottomSheetDialogFragment(), View.OnClickList
         fragmentApplyLoanBinding = FragmentApplyLoanBinding.inflate(inflater, container, false)
         return fragmentApplyLoanBinding.root
     }
-    
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         fragmentApplyLoanBinding.btCancel.setOnClickListener(this)
         fragmentApplyLoanBinding.btApplyLoan.setOnClickListener(this)
     }
-    
+
     override fun onClick(view: View) {
         when (view.id) {
-          R.id.bt_cancel ->
-          {
-               dismiss()
-          }
-          
-         R.id.bt_apply_loan ->
-         {
-             showDialog()
-         }
-          
+            R.id.bt_cancel -> {
+                dismiss()
+            }
+
+            R.id.bt_apply_loan -> {
+                showDialog()
+            }
+
         }
     }
-    
+
     private fun showDialog() {
         var dialog = Dialog(requireActivity())
         val binding: DialogApplyLoanBinding = DataBindingUtil.inflate(

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.coucouapp.viewmodel.CreditCardViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_16sdp"
+        tools:context=".ui.fragment.CreditCardDetailFragment">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvCardDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_corner_azure_gray"
+                android:padding="@dimen/_6sdp">
+
+                <ImageView
+                    android:id="@+id/ivCreditCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/city_bank"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RatingBar
+                    android:id="@+id/rbCreditCards"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rating="5"
+                    android:theme="@style/RatingBar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:text="@string/review"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_9sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/rbCreditCards"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvMinAccountBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:text="@string/min_annual_income"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_9sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivCreditCard" />
+
+                <TextView
+                    android:id="@+id/tvApr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:paddingHorizontal="@dimen/_16sdp"
+                    android:text="@string/apr"
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_9sdp"
+                    app:layout_constraintStart_toEndOf="@+id/tvMinAccountBalance"
+                    app:layout_constraintTop_toBottomOf="@id/ivCreditCard" />
+
+                <TextView
+                    android:id="@+id/tvCreditScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:paddingHorizontal="@dimen/_16sdp"
+                    android:text="@string/credit_score"
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_9sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/tvAnnualFee"
+                    app:layout_constraintStart_toEndOf="@+id/tvApr"
+                    app:layout_constraintTop_toBottomOf="@id/ivCreditCard" />
+
+                <TextView
+                    android:id="@+id/tvAnnualFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:text="@string/annual_fee"
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_9sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivCreditCard" />
+
+                <TextView
+                    android:id="@+id/tvMinAccountBalanceDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="HK$120,000"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/_16sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvMinAccountBalance" />
+
+                <TextView
+                    android:id="@+id/tvAprDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:paddingHorizontal="@dimen/_16sdp"
+                    android:text="24%"
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_16sdp"
+                    app:layout_constraintStart_toEndOf="@+id/tvMinAccountBalanceDetail"
+                    app:layout_constraintTop_toBottomOf="@id/tvApr" />
+
+                <TextView
+                    android:id="@+id/tvCreditScoreDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:paddingHorizontal="@dimen/_16sdp"
+                    android:text="670"
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_16sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/tvAnnualFeeDetail"
+                    app:layout_constraintStart_toEndOf="@+id/tvAprDetail"
+                    app:layout_constraintTop_toBottomOf="@id/tvCreditScore" />
+
+                <TextView
+                    android:id="@+id/tvAnnualFeeDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:text="HK$45"
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_16sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCreditScore" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:id="@+id/emptyView1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:background="@drawable/dotted_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCardDetail" />
+
+        <TextView
+            android:id="@+id/tvCardType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:gravity="start"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:text="@string/card_type"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emptyView1" />
+
+        <TextView
+            android:id="@+id/tvCardTypeInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:text="@string/reward_"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvCardType"
+            app:layout_constraintTop_toBottomOf="@id/emptyView1" />
+
+        <TextView
+            android:id="@+id/tvCashBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:text="@string/cash_back_"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCardType" />
+
+        <TextView
+            android:id="@+id/tvCashBackInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="20%"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvCashBack"
+            app:layout_constraintTop_toBottomOf="@id/tvCardTypeInfo" />
+
+        <TextView
+            android:id="@+id/tvRequiredCreditScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:text="@string/required_credit_score"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCashBack" />
+
+        <TextView
+            android:id="@+id/tvRequiredCreditScoreInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="670"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvRequiredCreditScore"
+            app:layout_constraintTop_toBottomOf="@id/tvCashBackInfo" />
+
+        <TextView
+            android:id="@+id/tvAnnualFee_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:text="@string/annual_fee_"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRequiredCreditScore" />
+
+        <TextView
+            android:id="@+id/tvAnnualFeeInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="HK$45.00"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvAnnualFee_"
+            app:layout_constraintTop_toBottomOf="@id/tvRequiredCreditScoreInfo" />
+
+        <TextView
+            android:id="@+id/tvInterestRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:text="@string/interest_rate_"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAnnualFee_" />
+
+        <TextView
+            android:id="@+id/tvInterestRateInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="24%"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvInterestRate"
+            app:layout_constraintTop_toBottomOf="@id/tvAnnualFeeInfo" />
+
+        <TextView
+            android:id="@+id/tvInitialDeposit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:text="@string/initial_deposit_"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvInterestRate" />
+
+        <TextView
+            android:id="@+id/tvInitialDepositInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="0"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvInitialDeposit"
+            app:layout_constraintTop_toBottomOf="@id/tvInterestRateInfo" />
+
+        <TextView
+            android:id="@+id/tvCreditCardBuilding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:text="@string/credit_card_building"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvInitialDeposit" />
+
+        <TextView
+            android:id="@+id/tvCreditCardBuildingInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="YES"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvCreditCardBuilding"
+            app:layout_constraintTop_toBottomOf="@id/tvInitialDepositInfo" />
+
+        <TextView
+            android:id="@+id/tvBalanceTransfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:text="@string/balance_transfer_"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCreditCardBuilding" />
+
+        <TextView
+            android:id="@+id/tvBalanceTransferInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="NO"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvBalanceTransfer"
+            app:layout_constraintTop_toBottomOf="@id/tvCreditCardBuildingInfo" />
+
+        <View
+            android:id="@+id/emptyView2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:background="@drawable/dotted_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBalanceTransfer" />
+
+        <TextView
+            android:id="@+id/tvApplyCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/bg_corner_primary"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@string/fill_this_form_to_apply_for_this_card"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

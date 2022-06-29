@@ -176,6 +176,7 @@
     <string name="search_in_contacts">Search in contacts</string>
     <string name="filter">Filter</string>
     <string name="investment_title">Find in the lists all the investment opportunities that are available for users to apply to</string>
+
     <string name="filter_loan">Filter loans</string>
     <string name="annual_interest_rate">Annual Interest rate</string>
     <string name="initial_deposit">Initial deposit</string>
@@ -200,6 +201,20 @@
     <string name="you_are_about_to_issue_a_purchase_order_for_amazon_stocks_would_you_like_to_proceed">You are about to issue a purchase order for Amazon stocks. Would you like to proceed?</string>
     <string name="loan_success_title">Loan application sent successfully</string>
     <string name="loan_success_description">Your loan application has been sent to the providers successfully. When approved you will be notified</string>
+    <string name="fill_this_form_to_apply_for_this_card">Fill this form to apply for this card</string>
+    <string name="card_type">Card type:</string>
+    <string name="reward_">Reward</string>
+    <string name="cash_back_">Cash back:</string>
+    <string name="required_credit_score">Required credit score:</string>
+    <string name="annual_fee_">Annual fee:</string>
+    <string name="interest_rate_">Interest rate:</string>
+    <string name="credit_card_building">Credit card building:</string>
+    <string name="initial_deposit_">Initial deposit:</string>
+    <string name="balance_transfer_">Balance transfer:</string>
+    <string name="credit_cards_forms">Credit cards forms</string>
+    <string name="personal_information">Personal information</string>
+    <string name="full_name">Full Name</string>
+    <string name="date_of_birth">Date of birth</string>
 
 
 </resources>
