@@ -1,14 +1,20 @@
 package com.coucouapp.ui.fragment
 
+import android.app.*
+import android.content.*
+import android.graphics.*
+import android.graphics.drawable.*
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.*
 import androidx.navigation.fragment.findNavController
 import com.coucouapp.R
-import com.coucouapp.databinding.FragmentGroupDetailBinding
-import com.coucouapp.ui.activity.DashBoardActivity
+import com.coucouapp.databinding.*
+import com.coucouapp.ui.activity.*
 import com.coucouapp.ui.base.BaseFragment
+import com.coucouapp.utils.*
 import com.coucouapp.viewmodel.DashboardViewModel
 
 class PublicGroupDetailFragment : BaseFragment<DashboardViewModel, FragmentGroupDetailBinding>(),
@@ -17,7 +23,7 @@ class PublicGroupDetailFragment : BaseFragment<DashboardViewModel, FragmentGroup
     private var param2: String? = null
 
     lateinit var fragmentGroupDetailBinding: FragmentGroupDetailBinding
-    override fun getLayout(): Int = R.layout.fragment_saving_group
+    override fun getLayout(): Int = R.layout.fragment_group_detail
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,9 +36,12 @@ class PublicGroupDetailFragment : BaseFragment<DashboardViewModel, FragmentGroup
         savedInstanceState: Bundle?
     ): View {
         fragmentGroupDetailBinding = FragmentGroupDetailBinding.inflate(inflater, container, false)
-        //setRecyclerView()
-
         return fragmentGroupDetailBinding.root
+    }
+    
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        fragmentGroupDetailBinding.btRequestJoin.setOnClickListener(this)
     }
 
     override fun onResume() {
@@ -51,37 +60,41 @@ class PublicGroupDetailFragment : BaseFragment<DashboardViewModel, FragmentGroup
         (activity as DashBoardActivity).setToolbarNotificationIcon(R.color.darkGray, View.VISIBLE)
     }
 
-//    private fun setRecyclerView() {
-//        fragmentSavingGroupBinding.recyclerviewFriends.layoutManager =
-//            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-//        fragmentSavingGroupBinding.recyclerviewFriends.adapter = FriendsAdapter()
-//
-//        fragmentSavingGroupBinding.recyclerviewGroupName.layoutManager =
-//            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-//        fragmentSavingGroupBinding.recyclerviewGroupName.adapter = SavingGroupAdapter()
-//
-//        fragmentSavingGroupBinding.recyclerviewPublicGroup.layoutManager =
-//            LinearLayoutManager(requireContext())
-//        fragmentSavingGroupBinding.recyclerviewPublicGroup.adapter = PublicGroupAdapter()
-//
-//        fragmentSavingGroupBinding.tvViewAll.setOnClickListener(this)
-//        fragmentSavingGroupBinding.imgCreateGroup.setOnClickListener(this)
-//
-//    }
-
     override fun getViewModelClass(): Class<DashboardViewModel> {
         return DashboardViewModel::class.java
     }
 
     override fun onClick(view: View?) {
         when (view?.id) {
-            R.id.tv_view_all -> {
-                findNavController().navigate(R.id.publicGroupFragment)
-            }
-
-            R.id.img_create_group -> {
-                findNavController().navigate(R.id.createGroupFragment)
+            R.id.bt_request_join ->
+            {
+                showDialog()
             }
         }
+    }
+    
+    
+    private fun showDialog() {
+        var dialog = Dialog(requireActivity())
+        val binding: DialogCoucouBinding = DataBindingUtil.inflate(
+            LayoutInflater.from(context),
+            R.layout.dialog_coucou,
+            null,
+            false
+        )
+        dialog.setContentView(binding.getRoot())
+        val width = (resources.displayMetrics.widthPixels * 0.90).toInt()
+        val height = ViewGroup.LayoutParams.WRAP_CONTENT
+        dialog.getWindow()?.setLayout(width, height)
+        binding.tvTitle.setText(resources.getString(R.string.send_reques))
+        binding.tvDescription.setText(resources.getString(R.string.kings_royal))
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        binding.btYes.setOnClickListener {
+            dialog.dismiss()
+        }
+        binding.btCancel.setOnClickListener {
+            dialog.dismiss()
+        }
+        dialog.show()
     }
 }

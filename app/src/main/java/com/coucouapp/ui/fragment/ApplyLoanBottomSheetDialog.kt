@@ -10,8 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.coucouapp.R
-import com.coucouapp.databinding.DialogApplyLoanBinding
-import com.coucouapp.databinding.FragmentApplyLoanBinding
+import com.coucouapp.databinding.*
 import com.coucouapp.ui.activity.CreateGroupVerificationActivity
 import com.coucouapp.utils.Constants
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -62,9 +61,9 @@ class ApplyLoanBottomSheetDialog : BottomSheetDialogFragment(), View.OnClickList
 
     private fun showDialog() {
         var dialog = Dialog(requireActivity())
-        val binding: DialogApplyLoanBinding = DataBindingUtil.inflate(
+        val binding: DialogCoucouBinding = DataBindingUtil.inflate(
             LayoutInflater.from(context),
-            R.layout.dialog_apply_loan,
+            R.layout.dialog_coucou,
             null,
             false
         )

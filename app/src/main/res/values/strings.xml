@@ -168,6 +168,8 @@
     <string name="credit_building">+ credit building</string>
     <string name="reward">+ reward</string>
     <string name="travel">+ travel</string>
+    <string name="your_contac">Your contacts</string>
+    <string name="credit_deta">Credit details</string>
     <string name="balance_transfer">+ balance transfer</string>
     <string name="apply_filter">Apply filter</string>
 
@@ -215,6 +217,8 @@
     <string name="personal_information">Personal information</string>
     <string name="full_name">Full Name</string>
     <string name="date_of_birth">Date of birth</string>
-
+    <string name="send_reques">Send Request</string>
+    <string name="upload_proo">Upload proof of employment</string>
+    <string name="kings_royal">Kings royals is a public savings group available to anyone. Would you like to join this savings group?</string>
 
 </resources>

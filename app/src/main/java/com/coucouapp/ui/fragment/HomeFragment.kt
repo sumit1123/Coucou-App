@@ -60,7 +60,7 @@ class HomeFragment : BaseFragment<DashboardViewModel, FragmentHomeBinding>(), Vi
             }
 
             R.id.img_manage_credit -> {
-                findNavController().navigate(R.id.creditCardsFragment)
+                findNavController().navigate(R.id.creditCardReportFragment)
             }
 
             R.id.img_saving_group -> {

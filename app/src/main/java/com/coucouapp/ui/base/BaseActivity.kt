@@ -1,13 +1,11 @@
 package com.coucouapp.ui.base
 
-import android.content.Context
-import android.graphics.*
+import android.content.*
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.*
 import android.view.inputmethod.InputMethodManager
 import androidx.annotation.LayoutRes
-import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.*
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
@@ -29,9 +27,7 @@ abstract class BaseActivity<VM : ViewModel,T : ViewDataBinding> : AppCompatActiv
         viewDataBinding = DataBindingUtil.setContentView(this, getLayout())
         mViewModel = ViewModelProvider(this).get(getViewModelClass())
         viewDataBinding.lifecycleOwner = this
-//        window?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
-//        window.statusBarColor = Color.TRANSPARENT
-    
+        
     }
 
     protected fun bindViewData(): T {
@@ -72,7 +68,6 @@ abstract class BaseActivity<VM : ViewModel,T : ViewDataBinding> : AppCompatActiv
     }
 
     override fun onFailed(msg: String, error: Int) {
-
         when (error) {
             INVALID_SESSION_ERROR_CODE -> {
                 // logout from app and go to launch screen

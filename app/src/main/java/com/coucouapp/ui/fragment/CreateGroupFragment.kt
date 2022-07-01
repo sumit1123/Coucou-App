@@ -10,8 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.coucouapp.R
-import com.coucouapp.databinding.DialogCreateGroupBinding
-import com.coucouapp.databinding.FragmentCreateGroupBinding
+import com.coucouapp.databinding.*
 import com.coucouapp.ui.activity.CreateGroupVerificationActivity
 import com.coucouapp.ui.activity.DashBoardActivity
 import com.coucouapp.ui.base.BaseFragment
@@ -74,13 +73,15 @@ class CreateGroupFragment : BaseFragment<DashboardViewModel, FragmentCreateGroup
 
     private fun showDialog() {
         var dialog = Dialog(requireActivity())
-        val binding: DialogCreateGroupBinding = DataBindingUtil.inflate(
+        val binding: DialogCoucouBinding = DataBindingUtil.inflate(
             LayoutInflater.from(context),
-            R.layout.dialog_create_group,
+            R.layout.dialog_coucou,
             null,
             false
         )
         dialog.setContentView(binding.root)
+        binding.tvTitle.setText(resources.getString(R.string.create_a_new_group))
+        binding.tvDescription.setText(resources.getString(R.string.you_are_about_to_create_a_new_savings_group_you_u00e2_u0080_u0099ve_currently_added_0_members_to_this_group))
         val width = (resources.displayMetrics.widthPixels * 0.90).toInt()
         val height = ViewGroup.LayoutParams.WRAP_CONTENT
         dialog.window?.setLayout(width, height)

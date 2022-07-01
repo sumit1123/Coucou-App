@@ -30,7 +30,6 @@ class AllCreditCardAdapter : RecyclerView.Adapter<AllCreditCardAdapter.ViewHolde
         return 10
     }
 
-    inner class ViewHolder(val binding: LayoutAllCreditCardsBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(val binding: LayoutAllCreditCardsBinding) : RecyclerView.ViewHolder(binding.root) {
     }
 }

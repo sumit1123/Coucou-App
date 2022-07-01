@@ -38,6 +38,9 @@ class SavingGroupFragment : BaseFragment<DashboardViewModel, FragmentSavingGroup
     
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        fragmentSavingGroupBinding.tvViewAll.setOnClickListener(this)
+        fragmentSavingGroupBinding.imgCreateGroup.setOnClickListener(this)
+        fragmentSavingGroupBinding.imgAddFriends.setOnClickListener(this)
         setRecyclerView()
     }
 
@@ -69,9 +72,6 @@ class SavingGroupFragment : BaseFragment<DashboardViewModel, FragmentSavingGroup
         fragmentSavingGroupBinding.recyclerviewPublicGroup.layoutManager =
             LinearLayoutManager(requireContext())
         fragmentSavingGroupBinding.recyclerviewPublicGroup.adapter = PublicGroupAdapter()
-        
-        fragmentSavingGroupBinding.tvViewAll.setOnClickListener(this)
-        fragmentSavingGroupBinding.imgCreateGroup.setOnClickListener(this)
     }
     
     override fun getViewModelClass(): Class<DashboardViewModel> {
@@ -86,6 +86,11 @@ class SavingGroupFragment : BaseFragment<DashboardViewModel, FragmentSavingGroup
             
             R.id.img_create_group -> {
                 findNavController().navigate(R.id.createGroupFragment)
+            }
+            
+            R.id.img_add_friends ->
+            {
+                findNavController().navigate(R.id.contactsFragment)
             }
         }
     }

@@ -19,12 +19,12 @@
             android:paddingEnd="@dimen/_31sdp">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_create_group"
+                android:id="@+id/tv_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_32sdp"
                 android:gravity="center_horizontal"
-                android:text="@string/apply_for_loan"
+                android:text="@string/create_a_new_group"
                 android:textColor="@color/primary"
                 android:textSize="@dimen/_20sdp"
                 android:textStyle="bold"
@@ -37,11 +37,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_12sdp"
                 android:gravity="center_horizontal"
-                android:text="@string/you_are_about_to_issue_a_purchase_order_for_amazon_stocks_would_you_like_to_proceed"
+                android:text="@string/you_are_about_to_create_a_new_savings_group_you_u00e2_u0080_u0099ve_currently_added_0_members_to_this_group"
                 android:textColor="@color/darkGray"
                 android:textSize="@dimen/_12sdp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_create_group" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bt_yes"

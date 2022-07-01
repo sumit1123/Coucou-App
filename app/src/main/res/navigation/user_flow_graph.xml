@@ -106,4 +106,12 @@
         android:name="com.coucouapp.ui.fragment.CreditCardFormsFragment"
         android:label="CreditCardFormsFragment"
         tools:layout="@layout/fragment_credit_card_forms" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.coucouapp.ui.fragment.ContactsFragment"
+        android:label="ContactsFragment" />
+    <fragment
+        android:id="@+id/creditCardReportFragment"
+        android:name="com.coucouapp.ui.fragment.CreditCardReportFragment"
+        android:label="CreditCardReportFragment" />
 </navigation>
