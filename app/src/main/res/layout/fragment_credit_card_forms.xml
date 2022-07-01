@@ -34,7 +34,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/personal_information"
                     android:textColor="@color/darkGray"
-                    android:textSize="@dimen/_16sdp"
+                    android:textSize="@dimen/_14sdp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -81,10 +81,11 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilGender"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@color/light_gray"
                     android:hint="@string/gender"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -96,13 +97,396 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/_14sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilMaritalStatus"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@color/light_gray"
+                    android:hint="@string/marital_status"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilGender">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/spMaritalStatus"
+                        style="@style/StyledTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_14sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTelephoneNumber"
+                    style="@style/StyledTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:hint="@string/telephone_number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilMaritalStatus">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edTelephoneNumber"
+                        style="@style/StyledTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilEmailAddress"
+                    style="@style/StyledTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:hint="@string/telephone_number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilMaritalStatus">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edEmailAddress"
+                        style="@style/StyledTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPassportId"
+                    style="@style/StyledTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:hint="@string/passport_national_id"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilEmailAddress">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edPassportId"
+                        style="@style/StyledTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilMotherName"
+                    style="@style/StyledTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:hint="@string/mother_s_maiden_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilPassportId">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edMotherName"
+                        style="@style/StyledTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilHighestEducation"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@color/light_gray"
+                    android:hint="@string/highest_education"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilMotherName">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/spHighestEducation"
+                        style="@style/StyledTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_14sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilOccupation"
+                    style="@style/StyledTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:hint="@string/occupation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilHighestEducation">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edOccupation"
+                        style="@style/StyledTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilEmployer"
+                    style="@style/StyledTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:hint="@string/employer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilOccupation">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edEmployer"
+                        style="@style/StyledTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text="@string/address"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tilEmployer" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilStreetAddress1"
+                    style="@style/StyledTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:hint="@string/street_address_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAddress">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edStreetAddress1"
+                        style="@style/StyledTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilStreetAddress2"
+                    style="@style/StyledTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:hint="@string/street_address_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilStreetAddress1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edStreetAddress2"
+                        style="@style/StyledTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCity"
+                    style="@style/StyledTextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:hint="@string/city"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tilState"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilStreetAddress2"
+                    app:layout_constraintVertical_bias=".5">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edCity"
+                        style="@style/StyledTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilState"
+                    style="@style/StyledTextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:hint="@string/state"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tilCity"
+                    app:layout_constraintTop_toBottomOf="@id/tilStreetAddress2"
+                    app:layout_constraintVertical_bias=".5">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edState"
+                        style="@style/StyledTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilZipCode"
+                    style="@style/StyledTextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:hint="@string/zip_code"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tilCountry"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilCity"
+                    app:layout_constraintVertical_bias=".5">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edZipCode"
+                        style="@style/StyledTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCountry"
+                    style="@style/StyledTextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:hint="@string/country"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tilZipCode"
+                    app:layout_constraintTop_toBottomOf="@id/tilState"
+                    app:layout_constraintVertical_bias=".5">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edCountry"
+                        style="@style/StyledTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tvFinancialInformation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text="@string/financial_information"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tilZipCode" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilHomeType"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@color/light_gray"
+                    android:hint="@string/you_are"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvFinancialInformation">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/spHomeType"
+                        style="@style/StyledTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_14sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilGrossMonthlyIncome"
+                    style="@style/StyledTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:hint="@string/gross_monthly_income"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilHomeType">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edGrossMonthlyIncome"
+                        style="@style/StyledTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCardInsurance"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@color/light_gray"
+                    android:hint="@string/insure_your_card"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilGrossMonthlyIncome">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/spCardInsurance"
+                        style="@style/StyledTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_14sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tvSubmitApplication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/bg_corner_primary"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/_8sdp"
+                    android:text="@string/submit_application"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilCardInsurance" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

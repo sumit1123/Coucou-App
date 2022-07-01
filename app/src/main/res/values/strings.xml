@@ -217,6 +217,23 @@
     <string name="personal_information">Personal information</string>
     <string name="full_name">Full Name</string>
     <string name="date_of_birth">Date of birth</string>
+    <string name="marital_status">Marital Status</string>
+    <string name="telephone_number">Telephone number</string>
+    <string name="passport_national_id">Passport/National ID</string>
+    <string name="mother_s_maiden_name">Mother’s maiden name</string>
+    <string name="highest_education">Highest education</string>
+    <string name="occupation">Occupation</string>
+    <string name="employer">Employer</string>
+    <string name="street_address_1">Street address 1</string>
+    <string name="street_address_2">Street address 2</string>
+    <string name="state">State</string>
+    <string name="zip_code">Zip code</string>
+    <string name="financial_information">Financial information</string>
+    <string name="you_are">You are…</string>
+    <string name="gross_monthly_income">Gross monthly income</string>
+    <string name="insure_your_card">Insure your card</string>
+    <string name="submit_application">Submit application</string>
+
     <string name="send_reques">Send Request</string>
     <string name="upload_proo">Upload proof of employment</string>
     <string name="kings_royal">Kings royals is a public savings group available to anyone. Would you like to join this savings group?</string>
