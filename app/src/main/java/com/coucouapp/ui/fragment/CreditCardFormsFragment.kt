@@ -17,7 +17,12 @@ class CreditCardFormsFragment :
 
     lateinit var binding: FragmentCreditCardFormsBinding
 
-    var genderArray = arrayOf("Male", "Female", "Other")
+    private var genderArray = arrayOf("Male", "Female", "Other")
+    private var maritalStatusArray = arrayOf("Single", "Married", "Divorced", "Widow(er)")
+    private var highestEducationArray =
+        arrayOf("University", "College", "Secondary", "Primary", "Not available")
+    private var homeTypeArray = arrayOf("Homeowner", "Renter")
+    private var cardInsuranceArray = arrayOf("Yes", "No")
 
     override fun getLayout(): Int = R.layout.fragment_credit_card_forms
 
@@ -57,8 +62,41 @@ class CreditCardFormsFragment :
     }
 
     private fun initViews() {
-        var genderAdapter: ArrayAdapter<String> = ArrayAdapter<String>(requireActivity(), R.layout.dropdown_menu_popup_item, genderArray)
-       binding.spGender.setAdapter<ArrayAdapter<String>>(genderAdapter)
+        val genderAdapter: ArrayAdapter<String> =
+            ArrayAdapter<String>(requireActivity(), R.layout.dropdown_menu_popup_item, genderArray)
+        binding.spGender.setAdapter<ArrayAdapter<String>>(genderAdapter)
+
+        val maritalStatusAdapter: ArrayAdapter<String> =
+            ArrayAdapter<String>(
+                requireActivity(),
+                R.layout.dropdown_menu_popup_item,
+                maritalStatusArray
+            )
+        binding.spMaritalStatus.setAdapter<ArrayAdapter<String>>(maritalStatusAdapter)
+
+        val highestEducationAdapter: ArrayAdapter<String> =
+            ArrayAdapter<String>(
+                requireActivity(),
+                R.layout.dropdown_menu_popup_item,
+                highestEducationArray
+            )
+        binding.spHighestEducation.setAdapter<ArrayAdapter<String>>(highestEducationAdapter)
+
+        val homeTypeAdapter: ArrayAdapter<String> =
+            ArrayAdapter<String>(
+                requireActivity(),
+                R.layout.dropdown_menu_popup_item,
+                homeTypeArray
+            )
+        binding.spHomeType.setAdapter<ArrayAdapter<String>>(homeTypeAdapter)
+
+        val cardInsuranceAdapter: ArrayAdapter<String> =
+            ArrayAdapter<String>(
+                requireActivity(),
+                R.layout.dropdown_menu_popup_item,
+                cardInsuranceArray
+            )
+        binding.spCardInsurance.setAdapter<ArrayAdapter<String>>(cardInsuranceAdapter)
     }
 
     override fun getViewModelClass(): Class<CreditCardViewModel> {
