@@ -233,9 +233,28 @@
     <string name="gross_monthly_income">Gross monthly income</string>
     <string name="insure_your_card">Insure your card</string>
     <string name="submit_application">Submit application</string>
-
+    <string name="current_funds">Current funds</string>
+    <string name="contribute_in_group">Contribute in group</string>
+    <string name="request_payment">Request payment</string>
+    <string name="add_contribution">Add\nContribution</string>
+    <string name="withdraw_funds">Withdraw\nFunds</string>
+    <string name="transaction_history">Transaction\nHistory</string>
+    <string name="request_payment_new">Request\npayment</string>
+    <string name="contributors">Contributors</string>
+    <string name="contributors_colon">Contributors:</string>
+    <string name="total_contributions">Total contributions:</string>
+    <string name="created_colon">Created:</string>
+    <string name="group_admin">Group admin:</string>
+    <string name="you">you</string>
+    <string name="share_link_to_friends">Share link to friends</string>
     <string name="send_reques">Send Request</string>
     <string name="upload_proo">Upload proof of employment</string>
     <string name="kings_royal">Kings royals is a public savings group available to anyone. Would you like to join this savings group?</string>
+    <string name="choose_a_group_to_send_contribution_to">Choose a group to send contribution to</string>
+    <string name="request_payment_detail">You are requesting to be next in-line for payment from this group. Do you want your request to be sent?</string>
+    <string name="payment_request_sent">Payment Request Sent</string>
+    <string name="payment_mode">Payment Mode</string>
+    <string name="bank_account">Bank Account</string>
+    <string name="date">Date</string>
 
 </resources>

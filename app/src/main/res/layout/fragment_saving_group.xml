@@ -120,7 +120,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_friends" />
 
                 <TextView
-                    android:id="@+id/current_saving_group"
+                    android:id="@+id/tv_current_saving_group"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_24sdp"
@@ -139,7 +139,7 @@
                     android:layout_marginTop="@dimen/_12sdp"
                     android:src="@drawable/create_group"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/current_saving_group" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_current_saving_group" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -158,7 +158,7 @@
                     android:layout_marginStart="@dimen/_4sdp"
                     android:layout_marginTop="@dimen/_12sdp"
                     app:layout_constraintStart_toEndOf="@+id/img_create_group"
-                    app:layout_constraintTop_toBottomOf="@+id/current_saving_group" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_current_saving_group" />
 
                 <TextView
                     android:id="@+id/tv_join_public_group"

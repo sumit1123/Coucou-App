@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.coucouapp.viewmodel.MySavingGroupsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.MySavingGroupsFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintMyGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary"
+                    android:padding="@dimen/_20sdp">
+
+                    <TextView
+                        android:id="@+id/tvCurrentFunds"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/current_funds"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCurrentFundsAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:gravity="center"
+                        android:text="@string/hk_1_500_00"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_20sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCurrentFunds" />
+
+                    <TextView
+                        android:id="@+id/tvContributeInGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:background="@drawable/bg_corner_silver_tree"
+                        android:paddingHorizontal="@dimen/_24sdp"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:text="@string/contribute_in_group"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintEnd_toStartOf="@+id/tvRequestPayment"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCurrentFundsAmount" />
+
+                    <TextView
+                        android:id="@+id/tvRequestPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:background="@drawable/bg_corner_flamingo"
+                        android:paddingHorizontal="@dimen/_24sdp"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:text="@string/request_payment"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvContributeInGroup"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCurrentFundsAmount" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vpMyGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_16sdp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintMyGroup" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -107,6 +107,11 @@
         android:label="CreditCardFormsFragment"
         tools:layout="@layout/fragment_credit_card_forms" />
     <fragment
+        android:id="@+id/mySavingGroupsFragment"
+        android:name="com.coucouapp.ui.fragment.MySavingGroupsFragment"
+        android:label="MySavingGroupsFragment"
+        tools:layout="@layout/fragment_my_saving_groups" />
+    <fragment
         android:id="@+id/contactsFragment"
         android:name="com.coucouapp.ui.fragment.ContactsFragment"
         android:label="ContactsFragment" />
@@ -114,4 +119,17 @@
         android:id="@+id/creditCardReportFragment"
         android:name="com.coucouapp.ui.fragment.CreditCardReportFragment"
         android:label="CreditCardReportFragment" />
+    <dialog
+        android:id="@+id/contributeInGroupBottomSheetDialogFragment"
+        android:name="com.coucouapp.ui.fragment.ContributeInGroupBottomSheetDialogFragment"
+        android:label="ContributeInGroupBottomSheetDialogFragment" />
+    <dialog
+        android:id="@+id/transactionHistoryBottomSheetDialogFragment"
+        android:name="com.coucouapp.ui.fragment.TransactionHistoryBottomSheetDialogFragment"
+        android:label="TransactionHistoryBottomSheetDialogFragment" />
+    <dialog
+        android:id="@+id/withdrawFundsBottomSheetDialogFragment"
+        android:name="com.coucouapp.ui.fragment.WithdrawFundsBottomSheetDialogFragment"
+        android:label="RequestPaymentBottomSheetDialogFragment" />
+
 </navigation>

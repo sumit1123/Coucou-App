@@ -11,7 +11,7 @@ class CreditCardAdapter() : RecyclerView.Adapter<CreditCardAdapter.ViewHolder>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val adapterCreditCardsBinding: AdapterCreditCardsBinding =
             AdapterCreditCardsBinding.inflate(
-                LayoutInflater.from(parent.getContext()),
+                LayoutInflater.from(parent.context),
                 parent,
                 false
             )

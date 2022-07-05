@@ -21,7 +21,7 @@ class SavingGroupFragment : BaseFragment<DashboardViewModel, FragmentSavingGroup
 
     lateinit var fragmentSavingGroupBinding: FragmentSavingGroupBinding
     override fun getLayout(): Int = R.layout.fragment_saving_group
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -35,12 +35,11 @@ class SavingGroupFragment : BaseFragment<DashboardViewModel, FragmentSavingGroup
         fragmentSavingGroupBinding = FragmentSavingGroupBinding.inflate(inflater, container, false)
         return fragmentSavingGroupBinding.root
     }
-    
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        fragmentSavingGroupBinding.tvViewAll.setOnClickListener(this)
-        fragmentSavingGroupBinding.imgCreateGroup.setOnClickListener(this)
-        fragmentSavingGroupBinding.imgAddFriends.setOnClickListener(this)
+
+        initViews()
         setRecyclerView()
     }
 
@@ -59,37 +58,44 @@ class SavingGroupFragment : BaseFragment<DashboardViewModel, FragmentSavingGroup
         (activity as DashBoardActivity).setToolbarBackground(R.color.primary)
         (activity as DashBoardActivity).setToolbarNotificationIcon(R.color.white, View.VISIBLE)
     }
-    
+
+    private fun initViews() {
+        fragmentSavingGroupBinding.tvViewAll.setOnClickListener(this)
+        fragmentSavingGroupBinding.imgCreateGroup.setOnClickListener(this)
+        fragmentSavingGroupBinding.tvCurrentSavingGroup.setOnClickListener(this)
+    }
+
     private fun setRecyclerView() {
         fragmentSavingGroupBinding.recyclerviewFriends.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         fragmentSavingGroupBinding.recyclerviewFriends.adapter = FriendsAdapter()
-        
+
         fragmentSavingGroupBinding.recyclerviewGroupName.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         fragmentSavingGroupBinding.recyclerviewGroupName.adapter = SavingGroupAdapter()
-        
+
         fragmentSavingGroupBinding.recyclerviewPublicGroup.layoutManager =
             LinearLayoutManager(requireContext())
         fragmentSavingGroupBinding.recyclerviewPublicGroup.adapter = PublicGroupAdapter()
     }
-    
+
     override fun getViewModelClass(): Class<DashboardViewModel> {
         return DashboardViewModel::class.java
     }
-    
+
     override fun onClick(view: View?) {
         when (view?.id) {
             R.id.tv_view_all -> {
                 findNavController().navigate(R.id.publicGroupFragment)
             }
-            
             R.id.img_create_group -> {
                 findNavController().navigate(R.id.createGroupFragment)
             }
-            
-            R.id.img_add_friends ->
-            {
+            R.id.tv_current_saving_group -> {
+                findNavController().navigate(R.id.mySavingGroupsFragment)
+            }
+
+            R.id.img_add_friends -> {
                 findNavController().navigate(R.id.contactsFragment)
             }
         }
