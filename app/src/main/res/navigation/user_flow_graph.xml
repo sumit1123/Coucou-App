@@ -119,6 +119,10 @@
         android:id="@+id/creditCardReportFragment"
         android:name="com.coucouapp.ui.fragment.CreditCardReportFragment"
         android:label="CreditCardReportFragment" />
+    <fragment
+        android:id="@+id/fileUploadFragment"
+        android:name="com.coucouapp.ui.fragment.FileUploadFragment"
+        android:label="FileUploadFragment" />
     <dialog
         android:id="@+id/contributeInGroupBottomSheetDialogFragment"
         android:name="com.coucouapp.ui.fragment.ContributeInGroupBottomSheetDialogFragment"

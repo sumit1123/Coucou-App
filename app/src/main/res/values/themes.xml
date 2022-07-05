@@ -39,6 +39,10 @@
         <item name="colorControlActivated">@color/white</item>
     </style>
 
+    <style name="RatingBar_yellow" parent="Theme.AppCompat">
+        <item name="colorControlActivated">@color/yellow</item>
+    </style>
+
     <style name="description_style">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">#4F4F4F</item>
