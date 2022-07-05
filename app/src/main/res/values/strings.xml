@@ -41,7 +41,7 @@
     <string name="_continue">Continue</string>
 
     <!--UserVerifiedActivity-->
-    <string name="user_verified">You have created\na new group</string>
+    <string name="user_verified">User Verified</string>
     <string name="user_verified_details">User has now been verified. You can use the application now.</string>
     <string name="password_changed_successfully">Password Changed Successfully</string>
     <string name="password_changed_successfully_details">Your password has been changed. Navigate to profile to make another corrections</string>
@@ -236,6 +236,25 @@
 
     <string name="send_reques">Send Request</string>
     <string name="upload_proo">Upload proof of employment</string>
+    <string name="upload_proof_income">Upload proof of income</string>
+    <string name="upload_rent">Upload rent payments proof</string>
+    <string name="bank_histor">Bank history</string>
+    <string name="trust_score">Trust Score</string>
+    <string name="excellent">EXCELLENT</string>
+    <string name="your_credit">Your Credit Score</string>
+    <string name="employement">Employement file</string>
+    <string name="income_file">Income file</string>
+    <string name="rent_file">Rent file</string>
+    <string name="bank_file">Bank file</string>
     <string name="kings_royal">Kings royals is a public savings group available to anyone. Would you like to join this savings group?</string>
+    <string name="upload_file">Upload file</string>
+    <string name="income_file_upload">Income file \n uploaded successfully</string>
+    <string name="employment_">Employment file\n uploaded successfully</string>
+    <string name="rent">Rent file\n uploaded successfully</string>
+    <string name="bank_history">Bank history file\n uploaded successfully</string>
+    <string name="your_employ">Your employment document has been uploaded into our database.</string>
+    <string name="your_rent">Your rent document has been uploaded into our database.</string>
+    <string name="your_income">Your Income document has been uploaded into our database.</string>
+    <string name="your_bank">Your Bank history document has been uploaded into our database.</string>
 
 </resources>

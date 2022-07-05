@@ -1,20 +1,19 @@
 package com.coucouapp.ui.fragment
 
-import android.opengl.*
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.*
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.navigation.fragment.*
 import com.coucouapp.R
-import com.coucouapp.data.*
 import com.coucouapp.databinding.*
 import com.coucouapp.ui.activity.DashBoardActivity
-import com.coucouapp.ui.adapter.*
 import com.coucouapp.ui.base.BaseFragment
+import com.coucouapp.utils.*
+import com.coucouapp.utils.Constants.DOCUMENT_TYPE
+import com.coucouapp.utils.Constants.TITLE
 import com.coucouapp.viewmodel.DashboardViewModel
-import java.util.*
+
 
 class CreditCardReportFragment : BaseFragment<DashboardViewModel, FragmentCreditcardsReportBinding>(),
     View.OnClickListener {
@@ -38,6 +37,10 @@ class CreditCardReportFragment : BaseFragment<DashboardViewModel, FragmentCredit
     
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        fragmentCreditcardsReportBinding.tvProofEmployment.setOnClickListener(this)
+        fragmentCreditcardsReportBinding.tvProofIncome.setOnClickListener(this)
+        fragmentCreditcardsReportBinding.tvProofRent.setOnClickListener(this)
+        fragmentCreditcardsReportBinding.tvBankHistory.setOnClickListener(this)
       
     }
     
@@ -63,8 +66,36 @@ class CreditCardReportFragment : BaseFragment<DashboardViewModel, FragmentCredit
     }
     
     override fun onClick(view: View?) {
+        var bundle = Bundle()
         when (view?.id) {
-        
+          R.id.tv_proof_employment ->
+          {
+              bundle.putString(TITLE , resources.getString(R.string.employement))
+              bundle.putString(DOCUMENT_TYPE , DocumentType.EMPLOYEMENT_DOC.name)
+            findNavController().navigate(R.id.fileUploadFragment ,bundle)
+          }
+          
+          R.id.tv_proof_income ->
+          {
+              bundle.putString(TITLE , resources.getString(R.string.income_file))
+              bundle.putString(DOCUMENT_TYPE , DocumentType.INCOME_DOC.name)
+              findNavController().navigate(R.id.fileUploadFragment ,bundle)
+          }
+          
+          R.id.tv_proof_rent ->
+          {
+              bundle.putString(TITLE , resources.getString(R.string.rent_file))
+              bundle.putString(DOCUMENT_TYPE , DocumentType.RENT_DOC.name)
+              findNavController().navigate(R.id.fileUploadFragment,bundle)
+          }
+         
+         R.id.tv_bank_history ->
+         {
+             bundle.putString(TITLE , resources.getString(R.string.bank_file))
+             bundle.putString(DOCUMENT_TYPE , DocumentType.BANK_HISTORY.name)
+             findNavController().navigate(R.id.fileUploadFragment,bundle)
+         }
+         
         }
     }
 }

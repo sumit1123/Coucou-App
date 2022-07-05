@@ -74,6 +74,8 @@
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/toolbar.xml" value="0.20416666666666666" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/layout/toolbar_dashboard.xml" value="0.20416666666666666" />
         <entry key="..\:/Coucou/Coucou - App/Coucou-App/app/src/main/res/menu/home_menu.xml" value="0.17777777777777778" />
+        <entry key="app/src/main/res/drawable/bg_corner_azure_gray.xml" value="0.1665" />
+        <entry key="app/src/main/res/drawable/bg_corner_gray.xml" value="0.1645" />
         <entry key="app/src/main/res/drawable/bg_corner_light_gray.xml" value="0.1465" />
         <entry key="app/src/main/res/drawable/bg_corner_snow_gray.xml" value="0.1465" />
         <entry key="app/src/main/res/drawable/bg_loan_product.xml" value="0.1465" />
@@ -81,11 +83,18 @@
         <entry key="app/src/main/res/drawable/contacts.xml" value="0.14" />
         <entry key="app/src/main/res/drawable/ic_appicon.xml" value="0.1445" />
         <entry key="app/src/main/res/drawable/ic_contact_mail.xml" value="0.1465" />
+        <entry key="app/src/main/res/drawable/ic_upload_file.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/radio_selector.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.15729166666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15729166666666666" />
+        <entry key="app/src/main/res/layout/activity_otp_verification.xml" value="0.15729166666666666" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_user_verified.xml" value="0.15729166666666666" />
         <entry key="app/src/main/res/layout/adapter_contacts.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/adapter_credit_cards.xml" value="0.14166666666666666" />
         <entry key="app/src/main/res/layout/adapter_friends.xml" value="0.13645833333333332" />
         <entry key="app/src/main/res/layout/adapter_loan_instrument.xml" value="0.14166666666666666" />
+        <entry key="app/src/main/res/layout/credit_report_rating.xml" value="0.2" />
         <entry key="app/src/main/res/layout/dialog_apply_loan.xml" value="0.15729166666666666" />
         <entry key="app/src/main/res/layout/dialog_coucou.xml" value="0.15729166666666666" />
         <entry key="app/src/main/res/layout/dialog_create_group.xml" value="0.15729166666666666" />
@@ -94,16 +103,19 @@
         <entry key="app/src/main/res/layout/fragment_credit_card_detail.xml" value="0.14166666666666666" />
         <entry key="app/src/main/res/layout/fragment_credit_card_forms.xml" value="0.15729166666666666" />
         <entry key="app/src/main/res/layout/fragment_credit_cards.xml" value="0.14166666666666666" />
-        <entry key="app/src/main/res/layout/fragment_creditcards_report.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_creditcards_report.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/fragment_file_upload.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_filter_loan.xml" value="0.14166666666666666" />
         <entry key="app/src/main/res/layout/fragment_group_detail.xml" value="0.15729166666666666" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.13645833333333332" />
         <entry key="app/src/main/res/layout/fragment_market_place.xml" value="0.13645833333333332" />
         <entry key="app/src/main/res/layout/fragment_personal_loan.xml" value="0.14166666666666666" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.14166666666666666" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_public_group.xml" value="0.14166666666666666" />
         <entry key="app/src/main/res/layout/fragment_saving_group.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/layout_bank_history.xml" value="0.15729166666666666" />
         <entry key="app/src/main/res/layout/layout_filter.xml" value="0.14166666666666666" />
+        <entry key="app/src/main/res/layout/layout_rent.xml" value="0.2" />
       </map>
     </option>
   </component>

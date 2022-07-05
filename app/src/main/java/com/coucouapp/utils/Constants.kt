@@ -7,5 +7,6 @@ object Constants {
     const val FROM_RESET_PASSWORD = "FROM_RESET_PASSWORD"
     const val TITLE = "TITLE"
     const val DESCRIPTION = "DESCRIPTION"
+    const val DOCUMENT_TYPE = "TITLE"
 
 }
