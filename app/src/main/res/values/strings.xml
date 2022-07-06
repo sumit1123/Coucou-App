@@ -39,11 +39,13 @@
     <string name="we_just_want_to_make_sure_it_s_you">We just want to make sure it\'s you</string>
     <string name="enter_the_code_we_just_sent_you_below">Enter the code we just sent you below</string>
     <string name="_continue">Continue</string>
+    <string name="enter_the_c">Enter the code we just sent you below. We just want to make sure it\u00E2\u0080\u0099s you.</string>
 
     <!--UserVerifiedActivity-->
     <string name="user_verified">User Verified</string>
     <string name="user_verified_details">User has now been verified. You can use the application now.</string>
     <string name="password_changed_successfully">Password Changed Successfully</string>
+    <string name="otp_verific">OTP Verification</string>
     <string name="password_changed_successfully_details">Your password has been changed. Navigate to profile to make another corrections</string>
 
 
