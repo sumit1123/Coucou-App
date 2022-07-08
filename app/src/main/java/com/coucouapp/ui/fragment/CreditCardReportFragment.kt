@@ -14,7 +14,6 @@ import com.coucouapp.utils.Constants.DOCUMENT_TYPE
 import com.coucouapp.utils.Constants.TITLE
 import com.coucouapp.viewmodel.DashboardViewModel
 
-
 class CreditCardReportFragment : BaseFragment<DashboardViewModel, FragmentCreditcardsReportBinding>(),
     View.OnClickListener {
 
@@ -72,7 +71,7 @@ class CreditCardReportFragment : BaseFragment<DashboardViewModel, FragmentCredit
           {
               bundle.putString(TITLE , resources.getString(R.string.employement))
               bundle.putString(DOCUMENT_TYPE , DocumentType.EMPLOYEMENT_DOC.name)
-            findNavController().navigate(R.id.fileUploadFragment ,bundle)
+              findNavController().navigate(R.id.fileUploadFragment ,bundle)
           }
           
           R.id.tv_proof_income ->
@@ -93,7 +92,7 @@ class CreditCardReportFragment : BaseFragment<DashboardViewModel, FragmentCredit
          {
              bundle.putString(TITLE , resources.getString(R.string.bank_file))
              bundle.putString(DOCUMENT_TYPE , DocumentType.BANK_HISTORY.name)
-             findNavController().navigate(R.id.fileUploadFragment,bundle)
+             findNavController().navigate(R.id.fileUploadFragment, bundle)
          }
          
         }

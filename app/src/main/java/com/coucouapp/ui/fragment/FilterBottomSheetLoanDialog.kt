@@ -13,7 +13,6 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 class FilterBottomSheetLoanDialog : BottomSheetDialogFragment(), View.OnClickListener {
 
     lateinit var fragmentFilterLoanBinding: FragmentFilterLoanBinding
-
     companion object {
         fun newInstance(): FilterBottomSheetLoanDialog {
             return FilterBottomSheetLoanDialog()

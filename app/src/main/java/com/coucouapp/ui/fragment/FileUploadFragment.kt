@@ -44,6 +44,7 @@ class FileUploadFragment : BaseFragment<DashboardViewModel, FragmentFileUploadBi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         fragmentFileUploadBinding.btUploadFile.setOnClickListener(this)
+        fragmentFileUploadBinding.imgScanImage.setOnClickListener(this)
         showRentAndBank()
     }
     
@@ -85,6 +86,12 @@ class FileUploadFragment : BaseFragment<DashboardViewModel, FragmentFileUploadBi
     
     override fun onClick(v: View?) {
         when (v!!.id) {
+            R.id.img_scan_image ->
+            {
+                val intent = Intent(requireActivity() , DocumentScannerActivity::class.java)
+                startActivity(intent)
+            }
+            
             R.id.bt_upload_file -> {
                 var intent = Intent(requireActivity(), CreateGroupVerificationActivity::class.java)
                 when (document_type) {

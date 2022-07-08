@@ -1,5 +1,6 @@
 package com.coucouapp.ui.fragment
 
+import android.content.*
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,12 +8,12 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.coucouapp.R
 import com.coucouapp.databinding.FragmentProfileVerificationBinding
-import com.coucouapp.ui.activity.DashBoardActivity
+import com.coucouapp.ui.activity.*
 import com.coucouapp.ui.base.BaseFragment
 import com.coucouapp.viewmodel.ProfileVerificationViewModel
 import kotlinx.android.synthetic.main.fragment_profile_verification.*
 
-class ProfileVerificationFragment : BaseFragment<ProfileVerificationViewModel, FragmentProfileVerificationBinding>() {
+class ProfileVerificationFragment : BaseFragment<ProfileVerificationViewModel, FragmentProfileVerificationBinding>() ,View.OnClickListener {
 
     lateinit var fragmentProfileVerificationBinding: FragmentProfileVerificationBinding
 
@@ -28,6 +29,7 @@ class ProfileVerificationFragment : BaseFragment<ProfileVerificationViewModel, F
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        fragmentProfileVerificationBinding.llFacialVerification.setOnClickListener(this)
         initViews()
     }
 
@@ -58,6 +60,16 @@ class ProfileVerificationFragment : BaseFragment<ProfileVerificationViewModel, F
     override fun getViewModelClass(): Class<ProfileVerificationViewModel> {
         return ProfileVerificationViewModel::class.java
     }
-
-
+    
+    override fun onClick(view: View?) {
+        when(view?.id) {
+            R.id.llFacialVerification ->
+            {
+                val intent = Intent(requireContext() , FaceDetectionActivity::class.java)
+                startActivity(intent)
+            }
+        }
+    }
+    
+    
 }

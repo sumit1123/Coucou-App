@@ -55,6 +55,10 @@ class HomeFragment : BaseFragment<DashboardViewModel, FragmentHomeBinding>(), Vi
 
     override fun onClick(v: View?) {
         when (v!!.id) {
+            R.id.img_saving_group -> {
+                findNavController().navigate(R.id.fragment_saving_group)
+            }
+            
             R.id.img_market_place -> {
                 findNavController().navigate(R.id.marketPlaceFragment)
             }
@@ -62,10 +66,7 @@ class HomeFragment : BaseFragment<DashboardViewModel, FragmentHomeBinding>(), Vi
             R.id.img_manage_credit -> {
                 findNavController().navigate(R.id.creditCardReportFragment)
             }
-
-            R.id.img_saving_group -> {
-                findNavController().navigate(R.id.fragment_saving_group)
-            }
+          
         }
     }
 }

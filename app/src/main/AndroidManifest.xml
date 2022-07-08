@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
     <application
         android:name=".application.CoucouApplication"
@@ -44,6 +45,9 @@
             android:name=".ui.activity.WelcomeActivity"
             android:exported="false" />
         <activity android:name=".ui.activity.CreateGroupVerificationActivity" />
+
+        <activity android:name=".ui.activity.FaceDetectionActivity"/>
+        <activity android:name=".ui.activity.DocumentScannerActivity"/>
 
         <activity
             android:name=".ui.activity.SplashActivity"
