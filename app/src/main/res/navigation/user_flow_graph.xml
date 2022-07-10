@@ -56,7 +56,7 @@
     <fragment
         android:id="@+id/publiGroupDetailFragment"
         android:name="com.coucouapp.ui.fragment.PublicGroupDetailFragment"
-        android:label="PubliGroupDetailFragment"
+        android:label="PublicGroupDetailFragment"
         tools:layout="@layout/fragment_group_detail" />
     <fragment
         android:id="@+id/marketPlaceFragment"

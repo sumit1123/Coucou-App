@@ -94,7 +94,6 @@ class SavingGroupFragment : BaseFragment<DashboardViewModel, FragmentSavingGroup
             R.id.tv_current_saving_group -> {
                 findNavController().navigate(R.id.mySavingGroupsFragment)
             }
-
             R.id.img_add_friends -> {
                 findNavController().navigate(R.id.contactsFragment)
             }

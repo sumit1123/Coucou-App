@@ -2,25 +2,29 @@ package com.coucouapp.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.coucouapp.R
 import com.coucouapp.databinding.LayoutTransactionHistoryBinding
+import com.coucouapp.ui.interfaces.OnClickTransactionHistory
 
-class TransactionHistoryAdapter : RecyclerView.Adapter<TransactionHistoryAdapter.ViewHolder>() {
+class TransactionHistoryAdapter(
+    private val onClickTransactionHistory: OnClickTransactionHistory
+) : RecyclerView.Adapter<TransactionHistoryAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding: LayoutTransactionHistoryBinding = LayoutTransactionHistoryBinding.inflate(
-            LayoutInflater.from(parent.context),
-            parent,
-            false
-        )
-        return ViewHolder(binding)
+        val transactionHistoryBinding: LayoutTransactionHistoryBinding =
+            LayoutTransactionHistoryBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        return ViewHolder(transactionHistoryBinding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.binding.root.setOnClickListener {
-            findNavController(holder.binding.root).navigate(R.id.publiGroupDetailFragment)
+        holder.transactionHistoryBinding.root.setOnClickListener {
+            onClickTransactionHistory.onClickTransactionHistory()
+            /*Navigation.findNavController(holder.transactionHistoryBinding.root)
+                .navigate(R.id.publiGroupDetailFragment)*/
         }
     }
 
@@ -28,6 +32,6 @@ class TransactionHistoryAdapter : RecyclerView.Adapter<TransactionHistoryAdapter
         return 10
     }
 
-    inner class ViewHolder(val binding: LayoutTransactionHistoryBinding) :
-        RecyclerView.ViewHolder(binding.root)
+    inner class ViewHolder(val transactionHistoryBinding: LayoutTransactionHistoryBinding) :
+        RecyclerView.ViewHolder(transactionHistoryBinding.root)
 }

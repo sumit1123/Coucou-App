@@ -36,6 +36,13 @@ class MySavingGroupsAdapter(
         holder.binding.rvContributors.adapter = contributorsAdapter
         contributorsAdapter.notifyDataSetChanged()
 
+        holder.binding.ivAddContribution.setOnClickListener {
+            onClickMySavingGroup.onAddContribution()
+        }
+        holder.binding.tvAddContribution.setOnClickListener {
+            onClickMySavingGroup.onAddContribution()
+        }
+
         holder.binding.ivRequestPayment.setOnClickListener {
             onClickMySavingGroup.onClickRequestPayment()
         }

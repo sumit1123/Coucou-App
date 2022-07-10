@@ -126,6 +126,7 @@ class MySavingGroupsFragment :
         dialog.show()
     }
 
+
     override fun onResume() {
         super.onResume()
         setToolbar()
@@ -136,7 +137,14 @@ class MySavingGroupsFragment :
             R.id.tvContributeInGroup -> {
                 findNavController().navigate(R.id.contributeInGroupBottomSheetDialogFragment)
             }
+            R.id.tvRequestPayment -> {
+                findNavController().navigate(R.id.withdrawFundsBottomSheetDialogFragment)
+            }
         }
+    }
+
+    override fun onAddContribution() {
+        findNavController().navigate(R.id.withdrawFundsBottomSheetDialogFragment)
     }
 
     override fun onClickRequestPayment() {

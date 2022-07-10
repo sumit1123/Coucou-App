@@ -5,14 +5,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.coucouapp.R
 import com.coucouapp.databinding.FragmentTransactionHistoryBinding
 import com.coucouapp.ui.adapter.TransactionHistoryAdapter
+import com.coucouapp.ui.interfaces.OnClickTransactionHistory
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class TransactionHistoryBottomSheetDialogFragment : BottomSheetDialogFragment(),
+    OnClickTransactionHistory,
     View.OnClickListener {
 
     lateinit var binding: FragmentTransactionHistoryBinding
@@ -47,7 +50,7 @@ class TransactionHistoryBottomSheetDialogFragment : BottomSheetDialogFragment(),
         binding.ivCancel.setOnClickListener(this)
 
         binding.rvRequestPayment.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvRequestPayment.adapter = TransactionHistoryAdapter()
+        binding.rvRequestPayment.adapter = TransactionHistoryAdapter(this)
 
     }
 
@@ -57,5 +60,10 @@ class TransactionHistoryBottomSheetDialogFragment : BottomSheetDialogFragment(),
                 dismiss()
             }
         }
+    }
+
+    override fun onClickTransactionHistory() {
+        dismiss()
+        findNavController().navigate(R.id.publiGroupDetailFragment)
     }
 }

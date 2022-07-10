@@ -1,26 +1,22 @@
 package com.coucouapp.ui.fragment
 
-import android.app.*
-import android.content.*
-import android.graphics.*
-import android.graphics.drawable.*
+import android.app.Dialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.*
-import androidx.navigation.fragment.findNavController
+import androidx.databinding.DataBindingUtil
 import com.coucouapp.R
-import com.coucouapp.databinding.*
-import com.coucouapp.ui.activity.*
+import com.coucouapp.databinding.DialogCoucouBinding
+import com.coucouapp.databinding.FragmentGroupDetailBinding
+import com.coucouapp.ui.activity.DashBoardActivity
 import com.coucouapp.ui.base.BaseFragment
-import com.coucouapp.utils.*
 import com.coucouapp.viewmodel.DashboardViewModel
 
 class PublicGroupDetailFragment : BaseFragment<DashboardViewModel, FragmentGroupDetailBinding>(),
     View.OnClickListener {
-    private var param1: String? = null
-    private var param2: String? = null
 
     lateinit var fragmentGroupDetailBinding: FragmentGroupDetailBinding
     override fun getLayout(): Int = R.layout.fragment_group_detail
@@ -82,12 +78,12 @@ class PublicGroupDetailFragment : BaseFragment<DashboardViewModel, FragmentGroup
             null,
             false
         )
-        dialog.setContentView(binding.getRoot())
+        dialog.setContentView(binding.root)
         val width = (resources.displayMetrics.widthPixels * 0.90).toInt()
         val height = ViewGroup.LayoutParams.WRAP_CONTENT
-        dialog.getWindow()?.setLayout(width, height)
-        binding.tvTitle.setText(resources.getString(R.string.send_reques))
-        binding.tvDescription.setText(resources.getString(R.string.kings_royal))
+        dialog.window?.setLayout(width, height)
+        binding.tvTitle.text = resources.getString(R.string.send_reques)
+        binding.tvDescription.text = resources.getString(R.string.kings_royal)
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         binding.btYes.setOnClickListener {
             dialog.dismiss()
