@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tvSpinnerItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/azureGray"
+    android:maxLines="1"
+    android:padding="@dimen/_16sdp"
+    android:drawableStart="@drawable/ic_credit_card_icon"
+    android:drawablePadding="@dimen/_5sdp"
+    android:textColor="@color/darkGray"
+    android:textSize="@dimen/_12sdp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />

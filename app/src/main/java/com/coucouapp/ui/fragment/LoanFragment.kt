@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.coucouapp.R
 import com.coucouapp.databinding.FragmentLoanBinding
 import com.coucouapp.ui.activity.DashBoardActivity
-import com.coucouapp.ui.adapter.LoanInstrumentAdapter
+import com.coucouapp.ui.adapter.*
 import com.coucouapp.ui.base.BaseFragment
 import com.coucouapp.viewmodel.DashboardViewModel
 
@@ -46,8 +46,11 @@ class LoanFragment : BaseFragment<DashboardViewModel, FragmentLoanBinding>(),
     }
 
     private fun setRecyclerView() {
-        fragmentLoanBinding.recyclerviewLoan.layoutManager =
-            LinearLayoutManager(requireContext())
+    
+        fragmentLoanBinding.layoutFilter.recyclerviewYourLoan.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        fragmentLoanBinding.layoutFilter.recyclerviewYourLoan.adapter = YourLoanAdapter(requireActivity())
+        
+        fragmentLoanBinding.recyclerviewLoan.layoutManager = LinearLayoutManager(requireContext())
         fragmentLoanBinding.recyclerviewLoan.adapter = LoanInstrumentAdapter(requireActivity())
     }
 

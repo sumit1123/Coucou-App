@@ -312,4 +312,29 @@
     <string name="ali_payment_request_completed_title">Alipay  Wallet payment request completed</string>
     <string name="ali_payment_request_completed_description">Your funds have been sent to the designated Alipay Wallet successfully</string>
 
+<!--     your loan-->
+    <string name="personal_lo">Personal Loan</string>
+    <string name="loan_balanc">Loan Balance</string>
+    <string name="outstanding">Outstanding Payment</string>
+    <string name="deadline">Deadline</string>
+    <string name="button_pay_loan">Pay loan</string>
+    <string name="button_payment_history">Payment History</string>
+    <string name="choose_a_pa">Choose a payment method</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="pay_for_loan">Pay for loan</string>
+    <string name="enter_card_">Enter Card Details</string>
+    <string name="card_number">Card number</string>
+    <string name="expiry_date">Expiry date</string>
+    <string name="vcc">VCC</string>
+    <string name="card_holder_name">Card holder name</string>
+    <string name="you_are_abo">You are about to pay HK$10,000.00 as part of your personal loan.</string>
+    <string name="loan_paymen">Loan payment\nsuccessful</string>
+    <string name="your_paymen">Your payment has been completed successfully</string>
+    <string name="payment_his">Payment history</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel odio sit amet sapien porttitor blandit in eu ipsum.</string>
+    <string name="_0000">**** **** **** 0000</string>
+    <string name="payment_dat">Payment date:</string>
+    <string name="all_notific">All Notifications</string>
+    <string name="payment_req">Payment Request</string>
+
 </resources>

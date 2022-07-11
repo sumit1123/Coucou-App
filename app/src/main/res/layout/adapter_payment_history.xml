@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_20sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:background="@drawable/bg_corner_snow_gray">
+
+      <ImageView
+          android:id="@+id/img_city_bank"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/citi"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          />
+
+       <androidx.appcompat.widget.AppCompatTextView
+           android:id="@+id/tv_personal_loan"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/personal_lo"
+           android:textColor="@color/primary"
+           android:textStyle="bold"
+           android:textSize="@dimen/_12sdp"
+           android:layout_marginStart="@dimen/_13sdp"
+           app:layout_constraintStart_toEndOf="@+id/img_city_bank"
+           app:layout_constraintTop_toTopOf="parent"
+           />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HK$10,000.00"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_13sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_payment_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payment_mode"
+            android:textSize="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_13sdp"
+            app:layout_constraintStart_toEndOf="@+id/img_city_bank"
+            app:layout_constraintTop_toBottomOf="@+id/tv_personal_loan"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_payment_mode_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/credit_card"
+            android:textSize="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_13sdp"
+            app:layout_constraintStart_toEndOf="@+id/img_city_bank"
+            app:layout_constraintTop_toBottomOf="@+id/tv_payment_mode"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_card_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/card_number"
+            android:textSize="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintStart_toEndOf="@+id/tv_payment_mode"
+            app:layout_constraintTop_toBottomOf="@+id/tv_personal_loan"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_card_number_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0000"
+            android:textSize="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintStart_toEndOf="@+id/tv_payment_mode"
+            app:layout_constraintTop_toBottomOf="@+id/tv_card_number"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_payment_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payment_dat"
+            android:textSize="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_13sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_personal_loan"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_payment_date_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12/12/2022"
+            android:textSize="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_13sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_payment_date"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

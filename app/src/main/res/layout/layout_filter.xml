@@ -7,11 +7,11 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintFilter"
+        android:id="@+id/layoutFilter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/primary"
-        android:padding="@dimen/_16sdp">
+        android:padding="@dimen/_10sdp">
 
         <TextView
             android:id="@+id/tvFilterDetail"
@@ -26,19 +26,27 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_your_loan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFilterDetail"/>
+
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchFilter"
             style="@style/searchViewStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20sdp"
             android:background="@drawable/bg_corner_white_smoke"
             app:defaultQueryHint="@string/search_in_contacts"
             app:iconifiedByDefault="false"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent="0.85"
+            android:layout_marginTop="@dimen/_10sdp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvFilterDetail"
-            app:layout_constraintVertical_bias="0.75"
+            app:layout_constraintTop_toBottomOf="@id/recyclerview_your_loan"
             app:queryHint="@string/search_in_contacts"
             app:searchHintIcon="@drawable/ic_search"
             app:theme="@style/searchViewStyle" />
@@ -46,17 +54,17 @@
         <LinearLayout
             android:id="@+id/llFilter"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_height="0dp"
             android:background="@drawable/bg_corner_snow_gray"
             android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
             android:orientation="vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintWidth_percent="0.15"
             android:padding="@dimen/_4sdp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/searchFilter"
-            app:layout_constraintTop_toBottomOf="@id/tvFilterDetail"
-            app:layout_constraintVertical_bias="0.25">
+            app:layout_constraintTop_toBottomOf="@id/recyclerview_your_loan">
 
             <ImageView
                 android:id="@+id/ivFilter"

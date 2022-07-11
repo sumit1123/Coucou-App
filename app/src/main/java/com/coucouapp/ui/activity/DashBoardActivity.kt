@@ -1,18 +1,19 @@
 package com.coucouapp.ui.activity
 
+import android.content.*
 import android.os.Bundle
+import android.view.*
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
+import androidx.navigation.*
 import androidx.navigation.ui.NavigationUI
 import com.coucouapp.R
-import com.coucouapp.databinding.ActivityDashboardScreenBinding
+import com.coucouapp.databinding.*
 import com.coucouapp.ui.base.BaseActivity
 import com.coucouapp.viewmodel.DashboardViewModel
 import kotlinx.android.synthetic.main.activity_dashboard_screen.*
+import kotlinx.android.synthetic.main.activity_dashboard_screen.view.*
 import kotlinx.android.synthetic.main.toolbar.view.*
-
 
 class DashBoardActivity : BaseActivity<DashboardViewModel, ActivityDashboardScreenBinding>() {
 
@@ -20,11 +21,11 @@ class DashBoardActivity : BaseActivity<DashboardViewModel, ActivityDashboardScre
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         initView()
     }
 
     private fun initView() {
+      
         setUpFragmentNavigation()
     }
 
@@ -55,12 +56,11 @@ class DashBoardActivity : BaseActivity<DashboardViewModel, ActivityDashboardScre
     }
 
     private fun setUpFragmentNavigation() {
-        val navController: NavController =
-            Navigation.findNavController(this, R.id.nav_host_fragment)
-        NavigationUI.setupWithNavController(
-            viewDataBinding.activityMainBottomNavigationView,
-            navController
-        )
+        val navController: NavController = Navigation.findNavController(this, R.id.nav_host_fragment)
+        NavigationUI.setupWithNavController(viewDataBinding.activityMainBottomNavigationView, navController)
+        dashboardToolbar.ivNotification.setOnClickListener {
+            navController.navigate(R.id.allNotificationsFragment)
+        }
     }
 
     override fun showMsg(msgId: Int) {
@@ -74,4 +74,5 @@ class DashBoardActivity : BaseActivity<DashboardViewModel, ActivityDashboardScre
     override fun getViewModelClass(): Class<DashboardViewModel> {
         return DashboardViewModel::class.java
     }
+    
 }

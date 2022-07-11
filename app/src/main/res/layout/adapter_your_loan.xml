@@ -1,16 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/_16sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_personal_loan"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/personal_lo"
+                android:textColor="@color/primary"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="@dimen/_99sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:src="@drawable/citibank_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_loan_balance"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/loan_balanc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_personal_loan" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_loan_amount"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HK$24,000.00"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_loan_balance" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_outstanding_payment"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/outstanding"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_loan_amount" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_loan_balance_amount"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HK$24,000.00"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_outstanding_payment" />
 
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_apr"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/apr"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_loan_balance_amount" />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_apr_value"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7.04%"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_apr" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_deadline"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/deadline"
+                app:layout_constraintStart_toEndOf="@+id/tv_apr"
+                app:layout_constraintTop_toBottomOf="@+id/tv_loan_balance_amount" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_deadline_date"
+                style="@style/description_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:text="Dec. 2022"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintStart_toEndOf="@+id/tv_apr_value"
+                app:layout_constraintTop_toBottomOf="@+id/tv_apr" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_pay_loan"
+                android:layout_width="@dimen/_95sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/bg_corner_silver_tree"
+                android:text="@string/button_pay_loan"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_apr_value" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_pay_history"
+                android:layout_width="@dimen/_138sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/bg_corner_flamingo"
+                android:text="@string/button_payment_history"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/bt_pay_loan"
+                app:layout_constraintTop_toBottomOf="@+id/tv_apr_value" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
 </layout>
