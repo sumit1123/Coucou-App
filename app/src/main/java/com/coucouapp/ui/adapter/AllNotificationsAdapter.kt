@@ -15,7 +15,6 @@ class AllNotificationsAdapter() : RecyclerView.Adapter<AllNotificationsAdapter.V
   
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
     
-      
     }
   
     override fun getItemCount(): Int {

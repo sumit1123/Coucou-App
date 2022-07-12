@@ -47,7 +47,8 @@ class PayPersonalLoanFragment : BaseFragment<DashboardViewModel, FragmentPayPers
     }
     
     private fun initview() {
-        var list_of_items = arrayOf(resources.getString(R.string.choose_a_pa), resources.getString(R.string.credit_card))
+        val list_of_items = arrayOf(resources.getString(R.string.credit_card))
+        fragmentPayPersonalLoanFragment.paymentModeSpinner.prompt = resources.getString(R.string.choose_a_pa)
         val payment_mode_adapter = ArrayAdapter(requireActivity(), R.layout.dropdown_menu_popup_item_icon, list_of_items)
         payment_mode_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         fragmentPayPersonalLoanFragment.paymentModeSpinner.setAdapter(payment_mode_adapter)
