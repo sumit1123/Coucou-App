@@ -5,12 +5,14 @@ import android.os.Bundle
 import android.view.View
 import com.coucouapp.R
 import com.coucouapp.databinding.ActivityLogInBinding
+import com.coucouapp.model.api_request.*
 import com.coucouapp.ui.base.BaseActivity
 import com.coucouapp.viewmodel.LogInViewModel
+import dagger.hilt.android.*
 import kotlinx.android.synthetic.main.activity_log_in.*
 
+@AndroidEntryPoint
 class LogInActivity : BaseActivity<LogInViewModel, ActivityLogInBinding>(), View.OnClickListener {
-    private val TAG = LogInActivity::class.simpleName
 
     override fun getLayout(): Int = R.layout.activity_log_in
 
@@ -57,6 +59,8 @@ class LogInActivity : BaseActivity<LogInViewModel, ActivityLogInBinding>(), View
         when (view!!.id) {
             R.id.tvLoginUser -> {
                 if (isValidate()) {
+                    val apiRequest = ApiRequest(name = "")
+                    mViewModel!!.doLogin(apiRequest)
                     val intent = Intent(this, DashBoardActivity::class.java)
                     startActivity(intent)
                 }

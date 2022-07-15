@@ -8,5 +8,6 @@ object Constants {
     const val TITLE = "TITLE"
     const val DESCRIPTION = "DESCRIPTION"
     const val DOCUMENT_TYPE = "TITLE"
-
+    const val PREF_NAME = "COUCOU_Preference"
+    const val STORE_NAME = "COUCOU_DATA_STORE"
 }

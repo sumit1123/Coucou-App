@@ -3,7 +3,9 @@ package com.coucouapp.application
 import android.app.Application
 import android.graphics.*
 import com.zynksoftware.documentscanner.ui.*
+import dagger.hilt.android.*
 
+@HiltAndroidApp
 open class CoucouApplication : Application() {
 
     override fun onCreate() {
